@@ -31,10 +31,24 @@ namespace ConsoleGames.Games
             int attempts = 0;
             bool isGuessed = false;
 
+            // Pętla główna gry, która trwa do momentu zgadnięcia liczby
             while (!isGuessed)
             {
+                // Zwiększam licznik prób
                 attempts++;
 
+                // Pobieram od użytkownika jego typ i waliduję go
+                int userGuess = GetValidNumber();
+
+                // Sprawdzam, czy podana liczba jest mniejsza, większa czy równa wylosowanej liczbie
+                if (userGuess == targetNumber)
+                {
+                    // Ustawiamy flagę zgadnięcia na true i wyświetlam gratulacje w odpowiedniej szacie graficznej
+                    isGuessed = true;
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine($"\nGratulacje! Zgadłeś liczbę {targetNumber} w {attempts} próbach.");
+                    Console.ResetColor();
+                }
             }
         }
 
