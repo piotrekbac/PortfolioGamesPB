@@ -21,6 +21,14 @@ namespace ConsoleGames.Games
             Console.WriteLine("Cześć graczu! Wylosowałem liczbę z zakresu 1 do 100");
             Console.WriteLine("Spróbuj ją zgadnąć w jak najmniejszej liczbie prób!\n");
             Console.WriteLine("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n");
+
+            // Inicjalizuję generator liczb losowych i losuję liczbę do zgadnięcia
+            Random random = new Random();
+            int targetNumber = random.Next(1, 101); // Losuję liczbę z zakresu 1-100
+
+            // Inicjalizuję zmienne do śledzenia liczby prób i stanu zgadnięcia
+            int attempts = 0;
+            bool isGuessed = false;
         }
     }
 }
