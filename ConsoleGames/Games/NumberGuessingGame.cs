@@ -63,6 +63,13 @@ namespace ConsoleGames.Games
                    Console.WriteLine("Za dużo! Spróbuj niższej liczby.\n");
                 }
             }
+
+            // Po zakończeniu gry wyświetlam komunikat i czekam na naciśnięcie klawisza przez użytkownika
+            Console.WriteLine();
+            Console.WriteLine("Naciśnij dowolny klawisz, aby wrócić do menu...\n");
+
+            // Czekam na naciśnięcie klawisza przez użytkownika
+            Console.ReadKey();
         }
 
         // Metoda do pobierania i walidacji liczby od użytkownika
