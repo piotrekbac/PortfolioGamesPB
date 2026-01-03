@@ -49,6 +49,19 @@ namespace ConsoleGames.Games
                     Console.WriteLine($"\nGratulacje! Zgadłeś liczbę {targetNumber} w {attempts} próbach.");
                     Console.ResetColor();
                 }
+
+                // Informuję użytkownika, że liczba jest za mała 
+                else if (userGuess < targetNumber)
+                {
+
+                    Console.WriteLine("Za mało! Spróbuj wyższej liczby.\n");
+                }
+
+                // Informuję użytkownika, że liczba jest za duża
+                else
+                {
+                   Console.WriteLine("Za dużo! Spróbuj niższej liczby.\n");
+                }
             }
         }
 
