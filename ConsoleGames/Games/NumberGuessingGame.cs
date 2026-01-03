@@ -55,6 +55,11 @@ namespace ConsoleGames.Games
                 {
                     return result;      // Zwracam poprawną liczbę
                 }
+
+                // W przypadku błędu wyświetlam komunikat i proszę o ponowne wprowadzenie
+                Console.ForegroundColor = ConsoleColor.DarkRed;
+                Console.WriteLine("Błąd: To nie jest poprawna liczba. Spróbuj ponownie.\n");
+                Console.ResetColor();
             }
         }
     }
