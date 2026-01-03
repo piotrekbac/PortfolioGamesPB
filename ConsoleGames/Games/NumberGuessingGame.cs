@@ -12,6 +12,7 @@ namespace ConsoleGames.Games
     // Tworzę klasę NumberGuessingGame, która będzie zawierać logikę gry w zgadywanie liczb.
     public class NumberGuessingGame
     {
+        // Definiuję metodę Play, w której znajduje się główna logika gry
         public void Run()
         {
             // Wywołuję metodę DisplayHeader z klasy AuthorInfo, aby wyświetlić nagłówek gry
@@ -29,6 +30,32 @@ namespace ConsoleGames.Games
             // Inicjalizuję zmienne do śledzenia liczby prób i stanu zgadnięcia
             int attempts = 0;
             bool isGuessed = false;
+
+            while (!isGuessed)
+            {
+                attempts++;
+
+            }
+        }
+
+        // Metoda do pobierania i walidacji liczby od użytkownika
+        private int GetValidNumber()
+        {
+            // Pętla do momentu uzyskania poprawnej liczby
+            while (true)
+            {
+                // Pytam użytkownika o podanie liczby
+                Console.WriteLine("Twój typ: ");
+
+                // Odczytuję dane wejściowe od użytkownika
+                string input = Console.ReadLine();
+
+                // Próbuję przekonwertować dane wejściowe na liczbę całkowitą
+                if (int.TryParse(input, out int result))
+                {
+                    return result;      // Zwracam poprawną liczbę
+                }
+            }
         }
     }
 }
