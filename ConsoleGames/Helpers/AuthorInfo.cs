@@ -14,12 +14,20 @@ namespace ConsoleGames.Helpers
         // Definiuję metodę DisplayHeader, która przyjmuje tytuł gry jako parametr i wyświetla go wraz z informacjami o autorze.
         public static void DisplayHeader(string gameTitle)
         {
+            // Czyścimy konsolę przed wyświetleniem nagłówka gry i informacji o autorze
             Console.Clear();
+
+            // Ustawiam kolor tekstu na ciemnocyjanowy i wyświetlam informacje o autorze w konsoli
             Console.ForegroundColor = ConsoleColor.DarkCyan;
             Console.WriteLine("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
             Console.WriteLine($"       PROJEKT PORTFOLIO: PIOTR BACIOR      ");
             Console.WriteLine("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n");
-            
+
+            // Ustawiam kolor tekstu na ciemnozielony i wyświetlam tytuł gry w konsoli
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine($" > {gameTitle.ToUpper()} <\n");
+            Console.ResetColor();
+            Console.WriteLine();
         }
 
         // Definiuję metodę WriteColor do wyświetlania kolorowych komunikatów w konsoli
