@@ -12,18 +12,24 @@ namespace ConsoleGames
         // Punkt wejścia aplikacji
         static void Main(string[] args)
         {
-            // Wywołuję metodę DisplayHeader z klasy AuthorInfo, aby wyświetlić nagłówek gry
-            AuthorInfo.DisplayHeader("Hub Gier Konsolowych");
+            // Inicjalizuję zmienną sterującą pętlą główną programu
+            bool keepRunning = true;
 
-            // Wyświetlam powitanie użytkownika i instrukcje zamknięcia programu
-            Console.WriteLine("Witaj w projekcie gier konsolowych!");
+            // Pętla główna programu, która pozwala na ponowne uruchomienie gry po jej zakończeniu
+            while (keepRunning)
+            {
+                // Wywołuję metodę DisplayHeader z klasy AuthorInfo, aby wyświetlić nagłówek gry
+                AuthorInfo.DisplayHeader("Hub Gier Konsolowych");
 
-            // Tworzę instancję gry w zgadywanie liczb i uruchamiam ją
-            NumberGuessingGame numberGuessingGame = new NumberGuessingGame();
-            numberGuessingGame.Run();
+                // Tworzę instancję gry w zgadywanie liczb i uruchamiam ją
+                NumberGuessingGame numberGuessingGame = new NumberGuessingGame();
+                numberGuessingGame.Run();
 
-            Console.WriteLine("Naciśnij dowolny klawisz, aby zamknąć...\n");
-            Console.ReadKey();
+                Console.WriteLine("Naciśnij dowolny klawisz, aby zamknąć...\n");
+                Console.ReadKey();
+            }
+            
+            
         }
     }
 }
