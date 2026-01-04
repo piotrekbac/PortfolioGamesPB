@@ -21,12 +21,14 @@ namespace ConsoleGames
                 // Wywołuję metodę DisplayHeader z klasy AuthorInfo, aby wyświetlić nagłówek gry
                 AuthorInfo.DisplayHeader("Hub Gier Konsolowych");
 
-                // Tworzę instancję gry w zgadywanie liczb i uruchamiam ją
-                NumberGuessingGame numberGuessingGame = new NumberGuessingGame();
-                numberGuessingGame.Run();
+                // Wyświetlam menu wyboru gry dla użytkownika i przedstawienie opcji
+                Console.WriteLine("Wybierz aplikację, którą chcesz uruchomić: ");
+                Console.WriteLine("1. Gra: Zgadnij liczbę");
+                Console.WriteLine("0. Wyjdź z programu");
+                Console.WriteLine("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n");
 
-                Console.WriteLine("Naciśnij dowolny klawisz, aby zamknąć...\n");
-                Console.ReadKey();
+                // Proszę użytkownika o wybór opcji
+                Console.Write("Twój wybór: ");
             }
             
             
