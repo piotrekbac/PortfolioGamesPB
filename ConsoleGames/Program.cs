@@ -45,6 +45,7 @@ namespace ConsoleGames
                     // W przypadku wyboru "0" ustawiam zmienną sterującą na false, aby zakończyć program
                     case "0":
                         keepRunning = false;
+                        Console.WriteLine("\nDziękuję za wizytę! Do zobaczenia!");
                         break;
 
                     // W przypadku nieprawidłowego wyboru informuję użytkownika i proszę o ponowny wybór
