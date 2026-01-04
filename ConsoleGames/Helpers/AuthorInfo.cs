@@ -17,7 +17,7 @@ namespace ConsoleGames.Helpers
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-            Console.WriteLine($"   PROJEKT PORTFOLIO: PIOTR BACIOR");
+            Console.WriteLine($"    PROJEKT PORTFOLIO: PIOTR BACIOR");
             Console.WriteLine("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n");
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine($"{gameTitle}\n");
