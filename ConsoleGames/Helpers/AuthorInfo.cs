@@ -20,7 +20,7 @@ namespace ConsoleGames.Helpers
             Console.WriteLine($"   PROJEKT PORTFOLIO: PIOTR BACIOR");
             Console.WriteLine("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n");
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine($"    GRA: {gameTitle}\n");
+            Console.WriteLine($"{gameTitle}\n");
             Console.ResetColor();
         }
     }
