@@ -17,6 +17,11 @@ namespace ConsoleGames
 
             // Wyświetlam powitanie użytkownika i instrukcje zamknięcia programu
             Console.WriteLine("Witaj w projekcie gier konsolowych!");
+
+            // Tworzę instancję gry w zgadywanie liczb i uruchamiam ją
+            NumberGuessingGame numberGuessingGame = new NumberGuessingGame();
+            numberGuessingGame.Run();
+
             Console.WriteLine("Naciśnij dowolny klawisz, aby zamknąć...\n");
             Console.ReadKey();
         }
