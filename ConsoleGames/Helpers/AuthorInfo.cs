@@ -23,5 +23,25 @@ namespace ConsoleGames.Helpers
             Console.WriteLine($"{gameTitle}\n");
             Console.ResetColor();
         }
+
+        // Definiuję metodę WriteColor do wyświetlania kolorowych komunikatów w konsoli
+        public static void WriteColor(string message, ConsoleColor color, bool newLine = true)
+        {
+            // Ustawiam kolor tekstu w konsoli i wyświetlam komunikat
+            Console.ForegroundColor = color;
+            if (newLine)
+            {
+                Console.WriteLine(message);
+            }
+
+            // Jeśli newLine jest false, wyświetlam komunikat bez nowej linii
+            else
+            {
+                Console.Write(message);
+            }
+
+            // Resetuję kolor tekstu do domyślnego
+            Console.ResetColor();
+        }
     }
 }
