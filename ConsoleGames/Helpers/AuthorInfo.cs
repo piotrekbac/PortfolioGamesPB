@@ -43,5 +43,18 @@ namespace ConsoleGames.Helpers
             // Resetuję kolor tekstu do domyślnego
             Console.ResetColor();
         }
+
+        // Definiuję metodę WriteError do wyświetlania komunikatów o błędach w kolorze czerwonym
+        public static void WriteError(string errorMessage)
+        {
+            // Ustawiam kolor tekstu na czerwony i wyświetlam komunikat o błędzie
+            Console.ForegroundColor = ConsoleColor.Red;
+
+            // Wyświetlam komunikat o błędzie z prefiksem "BŁĄD: "
+            Console.WriteLine($" BŁĄD: {errorMessage}");
+
+            // Resetuję kolor tekstu do domyślnego
+            Console.ResetColor();
+        }
     }
 }
