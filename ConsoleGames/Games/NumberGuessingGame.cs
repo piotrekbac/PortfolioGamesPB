@@ -94,6 +94,21 @@ namespace ConsoleGames.Games
                     return null; // Użytkownik chce wyjść z gry
                 }
 
+                // Próbuję przekonwertować dane wejściowe na liczbę całkowitą
+                if (int.TryParse(input, out int result))
+                {
+                    // Sprawdzam, czy liczba jest w zakresie od 1 do 100
+                    if (result < 1 || result > 100)
+                    {
+                        // Wyświetlam komunikat o błędzie, jeśli liczba jest poza zakresem
+                        AuthorInfo.WriteError("Liczba musi być w zakresie od 1 do 100. Spróbuj ponownie.");
+
+                        continue;   // Kontynuuję pętlę, aby użytkownik mógł wprowadzić poprawną liczbę
+                    }
+
+                    return result; // Zwracam poprawnie wprowadzoną liczbę
+                }
+
                 // W przypadku błędu wyświetlam komunikat i proszę o ponowne wprowadzenie
                 Console.ForegroundColor = ConsoleColor.DarkRed;
                 Console.WriteLine("Błąd: To nie jest poprawna liczba. Spróbuj ponownie.\n");
