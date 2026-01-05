@@ -63,8 +63,7 @@ namespace ConsoleGames.Games
                 // Informuję użytkownika, że liczba jest za mała 
                 else if (userGuess < targetNumber)
                 {
-
-                    Console.WriteLine("Za mało! Spróbuj wyższej liczby.\n");
+                    AuthorInfo.WriteColor("Za mało! Spróbuj wyższej liczby.\n", ConsoleColor.DarkCyan);
                 }
 
                 // Informuję użytkownika, że liczba jest za duża
