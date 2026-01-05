@@ -88,10 +88,10 @@ namespace ConsoleGames.Games
                 // Odczytuję dane wejściowe od użytkownika
                 string input = Console.ReadLine();
 
-                // Próbuję przekonwertować dane wejściowe na liczbę całkowitą
-                if (int.TryParse(input, out int result))
+                // Sprawdzam, czy gracz chce wyjść z gry
+                if (input.ToLower() == "q" || input.ToLower() == "exit")
                 {
-                    return result;      // Zwracam poprawną liczbę
+                    return null; // Użytkownik chce wyjść z gry
                 }
 
                 // W przypadku błędu wyświetlam komunikat i proszę o ponowne wprowadzenie
