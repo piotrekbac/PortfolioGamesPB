@@ -41,6 +41,15 @@ namespace ConsoleGames.Games
                 // Pobieram od użytkownika jego typ i waliduję go
                 int? userGuess = GetValidNumberOrExit(attempts);
 
+                // Jeżeli użytkownik wpisał 'q' lub 'exit', wychodzę z gry, i wracamy do menu
+                if (userGuess == null)
+                {
+                    AuthorInfo.WriteColor("\nWychodzisz z gry. Do zobaczenia!\n", ConsoleColor.DarkGray);
+
+                    Thread.Sleep(1500);     // Małą pauza, żeby użytkownik zdążył przeczytać komunikat
+                    return;                 // Użytkownik zdecydował się wyjść z gry
+                }
+
                 // Sprawdzam, czy podana liczba jest mniejsza, większa czy równa wylosowanej liczbie
                 if (userGuess == targetNumber)
                 {
