@@ -79,8 +79,11 @@ namespace ConsoleGames.Games
             // Pętla do momentu uzyskania poprawnej liczby
             while (true)
             {
-                // Pytam użytkownika o podanie liczby
-                Console.WriteLine("Twój typ: ");
+                // Wyświetlam informację o numerze próby
+                Console.ForegroundColor = ConsoleColor.DarkGray;
+                Console.WriteLine($"Próba {attempNumber}");
+
+                Console.ResetColor();          // Resetuję kolor konsoli do domyślnego
 
                 // Odczytuję dane wejściowe od użytkownika
                 string input = Console.ReadLine();
