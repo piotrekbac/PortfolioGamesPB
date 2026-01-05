@@ -56,7 +56,7 @@ namespace ConsoleGames.Games
                     // Ustawiamy flagę zgadnięcia na true i wyświetlam gratulacje w odpowiedniej szacie graficznej
                     isGuessed = true;
                     AuthorInfo.WriteColor($"\nGRATULACJE!", ConsoleColor.Green);
-                    Console.WriteLine($"Zgadłeś liczbę {targetNumber}");
+                    Console.WriteLine($"Odgadłeś liczbę: {targetNumber}");
                     Console.WriteLine($"Potrzebowałeś na to {attempts} prób!\n");
                 }
 
@@ -69,7 +69,7 @@ namespace ConsoleGames.Games
                 // Informuję użytkownika, że liczba jest za duża
                 else
                 {
-                   AuthorInfo.WriteColor("Za dużo! Spróbuj niższej liczby.\n", ConsoleColor.DarkMagenta);
+                   AuthorInfo.WriteColor("Za dużo! Spróbuj niższej liczby.\n", ConsoleColor.Magenta);
                 }
             }
 

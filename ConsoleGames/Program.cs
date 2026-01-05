@@ -22,9 +22,9 @@ namespace ConsoleGames
                 AuthorInfo.DisplayHeader("Hub Gier Konsolowych");
 
                 // Wyświetlam menu wyboru gry dla użytkownika i przedstawienie opcji
-                Console.WriteLine("Wybierz aplikację, którą chcesz uruchomić: ");
+                Console.WriteLine("Wybierz aplikację, którą chcesz uruchomić: \n");
                 Console.WriteLine("1. Gra: Zgadnij liczbę");
-                Console.WriteLine("0. Wyjdź z programu");
+                Console.WriteLine("0. Wyjdź z programu\n");
                 Console.WriteLine("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n");
 
                 // Proszę użytkownika o wybór opcji
