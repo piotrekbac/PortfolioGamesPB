@@ -69,7 +69,7 @@ namespace ConsoleGames.Games
                 // Informuję użytkownika, że liczba jest za duża
                 else
                 {
-                   Console.WriteLine("Za dużo! Spróbuj niższej liczby.\n");
+                   AuthorInfo.WriteColor("Za dużo! Spróbuj niższej liczby.\n", ConsoleColor.DarkMagenta);
                 }
             }
 
