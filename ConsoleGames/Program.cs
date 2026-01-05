@@ -31,10 +31,10 @@ namespace ConsoleGames
                 Console.Write("Twój wybór: ");
 
                 // Odczytuję wybór użytkownika z konsoli i przechowuję go w zmiennej "choise"
-                string choise = Console.ReadLine();
+                string choice = Console.ReadLine();
 
                 // Przetwarzam wybór użytkownika za pomocą instrukcji switch
-                switch (choise)
+                switch (choice)
                 {
                     // W przypadku wyboru "1" uruchamiam grę w zgadywanie liczb
                     case "1": 
@@ -46,22 +46,20 @@ namespace ConsoleGames
                     case "0":
                         keepRunning = false;
                         Console.WriteLine("\nDziękuję za wizytę! Do zobaczenia!");
+
+                        System.Threading.Thread.Sleep(1500);        // Mała pauza, żeby użytkownik zdążył przeczytać komunikat
                         break;
 
                     // W przypadku nieprawidłowego wyboru informuję użytkownika i proszę o ponowny wybór
-                    default: 
-                        Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("\nNieprawidłowy wybór. Proszę spróbować ponownie.\n");
-                        Console.ResetColor();
+                    default:
+                        // Wyświetlam komunikat o błędzie dla nieprawidłowego wyboru
+                        AuthorInfo.WriteError("Nieprawidłowy wybór. Naciśnij dowolny klawisz...");
 
                         // Czekam na naciśnięcie klawisza przez użytkownika przed ponownym wyświetleniem menu
                         Console.ReadKey();
                         break;
-
                 }
             }
-            
-            
         }
     }
 }
