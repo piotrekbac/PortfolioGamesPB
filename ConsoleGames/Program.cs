@@ -12,15 +12,15 @@ namespace ConsoleGames
         // Punkt wejścia aplikacji
         static void Main(string[] args)
         {
+            // Ustawiam tytuł okna konsoli 
+            Console.Title = "Console Games - Projekt Portfolio Piotr Bacior 2026";
+
             // Inicjalizuję zmienną sterującą pętlą główną programu
             bool keepRunning = true;
 
             // Pętla główna programu, która pozwala na ponowne uruchomienie gry po jej zakończeniu
             while (keepRunning)
             {
-                // Wywołuję metodę DisplayHeader z klasy AuthorInfo, aby wyświetlić nagłówek gry
-                AuthorInfo.DisplayHeader("Hub Gier Konsolowych");
-
                 // Wyświetlam menu wyboru gry dla użytkownika i przedstawienie opcji
                 Console.WriteLine("Wybierz aplikację, którą chcesz uruchomić: \n");
                 Console.WriteLine("1. Gra: Zgadnij liczbę");
