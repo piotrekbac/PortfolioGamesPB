@@ -21,6 +21,7 @@ namespace ConsoleGames.Games
             // Wyświetlam powitanie użytkownika i instrukcje gry
             Console.WriteLine("Cześć graczu! Wylosowałem liczbę z zakresu 1 do 100");
             Console.WriteLine("Spróbuj ją zgadnąć w jak najmniejszej liczbie prób!\n");
+            Console.WriteLine("Możesz wpisać 'q' w dowolnym momencie, aby wyjść.\n");
             Console.WriteLine("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n");
 
             // Inicjalizuję generator liczb losowych i losuję liczbę do zgadnięcia
@@ -38,7 +39,7 @@ namespace ConsoleGames.Games
                 attempts++;
 
                 // Pobieram od użytkownika jego typ i waliduję go
-                int userGuess = GetValidNumber();
+                int? userGuess = GetValidNumberOrExit(attempts);
 
                 // Sprawdzam, czy podana liczba jest mniejsza, większa czy równa wylosowanej liczbie
                 if (userGuess == targetNumber)
@@ -73,7 +74,7 @@ namespace ConsoleGames.Games
         }
 
         // Metoda do pobierania i walidacji liczby od użytkownika
-        private int GetValidNumber()
+        private int? GetValidNumberOrExit(int attempNumber)
         {
             // Pętla do momentu uzyskania poprawnej liczby
             while (true)
