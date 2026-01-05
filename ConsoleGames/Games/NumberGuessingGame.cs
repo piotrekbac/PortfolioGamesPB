@@ -110,9 +110,7 @@ namespace ConsoleGames.Games
                 }
 
                 // W przypadku błędu wyświetlam komunikat i proszę o ponowne wprowadzenie
-                Console.ForegroundColor = ConsoleColor.DarkRed;
-                Console.WriteLine("Błąd: To nie jest poprawna liczba. Spróbuj ponownie.\n");
-                Console.ResetColor();
+                AuthorInfo.WriteError("Nieprawidłowe dane wejściowe. Proszę wpisać liczbę całkowitą od 1 do 100 lub 'q' aby wyjść.");
             }
         }
     }
