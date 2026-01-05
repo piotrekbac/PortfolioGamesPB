@@ -75,7 +75,7 @@ namespace ConsoleGames.Games
 
             // Po zakończeniu gry wyświetlam komunikat i czekam na naciśnięcie klawisza przez użytkownika
             Console.WriteLine();
-            Console.WriteLine("Naciśnij dowolny klawisz, aby wrócić do menu...\n");
+            AuthorInfo.WriteColor("Dziękuję za grę! Naciśnij dowolny klawisz, aby wrócić do menu głównego.", ConsoleColor.Gray);
 
             // Czekam na naciśnięcie klawisza przez użytkownika
             Console.ReadKey();
