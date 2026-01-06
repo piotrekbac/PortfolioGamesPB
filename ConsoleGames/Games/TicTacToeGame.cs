@@ -121,7 +121,16 @@ namespace ConsoleGames.Games
                     return true;
             }
 
-           
+            // Sprawdzam kolumny pod kątem zwycięstwa
+            for (int i = 0; i < 3; i++)
+            {
+                // Sprawdzam kolumny - czy wszystkie trzy komórki w kolumnie należą do aktualnego gracza
+                if (board[0, i] == currentPlayer && board[1, i] == currentPlayer && board[2, i] == currentPlayer)
+
+                    // Jeśli tak, zwracam true - aktualny gracz wygrał
+                    return true;
+            }
+
         }
     }
 }
