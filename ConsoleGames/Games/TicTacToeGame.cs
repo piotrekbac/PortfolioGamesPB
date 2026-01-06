@@ -1,6 +1,7 @@
 ﻿using ConsoleGames.Helpers;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -116,9 +117,9 @@ namespace ConsoleGames.Games
             {
                 // Sprawdzam wiersze - czy wszystkie trzy komórki w wierszu należą do aktualnego gracza
                 if (board[i, 0] == currentPlayer && board[i, 1] == currentPlayer && board[i, 2] == currentPlayer)
-
-                    // Jeśli tak, zwracam true - aktualny gracz wygrał
-                    return true;
+                {
+                    return true;        // Jeśli tak, zwracam true - aktualny gracz wygrał
+                }
             }
 
             // Sprawdzam kolumny pod kątem zwycięstwa
@@ -126,19 +127,23 @@ namespace ConsoleGames.Games
             {
                 // Sprawdzam kolumny - czy wszystkie trzy komórki w kolumnie należą do aktualnego gracza
                 if (board[0, i] == currentPlayer && board[1, i] == currentPlayer && board[2, i] == currentPlayer)
-
-                    // Jeśli tak, zwracam true - aktualny gracz wygrał
-                    return true;
+                { 
+                    return true;        // Jeśli tak, zwracam true - aktualny gracz wygrał
+                }
             }
 
 
-            // Sprawdzam przekątne pod kątem zwycięstwa
+            // Sprawdzam pierwszą przekątną pod kątem zwycięstwa
             if (board[0, 0] == currentPlayer && board[1, 1] == currentPlayer && board[2, 2] == currentPlayer)
             {
                 return true;    // Zwycięstwo na przekątnej od lewego górnego do prawego dolnego rogu
             }
 
-
+            // Sprawdzenie drugiej przekątnej pod kątem zwycięstwa
+            if (board[0, 2] == currentPlayer && board[1, 1] == currentPlayer && board[2, 0] == currentPlayer)
+            {
+                return true;    // Zwycięstwo na przekątnej od prawego górnego do lewego dolnego rogu
+            }
         }
     }
 }
