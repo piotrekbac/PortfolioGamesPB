@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConsoleGames.Helpers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,7 +23,7 @@ namespace ConsoleGames.Games
         public void Run()
         {
             // Inicjalizuję planszę i ustawiam początkowe wartości
-            board = new char[3, 3];
+            board = new char[3, 3]
             {
                 { '1', '2', '3' },
                 { '4', '5', '6' },
@@ -32,6 +33,37 @@ namespace ConsoleGames.Games
             currentPlayer = 'X';        // Aktualny gracz zaczyna jako 'X'
             turnsCount = 0;             // Liczba ruchów na początku wynosi 0
             bool gameEnded = false;     // Flaga wskazująca, czy gra się zakończyła
+        }
+
+        // Definiuję metodę do kolorowania X i O na planszy
+        private void DrawCell(int row, int col)
+        {
+            // Pobieram wartość z planszy i ustawiam kolor w zależności od tego, czy to 'X', 'O' czy puste pole
+            char val = board[row, col];
+
+            // Jeżeli wartość to 'X', ustawiam kolor na ciemnoczerwony
+            if (val == 'X')
+            {
+                Console.ForegroundColor = ConsoleColor.DarkRed;
+            }
+
+            // Jeżeli wartość to 'O', ustawiam kolor na ciemnoniebieski
+            else if (val == 'O')
+            {
+                Console.ForegroundColor = ConsoleColor.DarkBlue;
+            }
+
+            // W przeciwnym razie ustawiam kolor na szary dla pustych pól
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Gray;
+            }
+
+            // Wyświetlam wartość na planszy
+            Console.Write(val);
+
+            // Resetuję kolor konsoli do domyślnego
+            Console.ResetColor();
         }
     }
 }
