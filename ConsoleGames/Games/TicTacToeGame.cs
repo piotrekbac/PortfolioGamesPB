@@ -65,5 +65,23 @@ namespace ConsoleGames.Games
             // Resetuję kolor konsoli do domyślnego
             Console.ResetColor();
         }
+
+        // Definiuję metodę do rysowania planszy w konsoli 
+        private void DrawBoard()
+        {
+            AuthorInfo.DisplayHeader("Gra w Kółko i Krzyżyk");
+
+            // Rysuję planszę w konsoli dla pierwszego wiersza 
+
+            Console.WriteLine("     |     |      ");
+            DrawCell(0, 0);                 // Rysuję komórkę (0,0) - pierwszy wiersz, pierwsza kolumna
+            Console.Write("  |  "); 
+            DrawCell(0, 1);                 // Rysuję komórkę (0,1) - pierwszy wiersz, druga kolumna
+            Console.Write("  |  "); 
+            DrawCell(0, 2);                 // Rysuję komórkę (0,2) - pierwszy wiersz, trzecia kolumna
+            Console.WriteLine();
+
+
+        }
     }
 }
