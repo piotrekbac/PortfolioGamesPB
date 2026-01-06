@@ -69,6 +69,7 @@ namespace ConsoleGames.Games
         // Definiuję metodę do rysowania planszy w konsoli 
         private void DrawBoard()
         {
+            // Wywołuję metodę DisplayHeader z klasy AuthorInfo, aby wyświetlić nagłówek gry
             AuthorInfo.DisplayHeader("Gra w Kółko i Krzyżyk");
 
             // Rysuję planszę w konsoli dla pierwszego wiersza 
@@ -82,6 +83,17 @@ namespace ConsoleGames.Games
             Console.WriteLine();
 
 
+            // Rysuję planszę w konsoli dla drugiego wiersza 
+
+            Console.WriteLine("_____|_____|_____ ");
+            Console.WriteLine("     |     |      ");
+
+            DrawCell(1, 0);                 // Rysuję komórkę (1,0) - drugi wiersz, pierwsza kolumna
+            Console.WriteLine("  |  ");
+            DrawCell(1, 1);                 // Rysuję komórkę (1,1) - drugi wiersz, druga kolumna
+            Console.WriteLine("  |  ");
+            DrawCell(1, 2);                 // Rysuję komórkę (1,2) - drugi wiersz, trzecia kolumna
+            Console.WriteLine();
         }
     }
 }
