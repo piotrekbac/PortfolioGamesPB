@@ -144,6 +144,9 @@ namespace ConsoleGames.Games
             {
                 return true;    // Zwycięstwo na przekątnej od prawego górnego do lewego dolnego rogu
             }
+
+
+            return false;   // Brak zwycięstwa w przypadku żadnej z powyższych sytuacji
         }
     }
 }
