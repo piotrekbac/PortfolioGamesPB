@@ -107,5 +107,21 @@ namespace ConsoleGames.Games
             DrawCell(2, 2);                 // Rysuję komórkę (2,2) - trzeci wiersz, trzecia kolumna
             Console.WriteLine();
         }
+
+        // Definiuję metodę do sprawdzania, czy aktualny gracz wygrał grę
+        private bool CheckWin()
+        {
+            // Sprawdzam wiersze pod kątem zwycięstwa 
+            for (int i = 0; i < 3; i++)
+            {
+                // Sprawdzam wiersze - czy wszystkie trzy komórki w wierszu należą do aktualnego gracza
+                if (board[i, 0] == currentPlayer && board[i, 1] == currentPlayer && board[i, 2] == currentPlayer)
+
+                    // Jeśli tak, zwracam true - aktualny gracz wygrał
+                    return true;
+            }
+
+           
+        }
     }
 }
