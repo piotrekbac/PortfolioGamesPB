@@ -131,6 +131,14 @@ namespace ConsoleGames.Games
                     return true;
             }
 
+
+            // Sprawdzam przekątne pod kątem zwycięstwa
+            if (board[0, 0] == currentPlayer && board[1, 1] == currentPlayer && board[2, 2] == currentPlayer)
+            {
+                return true;    // Zwycięstwo na przekątnej od lewego górnego do prawego dolnego rogu
+            }
+
+
         }
     }
 }
