@@ -94,6 +94,18 @@ namespace ConsoleGames.Games
             Console.WriteLine("  |  ");
             DrawCell(1, 2);                 // Rysuję komórkę (1,2) - drugi wiersz, trzecia kolumna
             Console.WriteLine();
+
+
+            // Rysuję planszę w konsoli dla trzeciego wiersza
+
+            Console.WriteLine("_____|_____|_____ ");
+            Console.WriteLine("     |     |      ");
+            DrawCell(2, 0);                 // Rysuję komórkę (2,0) - trzeci wiersz, pierwsza kolumna
+            Console.Write("  |  ");
+            DrawCell(2, 1);                 // Rysuję komórkę (2,1) - trzeci wiersz, druga kolumna
+            Console.Write("  |  ");
+            DrawCell(2, 2);                 // Rysuję komórkę (2,2) - trzeci wiersz, trzecia kolumna
+            Console.WriteLine();
         }
     }
 }
