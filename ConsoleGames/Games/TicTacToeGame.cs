@@ -45,6 +45,12 @@ namespace ConsoleGames.Games
                 Console.WriteLine("Wybierz pole (1-9) lub 'q' aby wyjść: \n");
 
                 string input = Console.ReadLine();   // Odczytuję wejście od użytkownika
+
+                // Sprawdzam, czy użytkownik chce zakończyć grę
+                if (input.ToLower() == "q")
+                {
+                    return;     // Jeśli użytkownik wpisze 'q', wychodzę z gry
+                }
             }
         }
 
