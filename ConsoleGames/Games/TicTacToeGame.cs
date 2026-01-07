@@ -77,6 +77,15 @@ namespace ConsoleGames.Games
                             gameEnded = true;    // Ustawiam flagę zakończenia gry na true
                         }
 
+                        // Obsługa remisu - jeśli wykonano 9 ruchów i nikt nie wygrał
+                        else if (turnsCount == 9)
+                        {
+                            DrawBoard();      // Rysuję planszę w konsoli
+
+                            // Wypisuję komunikat o remisie
+                            AuthorInfo.WriteError("\nRemis! Gra zakończyła się bez zwycięzcy.\n");
+                            gameEnded = true;    // Ustawiam flagę zakończenia gry na true
+                        }
                     }
                 }
             }
