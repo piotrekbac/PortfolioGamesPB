@@ -51,6 +51,17 @@ namespace ConsoleGames.Games
                 {
                     return;     // Jeśli użytkownik wpisze 'q', wychodzę z gry
                 }
+
+                // Jeżeli użytkownik wpisał liczbę od 1 do 9, przetwarzam wybór pola
+                if (int.TryParse(input, out int choice) && choice >= 1 && choice <= 9)
+                {
+                    // Konwertujemy numer 1-9 na indeksy wiersza i kolumny w tablicy 2D (wiersz, kolumna)
+                    // przykładowo: wybór 1 odpowiada (0,0), wybór 5 odpowiada (1,1), wybór 9 odpowiada (2,2)
+                    // Dla 5: (5-1)/3 = 1 (wiersz), (5-1)%3 = 1 (kolumna) zatem (1,1) 
+
+                    int row = (choice - 1) / 3;    // Obliczam wiersz na podstawie wyboru
+                    int col = (choice - 1) % 3;    // Obliczam kolumnę na podstawie wyboru
+                }
             }
         }
 
