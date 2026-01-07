@@ -199,6 +199,12 @@ namespace ConsoleGames.Games
             }
         }
 
+        // Definiuję metodę do wykonywania ruchu komputera 
+        private void PerformComputerMove()
+        {
+
+        }
+
         // Definiuję metodę do sprawdzania, czy ruch jest prawidłowy
         private bool IsValidMove(int row, int col)
         {
