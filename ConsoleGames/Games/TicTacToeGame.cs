@@ -109,6 +109,9 @@ namespace ConsoleGames.Games
                     Console.ReadKey();    // Czekam na naciśnięcie klawisza przez użytkownika
                 }
             }
+
+            Console.WriteLine("\nNaciśnij dowolny klawisz, aby wrócić do menu...\n");
+            Console.ReadKey();    // Czekam na naciśnięcie klawisza przez użytkownika przed powrotem do menu
         }
 
         // Definiuję metodę do kolorowania X i O na planszy
