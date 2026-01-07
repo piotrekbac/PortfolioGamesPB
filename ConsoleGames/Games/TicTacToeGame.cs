@@ -170,7 +170,13 @@ namespace ConsoleGames.Games
                     int row = (choice - 1) / 3;    // Obliczam wiersz na podstawie wyboru
                     int col = (choice - 1) % 3;    // Obliczam kolumnę na podstawie wyboru
 
-
+                    // Sprawdzam, czy ruch jest prawidłowy
+                    if (IsValidMove(row, col))
+                    {
+                        board[row, col] = currentPlayer;    // Ustawiam znak aktualnego gracza na wybranym polu
+                        turnsCount++;                       // Zwiększam licznik ruchów
+                        return true;                        // Ruch wykonany pomyślnie
+                    }
                 }
             }
         }
