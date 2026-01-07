@@ -150,6 +150,16 @@ namespace ConsoleGames.Games
             Console.ResetColor();
         }
 
+        // Definiuję metodę do wykonywania ruchu gracza
+        private bool PerformPlayerMove()
+        {
+            // Główna pętla gry
+            while (true)
+            {
+                string input = Console.ReadLine();   // Odczytuję wejście od użytkownika
+            }
+        }
+
         // Definiuję metodę do sprawdzania, czy ruch jest prawidłowy
         private bool IsValidMove(int row, int col)
         {
