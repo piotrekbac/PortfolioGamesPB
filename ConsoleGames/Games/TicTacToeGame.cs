@@ -94,7 +94,12 @@ namespace ConsoleGames.Games
                         }
                     }
 
-
+                    // Jeśli pole jest już zajęte, wyświetlam komunikat o błędzie
+                    else
+                    {
+                        AuthorInfo.WriteError("To pole jest już zajęte. Wybierz inne pole.");   // Komunikat o zajętym polu
+                        Console.ReadKey();    // Czekam na naciśnięcie klawisza przez użytkownika
+                    }
                 }
             }
         }
