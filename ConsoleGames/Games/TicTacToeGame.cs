@@ -40,8 +40,11 @@ namespace ConsoleGames.Games
             {
                 DrawBoard();      // Rysuję planszę w konsoli
 
+                // Wypisuję informacje o aktualnym graczu i proszę o wybór pola
                 Console.WriteLine($"\nTura gracza: {currentPlayer}");
                 Console.WriteLine("Wybierz pole (1-9) lub 'q' aby wyjść: \n");
+
+                string input = Console.ReadLine();   // Odczytuję wejście od użytkownika
             }
         }
 
