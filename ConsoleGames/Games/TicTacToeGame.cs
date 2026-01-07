@@ -23,6 +23,7 @@ namespace ConsoleGames.Games
         private char[,] board;          // Plansza do gry
         private char currentPlayer;     // Aktualny gracz ('X' lub 'O')
         private int turnsCount;         // Liczba wykonanych ruchów
+        private bool isSinglePlayer;    // Flaga wskazująca, czy gra jest jednoosobowa (przeciwko komputerowi)
 
         // Metoda uruchamiająca grę w kółko i krzyżyk
         public void Run()
