@@ -86,7 +86,15 @@ namespace ConsoleGames.Games
                             AuthorInfo.WriteError("\nRemis! Gra zakończyła się bez zwycięzcy.\n");
                             gameEnded = true;    // Ustawiam flagę zakończenia gry na true
                         }
+
+                        // Jeśli gra się nie zakończyła, zmieniam gracza na następnego
+                        else
+                        {
+                            currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';   // Zmiana gracza na następnego
+                        }
                     }
+
+
                 }
             }
         }
