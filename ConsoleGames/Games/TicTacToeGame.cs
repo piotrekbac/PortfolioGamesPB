@@ -163,6 +163,15 @@ namespace ConsoleGames.Games
                 {
                     return false;     // Jeśli użytkownik wpisze 'q', wychodzę z gry
                 }
+
+                // Jeżeli użytkownik wpisał liczbę od 1 do 9, przetwarzam wybór pola
+                if (int.TryParse(input, out int choice) && choice >= 1 && choice <= 9)
+                {
+                    int row = (choice - 1) / 3;    // Obliczam wiersz na podstawie wyboru
+                    int col = (choice - 1) % 3;    // Obliczam kolumnę na podstawie wyboru
+
+
+                }
             }
         }
 
