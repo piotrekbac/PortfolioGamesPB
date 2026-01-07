@@ -67,6 +67,16 @@ namespace ConsoleGames.Games
                     {
                         board[row, col] = currentPlayer;   // Ustawiam znak aktualnego gracza na wybranym polu
                         turnsCount++;                       // Zwiększam licznik ruchów
+
+                        // Sprawdzam, czy aktualny gracz wygrał grę
+                        if (CheckWin())
+                        {
+                            DrawBoard();      // Rysuję planszę w konsoli
+
+                            AuthorInfo.WriteColor($"\nGracz {currentPlayer} wygrał! Gratulacje!\n", ConsoleColor.Green);
+                            gameEnded = true;    // Ustawiam flagę zakończenia gry na true
+                        }
+
                     }
                 }
             }
