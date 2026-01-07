@@ -150,6 +150,12 @@ namespace ConsoleGames.Games
             Console.ResetColor();
         }
 
+        // Definiuję metodę do sprawdzania, czy ruch jest prawidłowy
+        private bool IsValidMove(int row, int col)
+        {
+            return board[row, col] != 'X' && board[row, col] != 'O';   // Sprawdzam, czy pole nie jest zajęte
+        }
+
         // Definiuję metodę do rysowania planszy w konsoli 
         private void DrawBoard()
         {
