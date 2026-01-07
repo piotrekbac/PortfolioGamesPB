@@ -101,6 +101,13 @@ namespace ConsoleGames.Games
                         Console.ReadKey();    // Czekam na naciśnięcie klawisza przez użytkownika
                     }
                 }
+
+                // Jeśli użytkownik wpisał nieprawidłowy wybór, wyświetlam komunikat o błędzie
+                else
+                {
+                    AuthorInfo.WriteError("Nieprawidłowy wybór. Wybierz pole od 1 do 9 lub 'q' aby wyjść.");   // Komunikat o nieprawidłowym wyborze
+                    Console.ReadKey();    // Czekam na naciśnięcie klawisza przez użytkownika
+                }
             }
         }
 
