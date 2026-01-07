@@ -6,6 +6,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+// Uwzględeiamy następujące przestrzenie nazw w celu obsługi ruchów komputera i opóźnień
+using System.Collections.Generic;
+using System.Threading;
+
 // Piotr Bacior - Portfolio Project 2026
 
 namespace ConsoleGames.Games
