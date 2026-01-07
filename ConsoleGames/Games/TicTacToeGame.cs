@@ -164,6 +164,12 @@ namespace ConsoleGames.Games
                     return false;     // Jeśli użytkownik wpisze 'q', wychodzę z gry
                 }
 
+                // Jeżeli użytkownik nie wpisał liczby od 1 do 9, wyświetlam komunikat o błędzie
+                else
+                {
+                    AuthorInfo.WriteError("Nieprawidłowy wybór. To pole jest już zajęte. Wybierz pole od 1 do 9 lub 'q' aby wyjść.");   // Komunikat o nieprawidłowym wyborze
+                }
+
                 // Jeżeli użytkownik wpisał liczbę od 1 do 9, przetwarzam wybór pola
                 if (int.TryParse(input, out int choice) && choice >= 1 && choice <= 9)
                 {
@@ -177,7 +183,12 @@ namespace ConsoleGames.Games
                         turnsCount++;                       // Zwiększam licznik ruchów
                         return true;                        // Ruch wykonany pomyślnie
                     }
-                }
+
+                    // Jeśli pole jest już zajęte, wyświetlam komunikat o błędzie
+                    else
+                    {
+                        AuthorInfo.WriteError("To pole jest już zajęte. Wybierz inne pole.");   // Komunikat o zajętym polu
+                    }
             }
         }
 
