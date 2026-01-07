@@ -154,6 +154,7 @@ namespace ConsoleGames.Games
             // Rysuję planszę w konsoli dla pierwszego wiersza 
 
             Console.WriteLine("     |     |      ");
+            Console.Write("  ");            
             DrawCell(0, 0);                 // Rysuję komórkę (0,0) - pierwszy wiersz, pierwsza kolumna
             Console.Write("  |  "); 
             DrawCell(0, 1);                 // Rysuję komórkę (0,1) - pierwszy wiersz, druga kolumna
@@ -167,6 +168,7 @@ namespace ConsoleGames.Games
             Console.WriteLine("_____|_____|_____ ");
             Console.WriteLine("     |     |      ");
 
+            Console.Write("  ");
             DrawCell(1, 0);                 // Rysuję komórkę (1,0) - drugi wiersz, pierwsza kolumna
             Console.WriteLine("  |  ");
             DrawCell(1, 1);                 // Rysuję komórkę (1,1) - drugi wiersz, druga kolumna
@@ -179,6 +181,8 @@ namespace ConsoleGames.Games
 
             Console.WriteLine("_____|_____|_____ ");
             Console.WriteLine("     |     |      ");
+
+            Console.Write("  ");
             DrawCell(2, 0);                 // Rysuję komórkę (2,0) - trzeci wiersz, pierwsza kolumna
             Console.Write("  |  ");
             DrawCell(2, 1);                 // Rysuję komórkę (2,1) - trzeci wiersz, druga kolumna
