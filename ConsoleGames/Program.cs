@@ -43,6 +43,12 @@ namespace ConsoleGames
                         guessingGame.Run();
                         break;
 
+                    // W przypadku wyboru "2" uruchamiam grę w kółko i krzyżyk
+                    case "2":
+                        TicTacToeGame ticTacToeGame = new TicTacToeGame();
+                        ticTacToeGame.Run();
+                        break;
+
                     // W przypadku wyboru "0" ustawiam zmienną sterującą na false, aby zakończyć program
                     case "0":
                         keepRunning = false;
