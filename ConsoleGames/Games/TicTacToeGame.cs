@@ -189,6 +189,13 @@ namespace ConsoleGames.Games
                     {
                         AuthorInfo.WriteError("To pole jest już zajęte. Wybierz inne pole.");   // Komunikat o zajętym polu
                     }
+                }
+
+                // Jeśli użytkownik wpisał nieprawidłowy wybór, wyświetlam komunikat o błędzie
+                else
+                {
+                    AuthorInfo.WriteError("Nieprawidłowy wybór. Wybierz pole od 1 do 9 lub 'q' aby wyjść.");   // Komunikat o nieprawidłowym wyborze
+                }
             }
         }
 
