@@ -34,6 +34,15 @@ namespace ConsoleGames.Games
             currentPlayer = 'X';        // Aktualny gracz zaczyna jako 'X'
             turnsCount = 0;             // Liczba ruchów na początku wynosi 0
             bool gameEnded = false;     // Flaga wskazująca, czy gra się zakończyła
+
+            // Główna pętla gry
+            while (!gameEnded)
+            {
+                DrawBoard();      // Rysuję planszę w konsoli
+
+                Console.WriteLine($"\nTura gracza: {currentPlayer}");
+                Console.WriteLine("Wybierz pole (1-9) lub 'q' aby wyjść: \n");
+            }
         }
 
         // Definiuję metodę do kolorowania X i O na planszy
