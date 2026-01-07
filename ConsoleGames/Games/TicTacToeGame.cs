@@ -157,6 +157,12 @@ namespace ConsoleGames.Games
             while (true)
             {
                 string input = Console.ReadLine();   // Odczytuję wejście od użytkownika
+
+                // Sprawdzam, czy użytkownik chce zakończyć grę
+                if (input.ToLower() == "q")
+                {
+                    return false;     // Jeśli użytkownik wpisze 'q', wychodzę z gry
+                }
             }
         }
 
