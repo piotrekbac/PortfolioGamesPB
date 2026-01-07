@@ -61,6 +61,13 @@ namespace ConsoleGames.Games
 
                     int row = (choice - 1) / 3;    // Obliczam wiersz na podstawie wyboru
                     int col = (choice - 1) % 3;    // Obliczam kolumnę na podstawie wyboru
+
+                    // Sprawdzam, czy wybrane pole jest już zajęte przez 'X' lub 'O'
+                    if (board[row, col] != 'X' && board[row, col] != 'O')
+                    {
+                        board[row, col] = currentPlayer;   // Ustawiam znak aktualnego gracza na wybranym polu
+                        turnsCount++;                       // Zwiększam licznik ruchów
+                    }
                 }
             }
         }
