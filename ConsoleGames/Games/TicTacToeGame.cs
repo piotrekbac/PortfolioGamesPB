@@ -229,6 +229,9 @@ namespace ConsoleGames.Games
 
             int row = (selectedMove - 1) / 3;    // Obliczam wiersz na podstawie wybranego ruchu
             int col = (selectedMove - 1) % 3;    // Obliczam kolumnę na podstawie wybranego ruchu
+
+            board[row, col] = 'O';     // Komputer zawsze gra jako 'O'
+            turnsCount++;              // Zwiększam licznik ruchów
         }
 
         // Definiuję metodę do sprawdzania, czy ruch jest prawidłowy
