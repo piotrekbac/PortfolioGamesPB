@@ -224,6 +224,7 @@ namespace ConsoleGames.Games
 
             Random random = new Random();                           // Tworzę instancję generatora liczb losowych
             int randomIndex = random.Next(availableMoves.Count);    // Wybieram losowy indeks z listy dostępnych ruchów
+            int selectedMove = availableMoves[randomIndex];         // Pobieram wybrany ruch na podstawie losowego indeksu
         }
 
         // Definiuję metodę do sprawdzania, czy ruch jest prawidłowy
