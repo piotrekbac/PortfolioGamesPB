@@ -202,6 +202,19 @@ namespace ConsoleGames.Games
         // Definiuję metodę do wykonywania ruchu komputera 
         private void PerformComputerMove()
         {
+            List<int> availableMoves = new List<int>();   // Lista dostępnych ruchów
+
+            // definiuję zmienną dla licznika ruchów i zapisuję ją pod nazwą "counter"
+            int counter = 1;
+
+            // Przeglądam planszę i dodaję dostępne ruchy do listy
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+
+                }
+            }
 
         }
 
