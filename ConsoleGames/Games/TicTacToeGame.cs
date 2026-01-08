@@ -217,6 +217,8 @@ namespace ConsoleGames.Games
                     {
                         availableMoves.Add(counter);   // Dodaję numer pola do listy dostępnych ruchów
                     }
+
+                    counter++;   // Zwiększam licznik ruchów
                 }
             }
 
