@@ -132,6 +132,26 @@ namespace ConsoleGames.Games
             while (true)
             {
                 string input = Console.ReadLine();   // Odczytuję wybór od użytkownika
+
+                // Sprawdzam wybór użytkownika i ustawiam tryb gry
+                if (input == "1")
+                {
+                    isSinglePlayer = true;    // Ustawiam tryb jednoosobowy
+                    return true;              // Zwracam true, aby kontynuować grę
+                }
+                else if (input == "2")
+                {
+                    isSinglePlayer = false;   // Ustawiam tryb dwuosobowy
+                    return true;              // Zwracam true, aby kontynuować grę
+                }
+                else if (input.ToLower() == "q")
+                {
+                    return false;   // Użytkownik zdecydował się wyjść z wyboru trybu gry
+                }
+                else
+                {
+                    AuthorInfo.WriteError("Nieprawidłowy wybór. Wybierz 1, 2 lub q: ");   // Komunikat o nieprawidłowym wyborze
+                }
             }
 
         }
