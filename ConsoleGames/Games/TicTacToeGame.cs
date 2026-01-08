@@ -217,6 +217,12 @@ namespace ConsoleGames.Games
             // Wywołuję metodę DisplayHeader z klasy AuthorInfo, aby wyświetlić nagłówek gry
             AuthorInfo.DisplayHeader("Gra w Kółko i Krzyżyk");
 
+            // defnuję zmienną trybu gry na podstawie wartości isSinglePlayer 
+            string modeInfo = isSinglePlayer ? "Tryb jednoosobowy (przeciwko komputerowi)" : "Tryb dwuosobowy (gracz vs gracz)";
+
+            Console.WriteLine($"\nWybrałeś tryb: {modeInfo}\n");
+            Console.WriteLine("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+
             // Rysuję planszę w konsoli dla pierwszego wiersza 
 
             Console.WriteLine("     |     |      ");
