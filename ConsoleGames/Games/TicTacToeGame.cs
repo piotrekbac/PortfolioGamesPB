@@ -51,6 +51,12 @@ namespace ConsoleGames.Games
             {
                 DrawBoard();      // Rysuję planszę w konsoli
 
+                // sprawdzam, czy teraz ruch ma komputer czy gracz (tylko w trybie jednoosobowym - gracz vs komputer)
+                if (isSinglePlayer && currentPlayer == 'O')
+                {
+                    Console.WriteLine($"Tura komputera (O)...");
+                    PerformComputerMove();      // Wykonuję ruch komputera
+                }
             }
         }
         
