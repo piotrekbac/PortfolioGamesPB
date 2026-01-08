@@ -128,6 +128,12 @@ namespace ConsoleGames.Games
             Console.WriteLine("2. Gra dwuosobowa (gracz vs gracz)");
             Console.Write("\nTwój wybór (1 lub 2): ");
 
+            // Główna pętla wyboru trybu gry
+            while (true)
+            {
+                string input = Console.ReadLine();   // Odczytuję wybór od użytkownika
+            }
+
         }
 
 
