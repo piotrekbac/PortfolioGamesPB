@@ -119,6 +119,18 @@ namespace ConsoleGames.Games
             Console.ReadKey();    // Czekam na naciśnięcie klawisza przez użytkownika przed powrotem do menu
         }
 
+        // Definiuję metodę do ustawiania trybu gry
+        private bool SetupGameMode()
+        {
+            AuthorInfo.DisplayHeader("Wybór Trybu Gry w Kółko i Krzyżyk");
+            Console.WriteLine("Wybierz tryb gry:");
+            Console.WriteLine("1. Gra jednoosobowa (przeciwko komputerowi)");
+            Console.WriteLine("2. Gra dwuosobowa (gracz vs gracz)");
+            Console.Write("\nTwój wybór (1 lub 2): ");
+
+        }
+
+
         // Definiuję metodę do kolorowania X i O na planszy
         private void DrawCell(int row, int col)
         {
