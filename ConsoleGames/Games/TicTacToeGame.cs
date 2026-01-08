@@ -28,6 +28,12 @@ namespace ConsoleGames.Games
         // Metoda uruchamiająca grę w kółko i krzyżyk
         public void Run()
         {
+            // Ustawiam tryb gry (jednoosobowy lub dwuosobowy)
+            if (!SetupGameMode())
+            {
+                return; // Użytkownik zdecydował się wyjść z wyboru trybu gry
+            }
+
             // Inicjalizuję planszę i ustawiam początkowe wartości
             board = new char[3, 3]
             {
@@ -45,79 +51,9 @@ namespace ConsoleGames.Games
             {
                 DrawBoard();      // Rysuję planszę w konsoli
 
-                // Wypisuję informacje o aktualnym graczu i proszę o wybór pola
-                Console.WriteLine($"\nTura gracza: {currentPlayer}");
-                Console.WriteLine("Wybierz pole (1-9) lub 'q' aby wyjść: \n");
-
-                string input = Console.ReadLine();   // Odczytuję wejście od użytkownika
-
-                // Sprawdzam, czy użytkownik chce zakończyć grę
-                if (input.ToLower() == "q")
-                {
-                    return;     // Jeśli użytkownik wpisze 'q', wychodzę z gry
-                }
-
-                // Jeżeli użytkownik wpisał liczbę od 1 do 9, przetwarzam wybór pola
-                if (int.TryParse(input, out int choice) && choice >= 1 && choice <= 9)
-                {
-                    // Konwertujemy numer 1-9 na indeksy wiersza i kolumny w tablicy 2D (wiersz, kolumna)
-                    // przykładowo: wybór 1 odpowiada (0,0), wybór 5 odpowiada (1,1), wybór 9 odpowiada (2,2)
-                    // Dla 5: (5-1)/3 = 1 (wiersz), (5-1)%3 = 1 (kolumna) zatem (1,1) 
-
-                    int row = (choice - 1) / 3;    // Obliczam wiersz na podstawie wyboru
-                    int col = (choice - 1) % 3;    // Obliczam kolumnę na podstawie wyboru
-
-                    // Sprawdzam, czy wybrane pole jest już zajęte przez 'X' lub 'O'
-                    if (board[row, col] != 'X' && board[row, col] != 'O')
-                    {
-                        board[row, col] = currentPlayer;   // Ustawiam znak aktualnego gracza na wybranym polu
-                        turnsCount++;                       // Zwiększam licznik ruchów
-
-                        // Sprawdzam, czy aktualny gracz wygrał grę
-                        if (CheckWin())
-                        {
-                            DrawBoard();      // Rysuję planszę w konsoli
-
-                            AuthorInfo.WriteColor($"\nGracz {currentPlayer} wygrał! Gratulacje!\n", ConsoleColor.Green);
-                            gameEnded = true;    // Ustawiam flagę zakończenia gry na true
-                        }
-
-                        // Obsługa remisu - jeśli wykonano 9 ruchów i nikt nie wygrał
-                        else if (turnsCount == 9)
-                        {
-                            DrawBoard();      // Rysuję planszę w konsoli
-
-                            // Wypisuję komunikat o remisie
-                            AuthorInfo.WriteError("\nRemis! Gra zakończyła się bez zwycięzcy.\n");
-                            gameEnded = true;    // Ustawiam flagę zakończenia gry na true
-                        }
-
-                        // Jeśli gra się nie zakończyła, zmieniam gracza na następnego
-                        else
-                        {
-                            currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';   // Zmiana gracza na następnego
-                        }
-                    }
-
-                    // Jeśli pole jest już zajęte, wyświetlam komunikat o błędzie
-                    else
-                    {
-                        AuthorInfo.WriteError("To pole jest już zajęte. Wybierz inne pole.");   // Komunikat o zajętym polu
-                        Console.ReadKey();    // Czekam na naciśnięcie klawisza przez użytkownika
-                    }
-                }
-
-                // Jeśli użytkownik wpisał nieprawidłowy wybór, wyświetlam komunikat o błędzie
-                else
-                {
-                    AuthorInfo.WriteError("Nieprawidłowy wybór. Wybierz pole od 1 do 9 lub 'q' aby wyjść.");   // Komunikat o nieprawidłowym wyborze
-                    Console.ReadKey();    // Czekam na naciśnięcie klawisza przez użytkownika
-                }
             }
-
-            Console.WriteLine("\nNaciśnij dowolny klawisz, aby wrócić do menu...\n");
-            Console.ReadKey();    // Czekam na naciśnięcie klawisza przez użytkownika przed powrotem do menu
         }
+        
 
         // Definiuję metodę do ustawiania trybu gry
         private bool SetupGameMode()
