@@ -212,7 +212,11 @@ namespace ConsoleGames.Games
             {
                 for (int j = 0; j < 3; j++)
                 {
-
+                    // jeżeli pole nie jest zajęte przez 'X' lub 'O', dodaję je do listy dostępnych ruchów
+                    if (board[i,j] != 'X' && board[i,j] != 'O')
+                    {
+                        availableMoves.Add(counter);   // Dodaję numer pola do listy dostępnych ruchów
+                    }
                 }
             }
 
