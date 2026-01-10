@@ -49,7 +49,7 @@ namespace ConsoleGames.Games
                 attempts++;
 
                 // Pobieram od użytkownika jego typ i waliduję go
-                int? userGuess = GetValidNumberOrExit(attempts);
+                int? userGuess = GetValidNumberOrExit(attempts, maxRange);
 
                 // Jeżeli użytkownik wpisał 'q' lub 'exit', wychodzę z gry, i wracamy do menu
                 if (userGuess == null)
@@ -152,6 +152,7 @@ namespace ConsoleGames.Games
                 // Wyświetlam informację o numerze próby
                 Console.ForegroundColor = ConsoleColor.DarkGray;
                 Console.WriteLine($"Próba {attemptNumber}");
+                Console.WriteLine($"Podaj liczbę (1-{currentMaxRange})");
 
                 Console.ResetColor();          // Resetuję kolor konsoli do domyślnego
 
@@ -171,7 +172,7 @@ namespace ConsoleGames.Games
                     if (result < 1 || result > currentMaxRange)
                     {
                         // Wyświetlam komunikat o błędzie, jeśli liczba jest poza zakresem
-                        AuthorInfo.WriteError("Liczba musi być w zakresie od 1 do 100. Spróbuj ponownie.");
+                        AuthorInfo.WriteError($"Liczba musi być w zakresie od 1 do {currentMaxRange}. Spróbuj ponownie.");
 
                         continue;   // Kontynuuję pętlę, aby użytkownik mógł wprowadzić poprawną liczbę
                     }
