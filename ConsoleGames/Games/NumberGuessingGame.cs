@@ -115,6 +115,13 @@ namespace ConsoleGames.Games
                     maxRange = 500;     // Ustawiam zakres na 500
                     return true;        // Ustawiam zakres na 500 i zwracam true
                 }
+
+                // Obsługa wyboru trudnego poziomu trudności (1-1000)
+                else if (input == "3")
+                {
+                    maxRange = 1000;    // Ustawiam zakres na 1000
+                    return true;        // Ustawiam zakres na 1000 i zwracam true
+                }
             }
         }
 
