@@ -36,7 +36,7 @@ namespace ConsoleGames.Games
 
             // Inicjalizuję generator liczb losowych i losuję liczbę do zgadnięcia
             Random random = new Random();
-            int targetNumber = random.Next(1, 101); // Losuję liczbę z zakresu 1-100
+            int targetNumber = random.Next(1, maxRange + 1); // Losuję liczbę z zakresu od 1 do maxRange + 1 
 
             // Inicjalizuję zmienne do śledzenia liczby prób i stanu zgadnięcia
             int attempts = 0;
