@@ -49,5 +49,22 @@ namespace ConsoleGames.Games
 
             lives = 6; // Ustawiam liczbę żyć na 6 - odpowiednio do rysunku wisielca
         }
+
+        // Definuję metodę ProcesWordGuess, która przetwarza zgadywanie całego słowa
+        private void ProcesWordGuess(string word)
+        {
+            // Sprawdzam, czy podane słowo jest równe docelowemu słowu
+            if (word == targetWord)
+            {
+                // jeżeli gracz zgadł całe słowo, dodajemy wszystkie litery do guessedLetters 
+                foreach (char cha in targetWord)
+                {
+                    if (!guessedLetters.Contains(cha))
+                    {
+                        guessedLetters.Add(cha);        // Dodaj literę do odgadniętych liter
+                    }
+                }
+            }
+        }
     }
 }
