@@ -95,6 +95,13 @@ namespace ConsoleGames.Games
             Console.WriteLine("Naciśnij 'q' aby wrócić do menu głównego");
             Console.WriteLine("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n");
             Console.Write("Twój wybór: ");
+
+            // Pętla do momentu uzyskania poprawnego wyboru poziomu trudności
+            while (true)
+            {
+                // Odczytuję wybór użytkownika z konsoli
+                string input = Console.ReadLine();
+            }
         }
 
         // Metoda do pobierania i walidacji liczby od użytkownika
