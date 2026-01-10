@@ -57,6 +57,13 @@ namespace ConsoleGames.Games
                     Console.WriteLine($"Tura komputera (O)...");
                     PerformComputerMove();      // Wykonuję ruch komputera
                 }
+
+                // obsługujemy ruch człowieka
+                else
+                {
+                    Console.WriteLine($"Tura gracza: {currentPlayer}");
+                    Console.WriteLine("Wybierz pole (1-9) lub naciśnij klawisz 'q' aby wyjść: ");
+                }
             }
         }
         
