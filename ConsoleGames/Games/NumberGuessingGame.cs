@@ -122,6 +122,12 @@ namespace ConsoleGames.Games
                     maxRange = 1000;    // Ustawiam zakres na 1000
                     return true;        // Ustawiam zakres na 1000 i zwracam true
                 }
+
+                // Obsługa wyjścia z menu wyboru poziomu trudności
+                else if (input.ToLower() == "q" || input.ToLower() == "exit")
+                {
+                    return false;       // Użytkownik chce wyjść z menu wyboru poziomu trudności
+                }
             }
         }
 
