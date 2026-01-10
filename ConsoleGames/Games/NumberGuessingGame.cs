@@ -128,6 +128,12 @@ namespace ConsoleGames.Games
                 {
                     return false;       // Użytkownik chce wyjść z menu wyboru poziomu trudności
                 }
+
+                // Obsługa nieprawidłowego wyboru
+                else
+                {
+                    AuthorInfo.WriteError("Nieprawidłowy wybór. Proszę wybrać 1, 2, 3 lub 'q' aby wyjść.");
+                }
             }
         }
 
