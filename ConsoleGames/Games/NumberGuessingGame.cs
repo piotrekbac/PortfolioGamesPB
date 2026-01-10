@@ -101,6 +101,13 @@ namespace ConsoleGames.Games
             {
                 // Odczytuję wybór użytkownika z konsoli
                 string input = Console.ReadLine();
+
+                // Obsługa wyboru łatwego poziomu trudności (1-100)
+                if (input == "1")
+                {
+                    maxRange = 100;     // Ustawiam zakres na 100
+                    return true;        // Ustawiam zakres na 100 i zwracam true
+                }
             }
         }
 
