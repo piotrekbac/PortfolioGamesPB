@@ -71,6 +71,18 @@ namespace ConsoleGames.Games
                     }
                 }
 
+                // Sprawdzam, czy aktualny gracz wygrał grę
+                if (CheckWin())
+                {
+                    // Rysuję planszę 
+                    DrawBoard();
+
+                    // Wyświetlam komunikat o zwycięstwie komputera lub gracza
+                    if (isSinglePlayer && currentPlayer == 'O')
+                    {
+                        AuthorInfo.WriteColor("\nKomputer (O) wygrał! Spróbuj ponownie.\n", ConsoleColor.Red);
+                    }
+                }
 
             }
         }
