@@ -22,5 +22,17 @@ namespace ConsoleGames.Games
         private string targetWord;              // Słowo do odgadnięcia
         private List<char> guessedLetters;      // Lista odgadniętych liter
         private int lives;                      // Liczba pozostałych żyć
+
+        // Definiuję metodę Run, w której znajduje się główna logika gry
+        public void Run()
+        {
+
+        }
+
+        // Definiuję metodę SetupGame, która inicjalizuje grę
+        private void SetupGame()
+        {
+            Random random = new Random();
+        }
     }
 }
