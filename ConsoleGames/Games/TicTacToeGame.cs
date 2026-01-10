@@ -104,6 +104,11 @@ namespace ConsoleGames.Games
                     gameEnded = true;   // Ustawiam flagę zakończenia gry na true
                 }
 
+                // Zmiana gracza na następnego, jeśli gra się nie zakończyła
+                else
+                {
+                    currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';   // Zmieniam aktualnego gracza na następnego
+                }
             }
         }
         
