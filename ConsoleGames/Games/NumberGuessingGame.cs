@@ -19,6 +19,12 @@ namespace ConsoleGames.Games
         // Definiuję metodę Play, w której znajduje się główna logika gry
         public void Run()
         {
+            // Wywołuję metodę SelectDifficulty, aby umożliwić użytkownikowi wybór poziomu trudności
+            if (!SelectDifficulty())
+            {
+                return; // Użytkownik zdecydował się wyjść z menu wyboru poziomu trudności
+            }
+
             // Wywołuję metodę DisplayHeader z klasy AuthorInfo, aby wyświetlić nagłówek gry
             AuthorInfo.DisplayHeader("Gra w Zgadywanie Liczb");
 
