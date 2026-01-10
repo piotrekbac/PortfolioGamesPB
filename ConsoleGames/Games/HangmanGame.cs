@@ -18,5 +18,9 @@ namespace ConsoleGames.Games
         {
             "motyl", "kwiatek", "polana", "łąka", "drzewo", "słońce", "chmura", "deszcz",
         };
+
+        private string targetWord;              // Słowo do odgadnięcia
+        private List<char> guessedLetters;      // Lista odgadniętych liter
+        private int lives;                      // Liczba pozostałych żyć
     }
 }
