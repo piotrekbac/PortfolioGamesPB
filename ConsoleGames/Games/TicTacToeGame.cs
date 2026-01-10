@@ -61,7 +61,7 @@ namespace ConsoleGames.Games
                 // obsługujemy ruch człowieka
                 else
                 {
-                    Console.WriteLine($"Tura gracza: {currentPlayer}");
+                    Console.WriteLine($"\nTura gracza: {currentPlayer}");
                     Console.WriteLine("Wybierz pole (1-9) lub naciśnij klawisz 'q' aby wyjść: ");
 
                     // Logika ruchu gracza jest w osobnej metodzie PerformPlayerMove
@@ -287,7 +287,7 @@ namespace ConsoleGames.Games
             string modeInfo = isSinglePlayer ? "Tryb jednoosobowy (przeciwko komputerowi)" : "Tryb dwuosobowy (gracz vs gracz)";
 
             Console.WriteLine($"\nWybrałeś tryb: {modeInfo}\n");
-            Console.WriteLine("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+            Console.WriteLine("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n");
 
             // Rysuję planszę w konsoli dla pierwszego wiersza 
 
@@ -308,9 +308,9 @@ namespace ConsoleGames.Games
 
             Console.Write("  ");
             DrawCell(1, 0);                 // Rysuję komórkę (1,0) - drugi wiersz, pierwsza kolumna
-            Console.WriteLine("  |  ");
+            Console.Write("  |  ");
             DrawCell(1, 1);                 // Rysuję komórkę (1,1) - drugi wiersz, druga kolumna
-            Console.WriteLine("  |  ");
+            Console.Write("  |  ");
             DrawCell(1, 2);                 // Rysuję komórkę (1,2) - drugi wiersz, trzecia kolumna
             Console.WriteLine();
 
