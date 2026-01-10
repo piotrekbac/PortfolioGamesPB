@@ -63,7 +63,15 @@ namespace ConsoleGames.Games
                 {
                     Console.WriteLine($"Tura gracza: {currentPlayer}");
                     Console.WriteLine("Wybierz pole (1-9) lub naciśnij klawisz 'q' aby wyjść: ");
+
+                    // Logika ruchu gracza jest w osobnej metodzie PerformPlayerMove
+                    if (!PerformPlayerMove())
+                    {
+                        return; // Użytkownik zdecydował się wyjść z gry
+                    }
                 }
+
+
             }
         }
         
