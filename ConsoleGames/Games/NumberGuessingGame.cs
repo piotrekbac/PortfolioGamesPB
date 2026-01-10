@@ -144,14 +144,14 @@ namespace ConsoleGames.Games
         }
 
         // Metoda do pobierania i walidacji liczby od użytkownika
-        private int? GetValidNumberOrExit(int attempNumber)
+        private int? GetValidNumberOrExit(int attemptNumber, int currentMaxRange)
         {
             // Pętla do momentu uzyskania poprawnej liczby
             while (true)
             {
                 // Wyświetlam informację o numerze próby
                 Console.ForegroundColor = ConsoleColor.DarkGray;
-                Console.WriteLine($"Próba {attempNumber}");
+                Console.WriteLine($"Próba {attemptNumber}");
 
                 Console.ResetColor();          // Resetuję kolor konsoli do domyślnego
 
@@ -168,7 +168,7 @@ namespace ConsoleGames.Games
                 if (int.TryParse(input, out int result))
                 {
                     // Sprawdzam, czy liczba jest w zakresie od 1 do 100
-                    if (result < 1 || result > 100)
+                    if (result < 1 || result > currentMaxRange)
                     {
                         // Wyświetlam komunikat o błędzie, jeśli liczba jest poza zakresem
                         AuthorInfo.WriteError("Liczba musi być w zakresie od 1 do 100. Spróbuj ponownie.");
