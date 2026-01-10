@@ -110,6 +110,11 @@ namespace ConsoleGames.Games
                     currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';   // Zmieniam aktualnego gracza na następnego
                 }
             }
+
+            // Po zakończeniu gry wyświetlam komunikat i czekam na naciśnięcie klawisza przez użytkownika
+            Console.WriteLine("\nNaciśnij dowolny klawisz, aby wrócić do menu...");
+
+            Console.ReadKey();   // Czekam na naciśnięcie klawisza przez użytkownika przed powrotem do menu
         }
         
 
