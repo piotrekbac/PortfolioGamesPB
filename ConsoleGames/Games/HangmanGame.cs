@@ -32,7 +32,22 @@ namespace ConsoleGames.Games
         // Definiuję metodę SetupGame, która inicjalizuje grę
         private void SetupGame()
         {
+            // Inicjalizuję losowanie słowa
             Random random = new Random();
+
+            // Losuję słowo do odgadnięcia z listy wordRepository
+            targetWord = wordRepository[random.Next(wordRepository.Count)];
+
+            // Inicjalizuję listę odgadniętych liter
+            guessedLetters = new List<char>();
+
+            // Spację w haśle traktuję jako odgadniętą literę - ułatwia to grę
+            if (targetWord.Contains(" "))
+            {
+                guessedLetters.Add(' '); // Dodaj spację do odgadniętych liter, jeśli słowo zawiera spację
+            }
+
+            lives = 6; // Ustawiam liczbę żyć na 6 - odpowiednio do rysunku wisielca
         }
     }
 }
