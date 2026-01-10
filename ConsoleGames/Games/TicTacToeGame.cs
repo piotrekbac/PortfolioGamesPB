@@ -92,6 +92,18 @@ namespace ConsoleGames.Games
                     gameEnded = true;   // Ustawiam flagę zakończenia gry na true
                 }
 
+                // Sprawdzam, czy gra zakończyła się remisem (wszystkie pola zajęte, brak zwycięzcy)
+                else if (turnsCount == 9)
+                {
+                    // Rysuję planszę
+                    DrawBoard();
+
+                    // Wyświetlam komunikat o remisie
+                    AuthorInfo.WriteColor("\nRemis! Nikt nie wygrał.\n", ConsoleColor.Yellow);
+
+                    gameEnded = true;   // Ustawiam flagę zakończenia gry na true
+                }
+
             }
         }
         
