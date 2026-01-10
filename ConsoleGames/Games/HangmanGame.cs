@@ -65,6 +65,15 @@ namespace ConsoleGames.Games
                     }
                 }
             }
+
+            // Jeżeli podane słowo jest niepoprawne - odejmujemy 2 życia graczowi - oto kara za porywcze zgadywanie
+            else
+            {
+                lives = -2; // Ustawiam lives na -2, aby zakończyć grę jako przegraną
+                AuthorInfo.WriteError("To nie jest to hasło! Za porywcze zgadywanie odejmuję Ci 2 życia!");
+
+                System.Threading.Thread.Sleep(1500); // Mała pauza, żeby użytkownik zdążył przeczytać komunikat
+            }
         }
     }
 }
