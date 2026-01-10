@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using ConsoleGames.Helpers;
 
@@ -12,6 +13,9 @@ namespace ConsoleGames.Games
     // Tworzę klasę NumberGuessingGame, która będzie zawierać logikę gry w zgadywanie liczb.
     public class NumberGuessingGame
     {
+        // Zmienna przechowująca maksymalny zakres losowanej liczby
+        private int maxRange;
+
         // Definiuję metodę Play, w której znajduje się główna logika gry
         public void Run()
         {
@@ -79,6 +83,18 @@ namespace ConsoleGames.Games
 
             // Czekam na naciśnięcie klawisza przez użytkownika
             Console.ReadKey();
+        }
+
+        // Metoda do wyświetlania menu wyboru poziomu trudności
+        private bool SelectDifficulty()
+        {
+            AuthorInfo.DisplayHeader("Wybierz poziom trudności");
+            Console.WriteLine("1. Poziom ŁATWY - (zakres 1-100) - Klasyk na rozgrzewkę");
+            Console.WriteLine("2. Poziom ŚREDNI - (zakres 1-500) - Dla bardziej doświadczonych graczy");
+            Console.WriteLine("3. Poziom TRUDNY - (zakres 1-1000) - Tylko dla odważnych!\n");
+            Console.WriteLine("Naciśnij 'q' aby wrócić do menu głównego");
+            Console.WriteLine("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n");
+            Console.Write("Twój wybór: ");
         }
 
         // Metoda do pobierania i walidacji liczby od użytkownika
