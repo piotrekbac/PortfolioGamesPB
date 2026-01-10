@@ -82,6 +82,14 @@ namespace ConsoleGames.Games
                     {
                         AuthorInfo.WriteColor("\nKomputer (O) wygrał! Spróbuj ponownie.\n", ConsoleColor.Red);
                     }
+
+                    // Jeśli wygrał człowiek to wyświetlam komunikat o zwycięstwie gracza
+                    else
+                    {
+                        AuthorInfo.WriteColor($"\nBRAWO! Wygrywa gracz: {currentPlayer}\n", ConsoleColor.Green);
+                    }
+
+                    gameEnded = true;   // Ustawiam flagę zakończenia gry na true
                 }
 
             }
