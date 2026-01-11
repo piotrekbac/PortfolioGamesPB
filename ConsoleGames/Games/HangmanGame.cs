@@ -60,6 +60,14 @@ namespace ConsoleGames.Games
                 AuthorInfo.WriteError("To nie jest litera! Proszę podać prawidłową literę.");
                 return;
             }
+
+            // Sprawdzam, czy litera była już odgadnięta wcześniej 
+            if (guessedLetters.Contains(letter))
+            {
+                // Wypisuję komunikat o błędzie, jeżeli litera została już odgadnięta
+                AuthorInfo.WriteError($"Litera '{letter}' została już odgadnięta. Spróbuj inną literę.");
+                return;
+            }
         }
 
         // Definuję metodę ProcesWordGuess, która przetwarza zgadywanie całego słowa
