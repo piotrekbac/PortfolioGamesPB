@@ -68,6 +68,15 @@ namespace ConsoleGames.Games
                 AuthorInfo.WriteError($"Litera '{letter}' została już odgadnięta. Spróbuj inną literę.");
                 return;
             }
+
+            guessedLetters.Add(letter); // Dodaj literę do odgadniętych liter
+
+            // Sprawdzam, czy podana litera znajduje się w docelowym słowie
+            if (targetWord.Contains(letter))
+            {
+                AuthorInfo.WriteColor("Dobrze! Trafiłeś literę!", ConsoleColor.Green);
+                System.Threading.Thread.Sleep(600); // Mała pauza, żeby użytkownik zdążył przeczytać komunikat
+            }
         }
 
         // Definuję metodę ProcesWordGuess, która przetwarza zgadywanie całego słowa
