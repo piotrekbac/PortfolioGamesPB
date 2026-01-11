@@ -50,6 +50,12 @@ namespace ConsoleGames.Games
             lives = 6; // Ustawiam liczbę żyć na 6 - odpowiednio do rysunku wisielca
         }
 
+        // Definiuję metodę ProcessLetterGuess, która przetwarza zgadywanie pojedynczej litery
+        private void ProcessLetterGuess(char letter)
+        {
+
+        }
+
         // Definuję metodę ProcesWordGuess, która przetwarza zgadywanie całego słowa
         private void ProcesWordGuess(string word)
         {
