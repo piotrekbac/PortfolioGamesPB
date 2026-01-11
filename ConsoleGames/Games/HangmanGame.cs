@@ -53,7 +53,13 @@ namespace ConsoleGames.Games
         // Definiuję metodę ProcessLetterGuess, która przetwarza zgadywanie pojedynczej litery
         private void ProcessLetterGuess(char letter)
         {
-
+            // Sprawdzam, czy podana została litera 
+            if (!char.IsLetter(letter))
+            {
+                // Wypisuję komunikat o błędzie, jeżeli podany znak nie jest literą
+                AuthorInfo.WriteError("To nie jest litera! Proszę podać prawidłową literę.");
+                return;
+            }
         }
 
         // Definuję metodę ProcesWordGuess, która przetwarza zgadywanie całego słowa
