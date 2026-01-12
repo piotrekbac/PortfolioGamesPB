@@ -121,5 +121,15 @@ namespace ConsoleGames.Games
             // Metoda LINQ .all() sprawdzacza   czy wszystkie litery w targetWord znajdują się w guessedLetters
             return targetWord.All(c => guessedLetters.Contains(c));
         }
+
+        // Definiuję metodę DrawSzubienica, która rysuje wisielca w konsoli na podstawie liczby pozostałych żyć
+        private void DrawSzubienica(int currentLives)
+        {
+            // Ustawiam kolor tekstu na ciemnocyjanowy
+            Console.ForegroundColor = ConsoleColor.DarkCyan;
+
+            // Obliczam liczbę błędów na podstawie pozostałych żyć
+            int mistakes = 6 - currentLives;
+        }
     }
 }
