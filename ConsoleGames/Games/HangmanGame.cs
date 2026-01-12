@@ -122,6 +122,16 @@ namespace ConsoleGames.Games
             return targetWord.All(c => guessedLetters.Contains(c));
         }
 
+        // Definiuję metodę DrawInterface, która rysuje interfejs gry w konsoli
+        private void DrawInterface()
+        {
+            // Wyświetlam nagłówek gry za pomocą klasy AuthorInfo
+            AuthorInfo.DisplayHeader("Wisielec");
+
+            // Rysuję szubienicę na podstawie liczby pozostałych żyć
+            DrawSzubienica(lives);
+        }
+
         // Definiuję metodę DrawSzubienica, która rysuje wisielca w konsoli na podstawie liczby pozostałych żyć
         private void DrawSzubienica(int currentLives)
         {
