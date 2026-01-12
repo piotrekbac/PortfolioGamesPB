@@ -46,6 +46,16 @@ namespace ConsoleGames.Games
                 {
                     return;     // Kończę działanie gry i wychodzę z metody Run
                 }
+
+
+                // Obsługuję logike gry
+
+                // Odgadywanie jednej litery 
+                if (input.Length == 1)
+                {
+                    char letter = input[0];         // Pobieram pierwszą literę z wejścia użytkownika
+                    ProcessLetterGuess(letter);     // Przetwarzam zgadywanie pojedynczej litery
+                }
             }
         }
 
