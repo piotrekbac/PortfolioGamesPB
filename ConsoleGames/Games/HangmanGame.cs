@@ -154,6 +154,9 @@ namespace ConsoleGames.Games
                     Console.WriteLine("_ ");
                 }
             }
+
+            Console.ResetColor();       // Resetuję kolor tekstu do domyślnego
+            Console.WriteLine();        // Dodaję pustą linię dla lepszej czytelności
         }
 
         // Definiuję metodę DrawSzubienica, która rysuje wisielca w konsoli na podstawie liczby pozostałych żyć
