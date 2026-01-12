@@ -35,6 +35,13 @@ namespace ConsoleGames.Games
             while (!gameEnded)
             {
                 DrawInterface();    // Rysuję interfejs gry
+
+                // Proszę użytkownika o podanie litery lub odgadnięcie hasła
+                Console.WriteLine("Podaj literę lub spróbuj odgadnąć hasło: ");
+
+                string input = Console.ReadLine().ToLower();   // Odczytuję wejście od użytkownika i konwertuję na małe litery  
+
+
             }
         }
 
