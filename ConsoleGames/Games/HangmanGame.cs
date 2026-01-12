@@ -68,6 +68,27 @@ namespace ConsoleGames.Games
                 {
                     AuthorInfo.WriteError("Nie podano żadnej litery ani hasła. Proszę spróbować ponownie.");
                 }
+
+                // Sprawdzam warunki zakończenia gry - czy gracz wygrał lub przegrał
+                if (CheckWin())
+                {
+                    DrawInterface();    // Rysuję interfejs gry
+                    AuthorInfo.WriteColor("Gratulacje! Odgadłeś hasło!", ConsoleColor.Green);
+                    gameEnded = true;   // Ustawiam flagę gameEnded na true, aby zakończyć grę
+                }
+
+                // Sprawdzam, czy gracz stracił wszystkie życia - przegrana gracza
+                else if (lives <= 0)
+                {
+                    DrawInterface();    // Rysuję interfejs gry
+                    AuthorInfo.WriteError($"Niestety, przegrałeś! Prawidłowe hasło to: {targetWord}");
+                    gameEnded = true;   // Ustawiam flagę gameEnded na true, aby zakończyć grę
+                }
+
+                // Jeżeli gra się zakończyła, proszę użytkownika o naciśnięcie dowolnego klawisza, aby kontynuować
+                Console.WriteLine();
+                AuthorInfo.WriteColor("Naciśnij dowolny klawisz, aby kontynuować...", ConsoleColor.DarkGray);
+                Console.ReadKey();   // Czekam na naciśnięcie dowolnego klawisza przez użytkownika
             }
         }
 
