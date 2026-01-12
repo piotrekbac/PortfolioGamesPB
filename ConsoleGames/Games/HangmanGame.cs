@@ -157,6 +157,11 @@ namespace ConsoleGames.Games
 
             Console.ResetColor();       // Resetuję kolor tekstu do domyślnego
             Console.WriteLine();        // Dodaję pustą linię dla lepszej czytelności
+
+            // Obsługuję rysowanie wykorzystanych liter
+            Console.Write("Użyj litery: ");
+            Console.ForegroundColor = ConsoleColor.DarkGray;            // Ustawiam kolor tekstu na cyjanowy dla wskazówek użytkownika
+            Console.WriteLine(string.Join(", ", guessedLetters));       // Wyświetlam odgadnięte litery oddzielone przecinkami
         }
 
         // Definiuję metodę DrawSzubienica, która rysuje wisielca w konsoli na podstawie liczby pozostałych żyć
