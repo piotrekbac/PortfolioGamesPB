@@ -146,6 +146,13 @@ namespace ConsoleGames.Games
                 {
                     Console.WriteLine($"{c}");  // Wyświetlam odgadniętą literę
                 }
+
+                // obsługuję przypadek jeżeli litera nie została odgadnięta
+                else
+                {
+                    //Jeżeli litera nie została odgadnięta, wyświetlam podkreślenie jako miejsce na literę
+                    Console.WriteLine("_ ");
+                }
             }
         }
 
