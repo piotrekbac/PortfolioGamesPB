@@ -77,6 +77,16 @@ namespace ConsoleGames.Games
                 AuthorInfo.WriteColor("Dobrze! Trafiłeś literę!", ConsoleColor.Green);
                 System.Threading.Thread.Sleep(600); // Mała pauza, żeby użytkownik zdążył przeczytać komunikat
             }
+
+            // Jeżeli litera nie występuje w haśle - odejmuję jedno życie i wypisuję komunikat o niepoprawnym strzale
+            else
+            {
+                lives--; // Odejmij jedno życie za błędne zgadywanie
+
+                // Wypisuję komunikat o błędzie, jeżeli litera nie występuje w haśle
+                AuthorInfo.WriteColor($"Niestety, litera '{letter}' nie występuje w haśle. Tracisz jedno życie.", ConsoleColor.Red);
+                System.Threading.Thread.Sleep(600); // Mała pauza, żeby użytkownik zdążył przeczytać komunikat
+            }
         }
 
         // Definuję metodę ProcesWordGuess, która przetwarza zgadywanie całego słowa
