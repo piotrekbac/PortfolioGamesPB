@@ -137,6 +137,16 @@ namespace ConsoleGames.Games
             Console.WriteLine("\nHasło do zgadnięcia: ");       // Wyświetlam tekst "Hasło do zgadnięcia: "
             Console.ForegroundColor = ConsoleColor.Yellow;      // Ustawiam kolor tekstu na żółty dla hasła
             Console.Write(" ");                                 // Dodaję odstęp przed hasłem
+
+            // Iteruję przez każdą literę w docelowym słowie
+            foreach (char c in targetWord)
+            {
+                // Sprawdzam, czy litera została odgadnięta
+                if (guessedLetters.Contains(c))
+                {
+                    Console.WriteLine($"{c}");  // Wyświetlam odgadniętą literę
+                }
+            }
         }
 
         // Definiuję metodę DrawSzubienica, która rysuje wisielca w konsoli na podstawie liczby pozostałych żyć
