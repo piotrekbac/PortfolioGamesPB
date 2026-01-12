@@ -26,7 +26,10 @@ namespace ConsoleGames.Games
         // Definiuję metodę Run, w której znajduje się główna logika gry
         public void Run()
         {
+            // Inicjalizuję grę
+            SetupGame();
 
+            bool gameEnded = false;     // Flaga do śledzenia, czy gra się zakończyła
         }
 
         // Definiuję metodę SetupGame, która inicjalizuje grę
