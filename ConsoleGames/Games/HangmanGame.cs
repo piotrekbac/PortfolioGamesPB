@@ -56,6 +56,12 @@ namespace ConsoleGames.Games
                     char letter = input[0];         // Pobieram pierwszą literę z wejścia użytkownika
                     ProcessLetterGuess(letter);     // Przetwarzam zgadywanie pojedynczej litery
                 }
+
+                // Odgadywanie całego hasła
+                else if (input.Length > 1)
+                {
+                    ProcesWordGuess(input);         // Przetwarzam zgadywanie całego hasła 
+                }
             }
         }
 
