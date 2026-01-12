@@ -62,6 +62,12 @@ namespace ConsoleGames.Games
                 {
                     ProcesWordGuess(input);         // Przetwarzam zgadywanie całego hasła 
                 }
+
+                // Obsługa błędnego wejścia - jeżeli użytkownik nie podał ani litery, ani hasła
+                else
+                {
+                    AuthorInfo.WriteError("Nie podano żadnej litery ani hasła. Proszę spróbować ponownie.");
+                }
             }
         }
 
