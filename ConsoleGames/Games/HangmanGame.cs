@@ -131,6 +131,7 @@ namespace ConsoleGames.Games
             // Obliczam liczbę błędów na podstawie pozostałych żyć
             int mistakes = 6 - currentLives;
 
+            // Rysuję szubienicę i wisielca w konsoli
             Console.WriteLine("  _______");
             Console.WriteLine("  |/    |");
 
@@ -176,6 +177,11 @@ namespace ConsoleGames.Games
                 Console.WriteLine("  |");
             }
 
+            // Podstawa szubienicy
+            Console.WriteLine("  |");
+            Console.WriteLine(" _|___\n");
+
+            Console.ResetColor(); // Resetuję kolor tekstu do domyślnego
 
         }
     }
