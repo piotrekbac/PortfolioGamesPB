@@ -41,7 +41,11 @@ namespace ConsoleGames.Games
 
                 string input = Console.ReadLine().ToLower();   // Odczytuję wejście od użytkownika i konwertuję na małe litery  
 
-
+                // Sprawdzam, czy użytkownik wpisał pojedynczą literę odpowiadającą za wyjście z programu
+                if (input == "q" || input == "exit")
+                {
+                    return;     // Kończę działanie gry i wychodzę z metody Run
+                }
             }
         }
 
