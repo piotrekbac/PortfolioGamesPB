@@ -162,6 +162,20 @@ namespace ConsoleGames.Games
                 Console.WriteLine("  |");
             }
 
+            // Nogi wisielca
+            if (mistakes == 5)
+            {
+                Console.WriteLine("  |    /");
+            }
+            else if (mistakes >= 6)
+            {
+                Console.WriteLine("  |    / \\");
+            }
+            else
+            {
+                Console.WriteLine("  |");
+            }
+
 
         }
     }
