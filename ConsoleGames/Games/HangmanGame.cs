@@ -136,8 +136,26 @@ namespace ConsoleGames.Games
 
             // Głowa wisielca 
             if (mistakes >= 1)
-            { 
+            {
                 Console.WriteLine("  |     O");
+            }
+            else
+            {
+                Console.WriteLine("  |");
+            }
+
+            // Tułów i ramiona naszego wisielca
+            if (mistakes == 2)
+            {
+                Console.WriteLine("  |     |");
+            }
+            else if (mistakes == 3)
+            {
+                Console.WriteLine("  |    /|");
+            }
+            else if (mistakes >= 4)
+            {
+                Console.WriteLine("  |    /|\\");
             }
             else
             {
