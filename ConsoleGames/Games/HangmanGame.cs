@@ -30,6 +30,12 @@ namespace ConsoleGames.Games
             SetupGame();
 
             bool gameEnded = false;     // Flaga do śledzenia, czy gra się zakończyła
+
+            // Główna pętla gry
+            while (!gameEnded)
+            {
+                DrawInterface();    // Rysuję interfejs gry
+            }
         }
 
         // Definiuję metodę SetupGame, która inicjalizuje grę
