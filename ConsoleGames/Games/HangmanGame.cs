@@ -114,5 +114,12 @@ namespace ConsoleGames.Games
                 System.Threading.Thread.Sleep(1500); // Mała pauza, żeby użytkownik zdążył przeczytać komunikat
             }
         }
+
+        // Definiuję metodę CheckWin, która sprawdza, czy gracz wygrał grę
+        private bool CheckWin()
+        {
+            // Metoda LINQ .all() sprawdzacza   czy wszystkie litery w targetWord znajdują się w guessedLetters
+            return targetWord.All(c => guessedLetters.Contains(c));
+        }
     }
 }
