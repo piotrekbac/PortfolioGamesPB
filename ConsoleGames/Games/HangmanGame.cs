@@ -130,6 +130,13 @@ namespace ConsoleGames.Games
 
             // Rysuję szubienicę na podstawie liczby pozostałych żyć
             DrawSzubienica(lives);
+
+
+            // Rysuję hasło z maskowaniem 
+
+            Console.WriteLine("\nHasło do zgadnięcia: ");       // Wyświetlam tekst "Hasło do zgadnięcia: "
+            Console.ForegroundColor = ConsoleColor.Yellow;      // Ustawiam kolor tekstu na żółty dla hasła
+            Console.Write(" ");                                 // Dodaję odstęp przed hasłem
         }
 
         // Definiuję metodę DrawSzubienica, która rysuje wisielca w konsoli na podstawie liczby pozostałych żyć
