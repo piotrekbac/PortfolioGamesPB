@@ -130,6 +130,21 @@ namespace ConsoleGames.Games
 
             // Obliczam liczbę błędów na podstawie pozostałych żyć
             int mistakes = 6 - currentLives;
+
+            Console.WriteLine("  _______");
+            Console.WriteLine("  |/    |");
+
+            // Głowa wisielca 
+            if (mistakes >= 1)
+            { 
+                Console.WriteLine("  |     O");
+            }
+            else
+            {
+                Console.WriteLine("  |");
+            }
+
+
         }
     }
 }
