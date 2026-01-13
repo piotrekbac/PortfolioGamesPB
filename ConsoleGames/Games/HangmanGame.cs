@@ -138,6 +138,9 @@ namespace ConsoleGames.Games
             // Dzięki temu dodajemy nową kategorię w kodzie, a menu aktualizuje się automatycznie
 
             int index = 1; // Inicjalizuję indeks do numerowania kategorii
+            List<string> keys = wordCategories.Keys.ToList(); // Pobieram listę kluczy (nazw kategorii) ze słownika wordCategories
+
+
         }
 
         // Definiuję metodę SetupGame, która inicjalizuje grę
