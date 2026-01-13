@@ -132,6 +132,12 @@ namespace ConsoleGames.Games
             // Wyświetlam nagłówek wyboru kategorii za pomocą klasy AuthorInfo
             AuthorInfo.DisplayHeader("Wisielec - wybór kategorii haseł");
             Console.WriteLine("Wybierz tematykę haseł: \n");
+
+
+            // Dynamicznie generujemy listę opcji na podstawie kluczy w słowniku wordCategories
+            // Dzięki temu dodajemy nową kategorię w kodzie, a menu aktualizuje się automatycznie
+
+            int index = 1; // Inicjalizuję indeks do numerowania kategorii
         }
 
         // Definiuję metodę SetupGame, która inicjalizuje grę
