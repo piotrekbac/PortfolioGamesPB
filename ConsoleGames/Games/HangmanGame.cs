@@ -52,9 +52,10 @@ namespace ConsoleGames.Games
             }
         };
 
-        private string targetWord;              // Słowo do odgadnięcia
-        private List<char> guessedLetters;      // Lista odgadniętych liter
-        private int lives;                      // Liczba pozostałych żyć
+        private string targetWord;                  // Słowo do odgadnięcia
+        private List<char> guessedLetters;          // Lista odgadniętych liter
+        private int lives;                          // Liczba pozostałych żyć
+        private string currentCategoryName;         // Aktualnie wybrana kategoria słów
 
         // Definiuję metodę Run, w której znajduje się główna logika gry
         public void Run()
