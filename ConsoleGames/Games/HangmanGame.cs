@@ -126,6 +126,12 @@ namespace ConsoleGames.Games
             }
         }
 
+        // Definiuję metodę SelectCategory, która pozwala użytkownikowi wybrać kategorię haseł
+        private bool SelectCategory()
+        {
+            
+        }
+
         // Definiuję metodę SetupGame, która inicjalizuje grę
         private void SetupGame()
         {
