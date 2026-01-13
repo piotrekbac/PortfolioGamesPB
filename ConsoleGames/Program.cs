@@ -50,6 +50,12 @@ namespace ConsoleGames
                         ticTacToeGame.Run();
                         break;
 
+                    // W przypadku wyboru "3" uruchamiam grę w wisielca
+                    case "3":
+                        HangmanGame hangmanGame = new HangmanGame();
+                        hangmanGame.Run();
+                        break;
+
                     // W przypadku wyboru "0" ustawiam zmienną sterującą na false, aby zakończyć program
                     case "0":
                         keepRunning = false;
