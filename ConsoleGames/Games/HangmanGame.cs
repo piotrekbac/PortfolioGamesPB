@@ -129,7 +129,9 @@ namespace ConsoleGames.Games
         // Definiuję metodę SelectCategory, która pozwala użytkownikowi wybrać kategorię haseł
         private bool SelectCategory()
         {
-            
+            // Wyświetlam nagłówek wyboru kategorii za pomocą klasy AuthorInfo
+            AuthorInfo.DisplayHeader("Wisielec - wybór kategorii haseł");
+            Console.WriteLine("Wybierz tematykę haseł: \n");
         }
 
         // Definiuję metodę SetupGame, która inicjalizuje grę
