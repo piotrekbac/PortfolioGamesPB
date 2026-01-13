@@ -140,7 +140,12 @@ namespace ConsoleGames.Games
             int index = 1; // Inicjalizuję indeks do numerowania kategorii
             List<string> keys = wordCategories.Keys.ToList(); // Pobieram listę kluczy (nazw kategorii) ze słownika wordCategories
 
-
+            // Iteruję przez klucze i wyświetlam je z numeracją
+            foreach (var key in keys)
+            {
+                Console.WriteLine($"[{index}] {key}");      // Wyświetlam numerowaną kategorię
+                index++;                                    // Zwiększam indeks dla kolejnej kategorii
+            }
         }
 
         // Definiuję metodę SetupGame, która inicjalizuje grę
