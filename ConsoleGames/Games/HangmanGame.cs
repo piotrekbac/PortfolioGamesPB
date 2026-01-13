@@ -33,6 +33,14 @@ namespace ConsoleGames.Games
                 }
             },
 
+            // Kategoria: Stolice Europy
+            {
+                "Stolice Europy",
+                new List<string>
+                {
+                    "warszawa", "berlin", "paryż", "madryt", "rzym", "londyn", "praga", "budapeszt",
+                }
+            }
         };
 
         private string targetWord;              // Słowo do odgadnięcia
