@@ -146,6 +146,11 @@ namespace ConsoleGames.Games
                 Console.WriteLine($"[{index}] {key}");      // Wyświetlam numerowaną kategorię
                 index++;                                    // Zwiększam indeks dla kolejnej kategorii
             }
+
+            // Wyświetlam opcję wyjścia z wyboru kategorii
+            Console.WriteLine("Wpisz 'q', aby wyjść z wyboru kateogrii.");
+            Console.WriteLine("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n");
+            Console.Write("Twój wybór: "); // Proszę użytkownika o wybór kategorii
         }
 
         // Definiuję metodę SetupGame, która inicjalizuje grę
