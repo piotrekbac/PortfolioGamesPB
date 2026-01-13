@@ -13,10 +13,17 @@ namespace ConsoleGames.Games
     // Tworzę klasę HangmanGame, która będzie zawierać logikę gry w wisielca.
     public class HangmanGame
     {
-        // Definiuję bazę naszych haseł w postaci listy stringów pod nazwą wordRepository
-        private List<string> wordRepository = new List<string>
+        // Definiuję bazę naszych haseł w postaci słownika przechowującego listy stringów pod nazwą wordCategories
+        private Dictionary<string, List<string>> wordCategories = new Dictionary<string, List<string>>
         {
-            "motyl", "kwiatek", "polana", "łąka", "drzewo", "słońce", "chmura", "deszcz",
+            {
+                "Roślinność",
+                new List<string>
+                {
+                    "motyl", "kwiatek", "polana", "łąka", "drzewo", "słońce", "chmura", "deszcz",
+                }
+            },
+
         };
 
         private string targetWord;              // Słowo do odgadnięcia
