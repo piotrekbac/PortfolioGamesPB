@@ -25,6 +25,7 @@ namespace ConsoleGames
                 Console.WriteLine("Wybierz aplikację, którą chcesz uruchomić: \n");
                 Console.WriteLine("1. Gra: Zgadnij liczbę");
                 Console.WriteLine("2. Gra: Kółko i krzyżyk");
+                Console.WriteLine("3. Gra: Wisielec");
                 Console.WriteLine("0. Wyjdź z programu\n");
                 Console.WriteLine("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n");
 
