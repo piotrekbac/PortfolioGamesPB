@@ -40,6 +40,15 @@ namespace ConsoleGames.Games
                 {
                     "warszawa", "berlin", "paryż", "madryt", "rzym", "londyn", "praga", "budapeszt",
                 }
+            },
+
+            // Kategoria: Marki Samochodów
+            {
+                "Marki Samochodów",
+                new List<string>
+                {
+                    "toyota", "ford", "bmw", "audi", "honda", "chevrolet", "nissan", "volkswagen",
+                }
             }
         };
 
