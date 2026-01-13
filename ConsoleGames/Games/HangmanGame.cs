@@ -16,11 +16,20 @@ namespace ConsoleGames.Games
         // Definiuję bazę naszych haseł w postaci słownika przechowującego listy stringów pod nazwą wordCategories
         private Dictionary<string, List<string>> wordCategories = new Dictionary<string, List<string>>
         {
+            // Kategoria: Roślinność 
             {
                 "Roślinność",
                 new List<string>
                 {
                     "motyl", "kwiatek", "polana", "łąka", "drzewo", "słońce", "chmura", "deszcz",
+                }
+            },
+
+            // Kategoria: Zwierzęta
+            {
+                "Zwierzęta",
+                new List<string> {
+                    "lew", "tygrys", "słoń", "żyrafa", "kangur", "pingwin", "delfin", "wieloryb",
                 }
             },
 
