@@ -162,6 +162,18 @@ namespace ConsoleGames.Games
                 {
                     return false; // Użytkownik wybrał wyjście, zwracam false
                 }
+
+                // Sprawdzam, czy wejście użytkownika jest poprawnym numerem kategorii
+                if (int.TryParse(input, out int choice) && choice >= 1 && choice <= keys.Count)
+                {
+                    // Użytkownik dokonuje wyboru, sprawdzamy numer i mapujemy go na nazwę kategorii 
+                    // przykładowo jeżeli użytkownik wybierze 1, to currentCategoryName będzie równe keys[0], czyli pierwszej kategorii w słowniku
+
+                    // Ustawiam aktualnie wybraną kategorię na podstawie wyboru użytkownika - listy są indeksowane od 0 dlatego odejmujemy 1
+                    currentCategoryName = keys[choice - 1]; 
+
+                    return true; // Zwracam true, ponieważ użytkownik dokonał poprawnego wyboru kategorii
+                }
             }
         }
 
