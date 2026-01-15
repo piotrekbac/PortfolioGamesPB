@@ -36,5 +36,11 @@ namespace ConsoleGames.Games
         private int height = 20;                 // Wysokość planszy gry
         private int score;                       // Aktualny wynik gracza
         private int speed;                       // Prędkość ruchu węża
+
+        // Główna metoda uruchamiająca grę Snake
+        public void Run()
+        {
+
+        }
     }
 }
