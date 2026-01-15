@@ -72,6 +72,9 @@ namespace ConsoleGames.Games
         // Definiuję metodę generującą pozycję jedzenia na planszy gry
         private Point GenerateFood(List<Point> snake)
         {
+            Random random = new Random();        // Tworzę nową instancję generatora liczb losowych
+            Point food;                          // Deklaruję zmienną do przechowywania pozycji jedzenia
+
 
         }
     }
