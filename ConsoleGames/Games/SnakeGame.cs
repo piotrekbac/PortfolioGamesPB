@@ -68,5 +68,11 @@ namespace ConsoleGames.Games
 
             Console.ResetColor();      // Resetuję kolor konsoli do domyślnego
         }
+
+        // Definiuję metodę generującą pozycję jedzenia na planszy gry
+        private Point GenerateFood(List<Point> snake)
+        {
+
+        }
     }
 }
