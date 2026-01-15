@@ -11,6 +11,12 @@ namespace ConsoleGames.Games
     // Klasa implementująca grę Snake 
     public class SnakeGame
     {
-
+        // Definiuję strukturę pomocniczą Point do reprezentacji punktów na planszy
+        struct Point
+        {
+            // Współrzędne punktu na planszy
+            public int X { get; set; }
+            public int Y { get; set; }
+        }
     }
 }
