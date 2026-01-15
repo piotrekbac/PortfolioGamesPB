@@ -60,6 +60,12 @@ namespace ConsoleGames.Games
         // Definiuję metodę Run, w której znajduje się główna logika gry
         public void Run()
         {
+            // Warunek wstępny - wybór kategorii haseł przez użytkownika 
+            if (!SelectCategory())
+            {
+                return;                 // Użytkownik wybrał wyjście z wyboru kategorii, kończę działanie gry
+            }
+
             // Inicjalizuję grę
             SetupGame();
 
