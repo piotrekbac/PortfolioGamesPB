@@ -25,5 +25,8 @@ namespace ConsoleGames.Games
                 Y = y;      // Współrzędna Y punktu
             }
         }
+
+        // Definiuję wyliczenie Direction do reprezentacji kierunków ruchu węża
+        enum Direction { Up, Down, Left, Right }
     }
 }
