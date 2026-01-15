@@ -174,6 +174,9 @@ namespace ConsoleGames.Games
 
                     return true; // Zwracam true, ponieważ użytkownik dokonał poprawnego wyboru kategorii
                 }
+
+                // Obsługa błędnego wejścia - jeżeli użytkownik nie podał poprawnego numeru kategorii
+                AuthorInfo.WriteError($"Nieprawidłowy wybór. Proszę wpisać poprawny numer kategorii (od 1 do {keys.Count}) lub 'q' (bądź 'exit') aby wyjść.");
             }
         }
 
