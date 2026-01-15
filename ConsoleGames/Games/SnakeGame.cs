@@ -28,5 +28,13 @@ namespace ConsoleGames.Games
 
         // Definiuję wyliczenie Direction do reprezentacji kierunków ruchu węża
         enum Direction { Up, Down, Left, Right }
+
+
+        // Ustawienia planszy dla gry Snake
+
+        private int width = 40;                  // Szerokość planszy gry
+        private int height = 20;                 // Wysokość planszy gry
+        private int score;                       // Aktualny wynik gracza
+        private int speed;                       // Prędkość ruchu węża
     }
 }
