@@ -56,6 +56,15 @@ namespace ConsoleGames.Games
                 Console.SetCursorPosition(x, height);             // Ustawiam kursor na dolną krawędź
                 Console.Write("#");                               // Rysuję dolną krawędź obramowania
             }
+
+            // Rysuję boczne krawędzie obramowania planszy
+            for (int y = 0; y <= height; y++)
+            {
+                Console.SetCursorPosition(0, y);                  // Ustawiam kursor na lewą krawędź
+                Console.Write("#");                               // Rysuję lewą krawędź obramowania
+                Console.SetCursorPosition(width, y);              // Ustawiam kursor na prawą krawędź
+                Console.Write("#");                               // Rysuję prawą krawędź obramowania
+            }
         }
     }
 }
