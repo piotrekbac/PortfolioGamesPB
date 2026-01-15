@@ -21,6 +21,8 @@ namespace ConsoleGames
             // Pętla główna programu, która pozwala na ponowne uruchomienie gry po jej zakończeniu
             while (keepRunning)
             {
+                AuthorInfo.DisplayHeader("Hub gier konsolowych - Piotr Bacior");
+
                 // Wyświetlam menu wyboru gry dla użytkownika i przedstawienie opcji
                 Console.WriteLine("Wybierz aplikację, którą chcesz uruchomić: \n");
                 Console.WriteLine("1. Gra: Zgadnij liczbę");
