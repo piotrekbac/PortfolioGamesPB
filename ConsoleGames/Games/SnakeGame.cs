@@ -17,6 +17,13 @@ namespace ConsoleGames.Games
             // Współrzędne punktu na planszy
             public int X { get; set; }
             public int Y { get; set; }
+
+            // Konstruktor inicjalizujący punkt z podanymi współrzędnymi
+            public Point(int x, int y)
+            {
+                X = x;      // Współrzędna X punktu
+                Y = y;      // Współrzędna Y punktu
+            }
         }
     }
 }
