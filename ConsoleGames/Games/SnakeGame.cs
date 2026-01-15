@@ -65,6 +65,8 @@ namespace ConsoleGames.Games
                 Console.SetCursorPosition(width, y);              // Ustawiam kursor na prawą krawędź
                 Console.Write("#");                               // Rysuję prawą krawędź obramowania
             }
+
+            Console.ResetColor();      // Resetuję kolor konsoli do domyślnego
         }
     }
 }
