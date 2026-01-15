@@ -66,15 +66,14 @@ namespace ConsoleGames.Games
                 return;                 // Użytkownik wybrał wyjście z wyboru kategorii, kończę działanie gry
             }
 
-            // Inicjalizuję grę
-            SetupGame();
+            SetupGame();                // Inicjalizuję grę
 
             bool gameEnded = false;     // Flaga do śledzenia, czy gra się zakończyła
 
             // Główna pętla gry
             while (!gameEnded)
             {
-                DrawInterface();    // Rysuję interfejs gry
+                DrawInterface();        // Rysuję interfejs gry
 
                 // Proszę użytkownika o podanie litery lub odgadnięcie hasła
                 Console.WriteLine("Podaj literę lub spróbuj odgadnąć hasło: ");
@@ -292,9 +291,9 @@ namespace ConsoleGames.Games
 
             // Rysuję hasło z maskowaniem 
 
-            Console.WriteLine("\nHasło do zgadnięcia: ");       // Wyświetlam tekst "Hasło do zgadnięcia: "
-            Console.ForegroundColor = ConsoleColor.Yellow;      // Ustawiam kolor tekstu na żółty dla hasła
-            Console.Write(" ");                                 // Dodaję odstęp przed hasłem
+            Console.WriteLine("\nHasło do zgadnięcia: \n");       // Wyświetlam tekst "Hasło do zgadnięcia: "
+            Console.ForegroundColor = ConsoleColor.Yellow;        // Ustawiam kolor tekstu na żółty dla hasła
+            Console.WriteLine(" ");                               // Dodaję odstęp przed hasłem
 
             // Iteruję przez każdą literę w docelowym słowie
             foreach (char c in targetWord)
@@ -317,7 +316,7 @@ namespace ConsoleGames.Games
             Console.WriteLine();        // Dodaję pustą linię dla lepszej czytelności
 
             // Obsługuję rysowanie wykorzystanych liter
-            Console.Write("Użyj litery: ");
+            Console.Write("Użyte litery: ");
             Console.ForegroundColor = ConsoleColor.DarkGray;            // Ustawiam kolor tekstu na cyjanowy dla wskazówek użytkownika
             Console.WriteLine(string.Join(", ", guessedLetters));       // Wyświetlam odgadnięte litery oddzielone przecinkami
             Console.ResetColor();                                       // Resetuję kolor tekstu do domyślnego

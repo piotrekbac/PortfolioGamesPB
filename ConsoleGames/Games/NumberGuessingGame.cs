@@ -95,7 +95,7 @@ namespace ConsoleGames.Games
         private bool SelectDifficulty()
         {
             AuthorInfo.DisplayHeader("Wybierz poziom trudności");
-            Console.WriteLine("1. Poziom ŁATWY - (zakres 1-100) - Klasyk na rozgrzewkę");
+            Console.WriteLine("1. Poziom ŁATWY  - (zakres 1-100) - Klasyk na rozgrzewkę");
             Console.WriteLine("2. Poziom ŚREDNI - (zakres 1-500) - Dla bardziej doświadczonych graczy");
             Console.WriteLine("3. Poziom TRUDNY - (zakres 1-1000) - Tylko dla odważnych!\n");
             Console.WriteLine("Naciśnij 'q' aby wrócić do menu głównego");
@@ -138,7 +138,7 @@ namespace ConsoleGames.Games
                 // Obsługa nieprawidłowego wyboru
                 else
                 {
-                    AuthorInfo.WriteError("Nieprawidłowy wybór. Proszę wybrać 1, 2, 3 lub 'q' aby wyjść.");
+                    AuthorInfo.WriteError("\nNieprawidłowy wybór. Proszę wybrać 1, 2, 3 lub 'q' aby wyjść.\n");
                 }
             }
         }
