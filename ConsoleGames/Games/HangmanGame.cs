@@ -186,8 +186,9 @@ namespace ConsoleGames.Games
             // Inicjalizuję losowanie słowa
             Random random = new Random();
 
-            // Losuję słowo do odgadnięcia z listy wordRepository
-            targetWord = wordRepository[random.Next(wordRepository.Count)];
+            List<string> wordList = wordCategories[currentCategoryName];    // Pobieram listę słów z wybranej kategorii
+
+            targetWord = wordList[random.Next(wordList.Count)];             // Losuję słowo z listy słów w wybranej kategorii
 
             // Inicjalizuję listę odgadniętych liter
             guessedLetters = new List<char>();
