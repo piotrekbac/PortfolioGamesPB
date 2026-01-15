@@ -42,5 +42,11 @@ namespace ConsoleGames.Games
         {
 
         }
+
+        // Definiuję metodę rysującą obramowanie planszy gry 
+        private void DrawBorder()
+        {
+
+        }
     }
 }
