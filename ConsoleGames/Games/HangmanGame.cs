@@ -151,6 +151,12 @@ namespace ConsoleGames.Games
             Console.WriteLine("Wpisz 'q', aby wyjść z wyboru kateogrii.");
             Console.WriteLine("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n");
             Console.Write("Twój wybór: "); // Proszę użytkownika o wybór kategorii
+
+            // Pętla do obsługi wyboru kategorii przez użytkownika
+            while (true)
+            {
+                string input = Console.ReadLine().ToLower(); // Odczytuję wejście od użytkownika i konwertuję na małe litery
+            }
         }
 
         // Definiuję metodę SetupGame, która inicjalizuje grę
