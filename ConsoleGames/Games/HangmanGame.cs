@@ -156,6 +156,12 @@ namespace ConsoleGames.Games
             while (true)
             {
                 string input = Console.ReadLine().ToLower(); // Odczytuję wejście od użytkownika i konwertuję na małe litery
+
+                // Sprawdzam, czy użytkownik wpisał 'q' lub 'exit' - w takim przypadku wychodzę z wyboru kategorii 
+                if (input.ToLower() == "q" || input.ToLower() == "exit")
+                {
+                    return false; // Użytkownik wybrał wyjście, zwracam false
+                }
             }
         }
 
