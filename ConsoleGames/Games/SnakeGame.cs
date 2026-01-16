@@ -59,10 +59,14 @@ namespace ConsoleGames.Games
             Point food = GenerateFood(snake);              // Generuję początkową pozycję jedzenia na planszy
             DrawBorder();                                  // Rysuję obramowanie planszy gry
 
-            // Główna pętla gry
+            // Główna pętla gry - w czasie rzeczywistym 
             while (!gameOver)
             {
-
+                // Obsługuję sprawdzenie kliknięcia klawisza przez gracza - bez zatrzymywania gry
+                if (Console.KeyAvailable)
+                {
+                    var key = Console.ReadKey(true).Key;      // Odczytuję naciśnięty klawisz bez wyświetlania go w konsoli
+                }
             }
         }
 
