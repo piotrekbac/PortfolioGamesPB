@@ -66,6 +66,12 @@ namespace ConsoleGames.Games
                 if (Console.KeyAvailable)
                 {
                     var key = Console.ReadKey(true).Key;      // Odczytuję naciśnięty klawisz bez wyświetlania go w konsoli
+
+                    // Zmieniam kierunek ruchu węża na podstawie naciśniętego klawisza
+                    if (key == ConsoleKey.UpArrow && currentDirection != Direction.Down)
+                    {
+                        currentDirection = Direction.Up;        // Zmieniam kierunek ruchu na górę
+                    }
                 }
             }
         }
