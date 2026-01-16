@@ -95,6 +95,10 @@ namespace ConsoleGames.Games
                     }
                 }
 
+                Point head = snake[0];      // Pobieram aktualną pozycję głowy węża
+
+                // Aktualizuję pozycję głowy węża na podstawie aktualnego kierunku ruchu
+                Point newHead = new Point(head.X, head.Y);
             }
         }
 
