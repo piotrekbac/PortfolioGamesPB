@@ -46,7 +46,9 @@ namespace ConsoleGames.Games
             // Inicjalizacja węża jako lista punktów na planszy, gdzie index 0 to głowa
             List<Point> snake = new List<Point>
             {
-
+                new Point(width / 2, height / 2),       // Głowa węża na środku planszy
+                new Point(width / 2, height / 2 + 1),   // Tułów węża
+                new Point(width / 2, height / 2 + 2)    // Ogon węża
             };
         }
 
