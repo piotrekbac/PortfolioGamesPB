@@ -42,6 +42,12 @@ namespace ConsoleGames.Games
         {
             Console.CursorVisible = false;      // Ukrywam kursor konsoli
             Console.Clear();                    // Czyści ekran konsoli
+
+            // Inicjalizacja węża jako lista punktów na planszy, gdzie index 0 to głowa
+            List<Point> snake = new List<Point>
+            {
+
+            };
         }
 
         // Definiuję metodę rysującą obramowanie planszy gry 
