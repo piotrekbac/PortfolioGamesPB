@@ -103,7 +103,12 @@ namespace ConsoleGames.Games
                 // Obsluga ruchu węża w zależności od kierunku
                 switch (currentDirection)
                 {
-                    case Direction.Up: newHead.Y--; break;          // Ruch w górę
+                    case Direction.Up: newHead.Y--; 
+                        break;          // Ruch w górę
+
+                    case Direction.Down: newHead.Y++; 
+                        break;        // Ruch w dół
+
                 }
             }
         }
