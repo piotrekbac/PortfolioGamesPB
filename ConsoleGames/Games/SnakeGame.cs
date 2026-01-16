@@ -59,6 +59,11 @@ namespace ConsoleGames.Games
             Point food = GenerateFood(snake);              // Generuję początkową pozycję jedzenia na planszy
             DrawBorder();                                  // Rysuję obramowanie planszy gry
 
+            // Główna pętla gry
+            while (!gameOver)
+            {
+
+            }
         }
 
         // Definiuję metodę rysującą obramowanie planszy gry 
