@@ -40,7 +40,8 @@ namespace ConsoleGames.Games
         // Główna metoda uruchamiająca grę Snake
         public void Run()
         {
-
+            Console.CursorVisible = false;      // Ukrywam kursor konsoli
+            Console.Clear();                    // Czyści ekran konsoli
         }
 
         // Definiuję metodę rysującą obramowanie planszy gry 
