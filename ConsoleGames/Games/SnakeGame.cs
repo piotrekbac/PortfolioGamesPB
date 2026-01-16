@@ -88,7 +88,13 @@ namespace ConsoleGames.Games
                         currentDirection = Direction.Right;     // Zmieniam kierunek ruchu na prawo
                     }
 
+                    // Kończę grę, jeśli naciśnięto klawisz Q
+                    else if (key == ConsoleKey.Q)
+                    {
+                        gameOver = true;                       // Kończę grę, jeśli naciśnięto klawisz Q
+                    }
                 }
+
             }
         }
 
