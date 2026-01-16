@@ -75,6 +75,14 @@ namespace ConsoleGames.Games
             Random random = new Random();        // Tworzę nową instancję generatora liczb losowych
             Point food;                          // Deklaruję zmienną do przechowywania pozycji jedzenia
 
+            // Pętla sprawdzająca, czy jedzenie nie pojawi się na ciele węża
+            do
+            {
+                food = new Point(random.Next(1, width), random.Next(1, height));   // Generuję losową pozycję jedzenia w obrębie planszy
+            }
+            while (snake.Any(p => p.X == food.X && p.Y == food.Y));      // Sprawdzam, czy jedzenie nie koliduje z ciałem węża
+
+            return food;      // Zwracam wygenerowaną pozycję jedzenia
 
         }
     }
