@@ -99,6 +99,12 @@ namespace ConsoleGames.Games
 
                 // Aktualizuję pozycję głowy węża na podstawie aktualnego kierunku ruchu
                 Point newHead = new Point(head.X, head.Y);
+
+                // Obsluga ruchu węża w zależności od kierunku
+                switch (currentDirection)
+                {
+                    case Direction.Up: newHead.Y--; break;          // Ruch w górę
+                }
             }
         }
 
