@@ -72,6 +72,12 @@ namespace ConsoleGames.Games
                     {
                         currentDirection = Direction.Up;        // Zmieniam kierunek ruchu na górę
                     }
+
+                    else if (key == ConsoleKey.DownArrow && currentDirection != Direction.Up)
+                    {
+                        currentDirection = Direction.Down;      // Zmieniam kierunek ruchu na dół
+                    }
+
                 }
             }
         }
