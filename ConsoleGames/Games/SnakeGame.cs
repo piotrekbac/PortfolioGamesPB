@@ -50,6 +50,11 @@ namespace ConsoleGames.Games
                 new Point(width / 2, height / 2 + 1),   // Tułów węża
                 new Point(width / 2, height / 2 + 2)    // Ogon węża
             };
+
+            Direction currentDirection = Direction.Up;      // Aktualny kierunek ruchu węża
+            bool gameOver = false;                          // Flaga zakończenia gry 
+            score = 0;                                      // Inicjalizacja wyniku gracza
+            speed = 100;                                    // Inicjalizacja początkowej prędkości ruchu węża
         }
 
         // Definiuję metodę rysującą obramowanie planszy gry 
