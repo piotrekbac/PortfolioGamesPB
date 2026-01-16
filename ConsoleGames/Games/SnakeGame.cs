@@ -78,6 +78,12 @@ namespace ConsoleGames.Games
                         currentDirection = Direction.Down;      // Zmieniam kierunek ruchu na dół
                     }
 
+                    else if (key == ConsoleKey.LeftArrow && currentDirection != Direction.Right)
+                    {
+                        currentDirection = Direction.Left;      // Zmieniam kierunek ruchu na lewo
+                    }
+
+
                 }
             }
         }
