@@ -55,6 +55,10 @@ namespace ConsoleGames.Games
             bool gameOver = false;                          // Flaga zakończenia gry 
             score = 0;                                      // Inicjalizacja wyniku gracza
             speed = 100;                                    // Inicjalizacja początkowej prędkości ruchu węża
+
+            Point food = GenerateFood(snake);              // Generuję początkową pozycję jedzenia na planszy
+            DrawBorder();                                  // Rysuję obramowanie planszy gry
+
         }
 
         // Definiuję metodę rysującą obramowanie planszy gry 
