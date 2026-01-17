@@ -112,6 +112,9 @@ namespace ConsoleGames.Games
                     case Direction.Left: newHead.X--;
                         break;      // Ruch w lewo
 
+                    case Direction.Right: newHead.X++; 
+                        break;     // Ruch w prawo
+
                 }
             }
         }
