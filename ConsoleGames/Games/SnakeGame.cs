@@ -120,6 +120,7 @@ namespace ConsoleGames.Games
                 if (newHead.X <= 0 || newHead.X >= width || newHead.Y <= 0 || newHead.Y >= height)
                 {
                     gameOver = true;      // Kończę grę, jeśli wąż uderzy w ścianę  
+                    continue;             // Przechodzę do następnej iteracji pętli
                 }
             }
         }
