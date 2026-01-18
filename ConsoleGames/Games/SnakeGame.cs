@@ -136,6 +136,8 @@ namespace ConsoleGames.Games
                 // Definiuję logikę zjedzenia jedzenia przez węża
                 if (newHead.X == food.X && newHead.Y == food.Y)
                 {
+                    score += 10;                     // Zwiększam wynik gracza o 10 punktów
+                    food = GenerateFood(snake);      // Generuję nową pozycję jedzenia na planszy
 
                 }
 
