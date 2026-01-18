@@ -129,6 +129,9 @@ namespace ConsoleGames.Games
                     gameOver = true;      // Kończę grę, jeśli wąż uderzy w siebie
                     continue;             // Przechodzę do następnej iteracji pętli
                 }
+
+                // Inicjujemy ruch węża 
+                snake.Insert(0, newHead);      // Dodaję nową głowę węża na początku listy
             }
         }
 
