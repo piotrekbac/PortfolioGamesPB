@@ -122,6 +122,13 @@ namespace ConsoleGames.Games
                     gameOver = true;      // Kończę grę, jeśli wąż uderzy w ścianę  
                     continue;             // Przechodzę do następnej iteracji pętli
                 }
+
+                // Sprawdzmmy czy głowa nie wchodzi w ciało - pomijay ostatni element (ogon) bo on się przesuwa
+                if (snake.Take(snake.Count - 1).Any(p => p.X == newHead.X && p.Y == newHead.Y))
+                {
+                    gameOver = true;      // Kończę grę, jeśli wąż uderzy w siebie
+                    continue;             // Przechodzę do następnej iteracji pętli
+                }
             }
         }
 
