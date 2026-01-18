@@ -132,6 +132,13 @@ namespace ConsoleGames.Games
 
                 // Inicjujemy ruch węża 
                 snake.Insert(0, newHead);      // Dodaję nową głowę węża na początku listy
+
+                // Definiuję logikę zjedzenia jedzenia przez węża
+                if (newHead.X == food.X && newHead.Y == food.Y)
+                {
+
+                }
+
             }
         }
 
