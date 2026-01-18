@@ -46,7 +46,7 @@ namespace ConsoleGames.Games
             // Inicjalizacja węża jako lista punktów na planszy, gdzie index 0 to głowa
             List<Point> snake = new List<Point>
             {
-                new Point(width / 2, height / 2),       // Głowa węża na środku planszy
+                new Point(width / 2, height / 2),       // Głowa węża
                 new Point(width / 2, height / 2 + 1),   // Tułów węża
                 new Point(width / 2, height / 2 + 2)    // Ogon węża
             };
@@ -107,13 +107,13 @@ namespace ConsoleGames.Games
                         break;          // Ruch w górę
 
                     case Direction.Down: newHead.Y++; 
-                        break;        // Ruch w dół
+                        break;          // Ruch w dół
 
                     case Direction.Left: newHead.X--;
-                        break;      // Ruch w lewo
+                        break;          // Ruch w lewo
 
                     case Direction.Right: newHead.X++; 
-                        break;     // Ruch w prawo
+                        break;          // Ruch w prawo
                 }
 
                 // Sprawdzam kolizcję ze ścianami planszy
@@ -139,6 +139,11 @@ namespace ConsoleGames.Games
                     score += 10;                     // Zwiększam wynik gracza o 10 punktów
                     food = GenerateFood(snake);      // Generuję nową pozycję jedzenia na planszy
 
+                    // Przyspieszam ruch węża po zjedzeniu jedzenia
+                    if (speed > 30)
+                    {
+                        speed = -2;         // Zwiększam prędkość ruchu węża, po zjedzeniu jedzenia
+                    }
                 }
 
             }
