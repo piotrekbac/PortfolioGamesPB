@@ -155,6 +155,10 @@ namespace ConsoleGames.Games
                     snake.RemoveAt(snake.Count - 1);                // Usuwam ogon węża z listy
                 }
 
+                // Rysuję głowę węża na nowej pozycji
+                Console.SetCursorPosition(newHead.X, newHead.Y);    // Ustawiam kursor na nowej pozycji głowy węża
+                Console.ForegroundColor = ConsoleColor.Green;       // Ustawiam kolor głowy węża na zielony
+                Console.Write("O");                                 // Rysuję głowę węża
             }
         }
 
