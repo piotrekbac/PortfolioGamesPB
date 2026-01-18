@@ -174,7 +174,9 @@ namespace ConsoleGames.Games
                 Console.ForegroundColor = ConsoleColor.White;      // Ustawiam kolor tekstu na biały
 
                 // Wyświetlam aktualny wynik gracza
-                Console.Write($"Wynik: {score} (Prędkość: {110 - speed})");                 
+                Console.Write($"Wynik: {score} (Prędkość: {110 - speed})");            
+                
+                Thread.Sleep(speed);      // Opóźniam kolejną iterację pętli na podstawie prędkości ruchu węża
             }
         }
 
