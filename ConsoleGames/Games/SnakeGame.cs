@@ -160,10 +160,12 @@ namespace ConsoleGames.Games
                 Console.ForegroundColor = ConsoleColor.Green;       // Ustawiam kolor głowy węża na zielony
                 Console.Write("O");                                 // Rysuję głowę węża
 
+                //Rysuję ciało węża na poprzedniej pozycji głowy
                 Console.SetCursorPosition(head.X, head.Y);          // Ustawiam kursor na pozycji poprzedniej głowy węża
                 Console.ForegroundColor = ConsoleColor.DarkGreen;   // Ustawiam kolor tułowia węża na ciemnozielony
                 Console.Write("o");                                 // Rysuję tułów węża
 
+                // Rysuję jedzenie na planszy
                 Console.SetCursorPosition(food.X, food.Y);          // Ustawiam kursor na pozycji jedzenia
                 Console.ForegroundColor = ConsoleColor.Red;         // Ustawiam kolor jedzenia na czerwony
                 Console.Write("@");                                 // Rysuję jedzenie
