@@ -146,6 +146,12 @@ namespace ConsoleGames.Games
                     }
                 }
 
+                // Jeśli wąż nie zjadł jedzenia, usuwam ostatni segment (ogon) naszego węża
+                else
+                {
+                    Point tail = snake[snake.Count - 1];      // Pobieram pozycję ogona węża
+                }
+
             }
         }
 
