@@ -169,6 +169,12 @@ namespace ConsoleGames.Games
                 Console.SetCursorPosition(food.X, food.Y);          // Ustawiam kursor na pozycji jedzenia
                 Console.ForegroundColor = ConsoleColor.Red;         // Ustawiam kolor jedzenia na czerwony
                 Console.Write("@");                                 // Rysuję jedzenie
+
+                Console.SetCursorPosition(0, height + 1);          // Ustawiam kursor poniżej planszy gry
+                Console.ForegroundColor = ConsoleColor.White;      // Ustawiam kolor tekstu na biały
+
+                // Wyświetlam aktualny wynik gracza
+                Console.Write($"Wynik: {score} (Prędkość: {110 - speed})");                 
             }
         }
 
