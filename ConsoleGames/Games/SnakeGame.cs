@@ -38,6 +38,9 @@ namespace ConsoleGames.Games
         private int score;                       // Aktualny wynik gracza
         private int speed;                       // Prędkość ruchu węża
 
+        private List<Point> objects;             // Lista obiektów na planszy gry
+                                                 
+
         // Główna metoda uruchamiająca grę Snake
         public void Run()
         {
