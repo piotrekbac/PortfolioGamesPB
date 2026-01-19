@@ -187,7 +187,10 @@ namespace ConsoleGames.Games
             AuthorInfo.WriteColor("\nKoniec gry", ConsoleColor.DarkRed);
 
             // Wyświetlam końcowy wynik gracza
-            Console.WriteLine($"Twój wynik końcowy: {score}");
+            Console.WriteLine($"Twój wynik końcowy: {score}\n");
+
+            // Wyświetlam instrukcję powrotu do menu głównego
+            AuthorInfo.WriteColor("Naciśnij dowolny klawisz, aby wrócić do menu głównego...", ConsoleColor.Gray);
         }
 
 
