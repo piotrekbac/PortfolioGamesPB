@@ -213,6 +213,12 @@ namespace ConsoleGames.Games
             Console.ResetColor();                 // Resetuję kolor konsoli do domyślnego
         }
 
+        // Definiuję metodę zarządzającą logiką bonusowego jedzenia na planszy gry
+        private void ManageBonusFood(Random random, List<Point> snake, Point normalFood)
+        {
+
+        }
+
         // Definiuję metodę rysującą obramowanie planszy gry 
         private void DrawBorder()
         {
