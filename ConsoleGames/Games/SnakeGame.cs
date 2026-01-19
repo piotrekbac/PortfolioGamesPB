@@ -178,6 +178,8 @@ namespace ConsoleGames.Games
                 
                 Thread.Sleep(speed);      // Opóźniam kolejną iterację pętli na podstawie prędkości ruchu węża
             }
+
+            Console.Clear();      // Czyści ekran konsoli po zakończeniu gry
         }
 
         // Definiuję metodę rysującą obramowanie planszy gry 
