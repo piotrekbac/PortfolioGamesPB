@@ -207,7 +207,7 @@ namespace ConsoleGames.Games
         // Definiuję metodę rysującą pojedynczy piksel na planszy gry - metoda pomocnicza
         private void DrawPixel(int x, int y, string symbol, ConsoleColor color)
         {
-
+            Console.SetCursorPosition(x, y);      // Ustawiam kursor na podanej pozycji
         }
 
         // Definiuję metodę rysującą obramowanie planszy gry 
