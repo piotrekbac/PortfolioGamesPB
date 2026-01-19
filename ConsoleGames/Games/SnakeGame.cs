@@ -233,6 +233,12 @@ namespace ConsoleGames.Games
                     bonusFoodTimer = 40;    // Ustawiam czas istnienia bonusowego jedzenia na 40 klatek
                 }
             }
+
+            // Jeżeli bonusowe jedzenie istnieje, to zmniejszamy jego licznik czasu i usuwamy je, gdy czas się skończy
+            else
+            {
+                bonusFoodTimer--;      // Zmniejszam licznik czasu bonusowego jedzenia
+            }
         }
 
         // Definiuję metodę rysującą obramowanie planszy gry 
