@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConsoleGames.Helpers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -181,6 +182,9 @@ namespace ConsoleGames.Games
 
             Console.Clear();                    // Czyści ekran konsoli po zakończeniu gry
             Console.CursorVisible = true;       // Przywracam widoczność kursora konsoli
+
+            // Wyświetlam komunikat o zakończeniu gry
+            AuthorInfo.WriteColor("\nKoniec gry", ConsoleColor.DarkRed);
         }
 
 
