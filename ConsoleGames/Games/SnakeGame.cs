@@ -62,8 +62,12 @@ namespace ConsoleGames.Games
             score = 0;                                      // Inicjalizacja wyniku gracza
             speed = 100;                                    // Inicjalizacja początkowej prędkości ruchu węża
 
-            Point food = GenerateFood(snake);              // Generuję początkową pozycję jedzenia na planszy
-            DrawBorder();                                  // Rysuję obramowanie planszy gry
+
+            objects = new List<Point>();                    // Inicjalizacja listy obiektów na planszy gry
+
+
+            Point food = GenerateFood(snake);               // Generuję początkową pozycję jedzenia na planszy
+            DrawBorder();                                   // Rysuję obramowanie planszy gry
 
             // Główna pętla gry - w czasie rzeczywistym 
             while (!gameOver)
