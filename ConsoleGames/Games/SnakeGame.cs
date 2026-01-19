@@ -229,6 +229,8 @@ namespace ConsoleGames.Games
                     {
                         bonusFood = GenerateFood(snake);  // Upewniam się, że bonusowe jedzenie nie koliduje z normalnym jedzeniem
                     }
+
+                    bonusFoodTimer = 40;    // Ustawiam czas istnienia bonusowego jedzenia na 40 klatek
                 }
             }
         }
