@@ -243,6 +243,8 @@ namespace ConsoleGames.Games
                 if (bonusFoodTimer <= 0)
                 {
                     Console.SetCursorPosition(bonusFood.Value.X, bonusFood.Value.Y);    // Ustawiam kursor na pozycji bonusowego jedzenia
+                    Console.Write(" ");                                                 // Czyścimy znak $ z planszy
+                    bonusFood = null;                                                   // Usuwam bonusowe jedzenie z planszy
                 }
             }
         }
