@@ -216,7 +216,11 @@ namespace ConsoleGames.Games
         // Definiuję metodę zarządzającą logiką bonusowego jedzenia na planszy gry
         private void ManageBonusFood(Random random, List<Point> snake, Point normalFood)
         {
+            // Jeżeli bonusowego jedzenia nie ma, to mamy 2% szany na jego pojawienie się w każdej klatce, na planszy
+            if (bonusFood == null)
+            {
 
+            }
         }
 
         // Definiuję metodę rysującą obramowanie planszy gry 
