@@ -185,6 +185,9 @@ namespace ConsoleGames.Games
 
             // Wyświetlam komunikat o zakończeniu gry
             AuthorInfo.WriteColor("\nKoniec gry", ConsoleColor.DarkRed);
+
+            // Wyświetlam końcowy wynik gracza
+            Console.WriteLine($"Twój wynik końcowy: {score}");
         }
 
 
