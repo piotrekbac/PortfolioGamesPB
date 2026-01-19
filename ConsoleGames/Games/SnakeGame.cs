@@ -208,6 +208,8 @@ namespace ConsoleGames.Games
         private void DrawPixel(int x, int y, string symbol, ConsoleColor color)
         {
             Console.SetCursorPosition(x, y);      // Ustawiam kursor na podanej pozycji
+            Console.ForegroundColor = color;      // Ustawiam kolor tekstu na podany kolor
+            Console.Write(symbol);                // Rysuję podany symbol na planszy
         }
 
         // Definiuję metodę rysującą obramowanie planszy gry 
