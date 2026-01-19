@@ -223,6 +223,12 @@ namespace ConsoleGames.Games
                 if (random.Next(0, 50) == 0)
                 {
                     bonusFood = GenerateFood(snake);      // Generuję pozycję bonusowego jedzenia na planszy
+
+                    // Musimy upewnić się, że bonus nie wpadł na normalne jedzenie 
+                    while (bonusFood.Value.X == normalFood.X && bonusFood.Value.Y == normalFood.Y)
+                    {
+                        bonusFood = GenerateFood(snake);  // Upewniam się, że bonusowe jedzenie nie koliduje z normalnym jedzeniem
+                    }
                 }
             }
         }
