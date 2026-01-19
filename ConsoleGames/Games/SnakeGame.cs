@@ -39,7 +39,8 @@ namespace ConsoleGames.Games
         private int speed;                       // Prędkość ruchu węża
 
         private List<Point> objects;             // Lista obiektów na planszy gry
-                                                 
+        private Point? bonusFood;                // Pozycja bonusowego jedzenia na planszy gry - możliwy null
+
 
         // Główna metoda uruchamiająca grę Snake
         public void Run()
