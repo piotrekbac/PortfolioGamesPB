@@ -204,6 +204,11 @@ namespace ConsoleGames.Games
             Console.ReadKey();      // Czekam na naciśnięcie dowolnego klawisza przez gracza
         }
 
+        // Definiuję metodę rysującą pojedynczy piksel na planszy gry - metoda pomocnicza
+        private void DrawPixel(int x, int y, string symbol, ConsoleColor color)
+        {
+
+        }
 
         // Definiuję metodę rysującą obramowanie planszy gry 
         private void DrawBorder()
