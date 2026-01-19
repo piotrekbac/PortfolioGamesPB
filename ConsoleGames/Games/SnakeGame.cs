@@ -40,6 +40,7 @@ namespace ConsoleGames.Games
 
         private List<Point> objects;             // Lista obiektów na planszy gry
         private Point? bonusFood;                // Pozycja bonusowego jedzenia na planszy gry - możliwy null
+        private int bonusFoodTimer;              // Licznik czasu dla bonusowego jedzenia
 
 
         // Główna metoda uruchamiająca grę Snake
