@@ -191,6 +191,8 @@ namespace ConsoleGames.Games
 
             // Wyświetlam instrukcję powrotu do menu głównego
             AuthorInfo.WriteColor("Naciśnij dowolny klawisz, aby wrócić do menu głównego...", ConsoleColor.Gray);
+
+            Console.ReadKey();      // Czekam na naciśnięcie dowolnego klawisza przez gracza
         }
 
 
