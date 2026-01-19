@@ -59,6 +59,12 @@ namespace ConsoleGames
                         hangmanGame.Run();
                         break;
 
+                    // W przypadku wyboru "4" uruchamiam grę w snake'a
+                    case "4":
+                        SnakeGame snakeGame = new SnakeGame();
+                        snakeGame.Run();
+                        break;
+
                     // W przypadku wyboru "0" ustawiam zmienną sterującą na false, aby zakończyć program
                     case "0":
                         keepRunning = false;
