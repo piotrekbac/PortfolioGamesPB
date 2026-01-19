@@ -222,7 +222,7 @@ namespace ConsoleGames.Games
                 // Obsługujemy 1 na 50 szansę na pojawienie się bonusowego jedzenia - 2% szans
                 if (random.Next(0, 50) == 0)
                 {
-
+                    bonusFood = GenerateFood(snake);      // Generuję pozycję bonusowego jedzenia na planszy
                 }
             }
         }
