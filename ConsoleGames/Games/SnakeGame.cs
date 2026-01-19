@@ -219,7 +219,11 @@ namespace ConsoleGames.Games
             // Jeżeli bonusowego jedzenia nie ma, to mamy 2% szany na jego pojawienie się w każdej klatce, na planszy
             if (bonusFood == null)
             {
+                // Obsługujemy 1 na 50 szansę na pojawienie się bonusowego jedzenia - 2% szans
+                if (random.Next(0, 50) == 0)
+                {
 
+                }
             }
         }
 
