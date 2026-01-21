@@ -283,7 +283,8 @@ namespace ConsoleGames.Games
             // Rysuję każdą przeszkodę na planszy gry
             foreach (var obj in objects)
             {
-
+                Console.SetCursorPosition(obj.X, obj.Y);      // Ustawiam kursor na pozycji przeszkody
+                Console.Write("#");                           // Rysuję przeszkodę na planszy
             }
         }
 
