@@ -286,6 +286,8 @@ namespace ConsoleGames.Games
                 Console.SetCursorPosition(obj.X, obj.Y);      // Ustawiam kursor na pozycji przeszkody
                 Console.Write("#");                           // Rysuję przeszkodę na planszy
             }
+
+            Console.ResetColor();      // Resetuję kolor konsoli do domyślnego
         }
 
         // Definiuję metodę generującą pozycję jedzenia na planszy gry
