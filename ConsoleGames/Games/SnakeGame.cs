@@ -38,7 +38,7 @@ namespace ConsoleGames.Games
         private int score;                       // Aktualny wynik gracza
         private int speed;                       // Prędkość ruchu węża
 
-        private List<Point> objects;             // Lista obiektów na planszy gry
+        private List<Point> obstacles;             // Lista obiektów na planszy gry
         private Point? bonusFood;                // Pozycja bonusowego jedzenia na planszy gry - możliwy null
         private int bonusFoodTimer;              // Licznik czasu dla bonusowego jedzenia
 
@@ -63,7 +63,10 @@ namespace ConsoleGames.Games
             speed = 100;                                    // Inicjalizacja początkowej prędkości ruchu węża
 
 
-            objects = new List<Point>();                    // Inicjalizacja listy obiektów na planszy gry
+            obstacles = new List<Point>();                    // Inicjalizacja listy obiektów na planszy gry
+            GenerateObstacles(5, snake);                    // Generuję 5 przeszkód na planszy gry
+            bonusFood = null;                               // Inicjalizacja braku bonusowego jedzenia na planszy
+            speed = 100;                                    // Ustawiam początkową prędkość ruchu węża
 
 
             Point food = GenerateFood(snake);               // Generuję początkową pozycję jedzenia na planszy
@@ -281,7 +284,7 @@ namespace ConsoleGames.Games
             Console.ForegroundColor = ConsoleColor.DarkGray;      // Ustawiam kolor przeszkód na ciemnoszary
 
             // Rysuję każdą przeszkodę na planszy gry
-            foreach (var obj in objects)
+            foreach (var obj in obstacles)
             {
                 Console.SetCursorPosition(obj.X, obj.Y);      // Ustawiam kursor na pozycji przeszkody
                 Console.Write("#");                           // Rysuję przeszkodę na planszy
@@ -306,9 +309,9 @@ namespace ConsoleGames.Games
                     obstacle = new Point(random.Next(2, width - 1), random.Next(2, height - 1));   // Generuję losową pozycję przeszkody w obrębie planszy
                 }
 
-                while ()
+                while (snake.Any(s => s.X == obstacle.X && s.Y == obstacle.Y) || obstacles.Any(o => o.X == obstacle.X && o.Y == obstacle.Y));
                 {
-
+                    obstacles.Add(obstacle);      // Dodaję przeszkodę do listy przeszkód (gdy znaleziono wolne miejsce)
                 }
             }
         }
