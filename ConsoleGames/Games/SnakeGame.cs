@@ -299,6 +299,17 @@ namespace ConsoleGames.Games
             for (int i = 0; i < count; i++)
             {
                 Point obstacle;                  // Deklaruję zmienną do przechowywania pozycji przeszkody
+
+                // Pętla sprawdzająca, czy przeszkoda nie pojawi się na ciele węża lub na innych przeszkodach
+                do
+                {
+                    obstacle = new Point(random.Next(2, width - 1), random.Next(2, height - 1));   // Generuję losową pozycję przeszkody w obrębie planszy
+                }
+
+                while ()
+                {
+
+                }
             }
         }
 
