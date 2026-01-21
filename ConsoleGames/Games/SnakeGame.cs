@@ -275,6 +275,12 @@ namespace ConsoleGames.Games
             Console.ResetColor();      // Resetuję kolor konsoli do domyślnego
         }
 
+        // Definiuję metodę rysującą przeszkody na planszy gry
+        private void DrawObstacles()
+        {
+
+        }
+
         // Definiuję metodę generującą pozycję jedzenia na planszy gry
         private Point GenerateFood(List<Point> snake)
         {
