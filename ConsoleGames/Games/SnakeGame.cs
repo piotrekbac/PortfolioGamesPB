@@ -278,7 +278,13 @@ namespace ConsoleGames.Games
         // Definiuję metodę rysującą przeszkody na planszy gry
         private void DrawObstacles()
         {
+            Console.ForegroundColor = ConsoleColor.DarkGray;      // Ustawiam kolor przeszkód na ciemnoszary
 
+            // Rysuję każdą przeszkodę na planszy gry
+            foreach (var obj in objects)
+            {
+
+            }
         }
 
         // Definiuję metodę generującą pozycję jedzenia na planszy gry
