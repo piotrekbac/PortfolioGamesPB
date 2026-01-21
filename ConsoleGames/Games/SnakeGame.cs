@@ -155,6 +155,8 @@ namespace ConsoleGames.Games
                 // Inicjujemy ruch węża 
                 snake.Insert(0, newHead);      // Dodaję nową głowę węża na początku listy
 
+                bool ateBonusFood = false;    // Flaga zjedzenia bonusowego jedzenia
+
                 // Definiuję logikę zjedzenia jedzenia przez węża
                 if (newHead.X == food.X && newHead.Y == food.Y)
                 {
