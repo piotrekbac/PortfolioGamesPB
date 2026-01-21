@@ -68,8 +68,11 @@ namespace ConsoleGames.Games
             bonusFood = null;                               // Inicjalizacja braku bonusowego jedzenia na planszy
             bonusFoodTimer = 0;                             // Ustawiam licznik czasu bonusowego jedzenia na 0
 
+            Random random = new Random();                   // Tworzę nową instancję generatora liczb losowych
             Point food = GenerateFood(snake);               // Generuję początkową pozycję jedzenia na planszy
+
             DrawBorder();                                   // Rysuję obramowanie planszy gry
+            DrawObstacles();                                // Rysuję przeszkody na planszy gry
 
             // Główna pętla gry - w czasie rzeczywistym 
             while (!gameOver)
