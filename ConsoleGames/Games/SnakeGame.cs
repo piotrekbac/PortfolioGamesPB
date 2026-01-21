@@ -294,6 +294,12 @@ namespace ConsoleGames.Games
         private void GenerateObstacles(int count, List<Point> snake)
         {
             Random random = new Random();        // Tworzę nową instancję generatora liczb losowych
+
+            // Generuję określoną liczbę przeszkód na planszy gry
+            for (int i = 0; i < count; i++)
+            {
+                Point obstacle;                  // Deklaruję zmienną do przechowywania pozycji przeszkody
+            }
         }
 
         // Definiuję metodę generującą pozycję jedzenia na planszy gry
