@@ -145,6 +145,13 @@ namespace ConsoleGames.Games
                     continue;             // Przechodzę do następnej iteracji pętli
                 }
 
+                // Sprawdzamy kolizję z przeszkodami na planszy gry 
+                if (obstacles.Any( o => o.X == newHead.X && o.Y == newHead.Y))
+                {
+                    gameOver = true;      // Kończę grę, jeśli wąż uderzy w przeszkodę
+                    continue;             // Przechodzę do następnej iteracji pętli
+                }
+
                 // Inicjujemy ruch węża 
                 snake.Insert(0, newHead);      // Dodaję nową głowę węża na początku listy
 
