@@ -290,6 +290,12 @@ namespace ConsoleGames.Games
             Console.ResetColor();      // Resetuję kolor konsoli do domyślnego
         }
 
+        // Definiuję metodę generującą przeszkody na planszy gry
+        private void GenerateObstacles(int count, List<Point> snake)
+        {
+            Random random = new Random();        // Tworzę nową instancję generatora liczb losowych
+        }
+
         // Definiuję metodę generującą pozycję jedzenia na planszy gry
         private Point GenerateFood(List<Point> snake)
         {
@@ -304,7 +310,6 @@ namespace ConsoleGames.Games
             while (snake.Any(p => p.X == food.X && p.Y == food.Y));      // Sprawdzam, czy jedzenie nie koliduje z ciałem węża
 
             return food;      // Zwracam wygenerowaną pozycję jedzenia
-
         }
     }
 }
