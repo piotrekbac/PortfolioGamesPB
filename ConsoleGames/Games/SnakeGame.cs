@@ -30,7 +30,6 @@ namespace ConsoleGames.Games
         // Definiuję wyliczenie Direction do reprezentacji kierunków ruchu węża
         enum Direction { Up, Down, Left, Right }
 
-
         // Ustawienia planszy dla gry Snake
 
         private int width = 40;                  // Szerokość planszy gry
@@ -41,7 +40,6 @@ namespace ConsoleGames.Games
         private List<Point> obstacles;             // Lista obiektów na planszy gry
         private Point? bonusFood;                // Pozycja bonusowego jedzenia na planszy gry - możliwy null
         private int bonusFoodTimer;              // Licznik czasu dla bonusowego jedzenia
-
 
         // Główna metoda uruchamiająca grę Snake
         public void Run()
@@ -63,11 +61,12 @@ namespace ConsoleGames.Games
             speed = 100;                                    // Inicjalizacja początkowej prędkości ruchu węża
 
 
-            obstacles = new List<Point>();                    // Inicjalizacja listy obiektów na planszy gry
+            // Inicjalizacja przeszkód i bonusu na planszy gry
+
+            obstacles = new List<Point>();                  // Inicjalizacja listy obiektów na planszy gry
             GenerateObstacles(5, snake);                    // Generuję 5 przeszkód na planszy gry
             bonusFood = null;                               // Inicjalizacja braku bonusowego jedzenia na planszy
-            speed = 100;                                    // Ustawiam początkową prędkość ruchu węża
-
+            bonusFoodTimer = 0;                             // Ustawiam licznik czasu bonusowego jedzenia na 0
 
             Point food = GenerateFood(snake);               // Generuję początkową pozycję jedzenia na planszy
             DrawBorder();                                   // Rysuję obramowanie planszy gry
