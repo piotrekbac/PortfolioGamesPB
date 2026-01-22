@@ -181,6 +181,12 @@ namespace ConsoleGames.Games
                     AuthorInfo.WriteColor("BONUS!", ConsoleColor.Yellow, false);   // Wyświetlam komunikat o zjedzeniu bonusowego jedzenia
                 }
 
+                // Zarządzam logiką bonusowego jedzenia na planszy gry
+                if (!ateBonusFood)
+                {
+                    Point tail = snake[snake.Count - 1];            // Pobieram pozycję ogona węża
+                }
+
                 // Jeśli wąż nie zjadł jedzenia, usuwam ostatni segment (ogon) naszego węża
                 else
                 {
