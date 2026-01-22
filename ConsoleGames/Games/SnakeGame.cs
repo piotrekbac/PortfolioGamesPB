@@ -171,6 +171,16 @@ namespace ConsoleGames.Games
                     }
                 }
 
+                // Obsługa logiki zjedzenia bonusowego jedzenia przez węża
+                else if (bonusFood.HasValue && newHead.X == bonusFood.Value.X && newHead.Y == bonusFood.Value.Y)
+                {
+                    score += 50;                     // Zwiększam wynik gracza o 50 punktów za zjedzenie bonusowego jedzenia
+                    ateBonusFood = true;             // Ustawiam flagę zjedzenia bonusowego jedzenia na true
+                    bonusFood = null;                // Usuwam bonusowe jedzenie z planszy
+
+                    AuthorInfo.WriteColor("BONUS!", ConsoleColor.Yellow, false);   // Wyświetlam komunikat o zjedzeniu bonusowego jedzenia
+                }
+
                 // Jeśli wąż nie zjadł jedzenia, usuwam ostatni segment (ogon) naszego węża
                 else
                 {
