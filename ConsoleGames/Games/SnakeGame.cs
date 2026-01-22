@@ -212,6 +212,8 @@ namespace ConsoleGames.Games
                 {
 
                 }
+
+                Console.SetCursorPosition(0, height + 1);      // Ustawiam kursor poniżej planszy gry
             }
 
             Console.Clear();                    // Czyści ekran konsoli po zakończeniu gry
