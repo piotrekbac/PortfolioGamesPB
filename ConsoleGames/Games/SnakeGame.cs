@@ -192,28 +192,8 @@ namespace ConsoleGames.Games
 
                 ManageBonusFood(random, snake, food);               // Zarządzam logiką bonusowego jedzenia na planszy gry
 
-                // Rysuję głowę węża na nowej pozycji
-                Console.SetCursorPosition(newHead.X, newHead.Y);    // Ustawiam kursor na nowej pozycji głowy węża
-                Console.ForegroundColor = ConsoleColor.Green;       // Ustawiam kolor głowy węża na zielony
-                Console.Write("O");                                 // Rysuję głowę węża
-
-                //Rysuję ciało węża na poprzedniej pozycji głowy
-                Console.SetCursorPosition(head.X, head.Y);          // Ustawiam kursor na pozycji poprzedniej głowy węża
-                Console.ForegroundColor = ConsoleColor.DarkGreen;   // Ustawiam kolor tułowia węża na ciemnozielony
-                Console.Write("o");                                 // Rysuję tułów węża
-
-                // Rysuję jedzenie na planszy
-                Console.SetCursorPosition(food.X, food.Y);          // Ustawiam kursor na pozycji jedzenia
-                Console.ForegroundColor = ConsoleColor.Red;         // Ustawiam kolor jedzenia na czerwony
-                Console.Write("@");                                 // Rysuję jedzenie
-
-                Console.SetCursorPosition(0, height + 1);          // Ustawiam kursor poniżej planszy gry
-                Console.ForegroundColor = ConsoleColor.White;      // Ustawiam kolor tekstu na biały
-
-                // Wyświetlam aktualny wynik gracza
-                Console.Write($"Wynik: {score} (Prędkość: {110 - speed})");            
-                
-                Thread.Sleep(speed);      // Opóźniam kolejną iterację pętli na podstawie prędkości ruchu węża
+                // Rysuję wężą na planszy gry
+                DrawPixel(newHead.X, newHead.Y, "O", ConsoleColor.Green);    // Rysuję nową głowę węża na planszy
             }
 
             Console.Clear();                    // Czyści ekran konsoli po zakończeniu gry
