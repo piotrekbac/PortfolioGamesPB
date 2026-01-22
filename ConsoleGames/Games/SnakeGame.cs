@@ -192,8 +192,11 @@ namespace ConsoleGames.Games
 
                 ManageBonusFood(random, snake, food);               // Zarządzam logiką bonusowego jedzenia na planszy gry
 
+
                 // Rysuję wężą na planszy gry
+
                 DrawPixel(newHead.X, newHead.Y, "O", ConsoleColor.Green);    // Rysuję nową głowę węża na planszy
+                DrawPixel(head.X, head.Y, "o", ConsoleColor.DarkGreen);      // Rysuję tułów węża na planszy
             }
 
             Console.Clear();                    // Czyści ekran konsoli po zakończeniu gry
