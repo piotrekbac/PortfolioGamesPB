@@ -213,7 +213,13 @@ namespace ConsoleGames.Games
 
                 }
 
-                Console.SetCursorPosition(0, height + 1);      // Ustawiam kursor poniżej planszy gry
+                Console.SetCursorPosition(0, height + 1);           // Ustawiam kursor poniżej planszy gry
+                Console.ForegroundColor = ConsoleColor.White;       // Ustawiam kolor tekstu na biały
+
+                // Wyświetlam aktualny wynik gracza i liczbę przeszkód na planszy gry
+                Console.WriteLine($"Wynik: {score} | Przeszkody: {obstacles.Count} ");
+
+                Thread.Sleep(speed);      // Opóźniam kolejną iterację pętli na podstawie prędkości ruchu węża
             }
 
             Console.Clear();                    // Czyści ekran konsoli po zakończeniu gry
