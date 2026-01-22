@@ -161,6 +161,7 @@ namespace ConsoleGames.Games
                 if (newHead.X == food.X && newHead.Y == food.Y)
                 {
                     score += 10;                     // Zwiększam wynik gracza o 10 punktów
+                    ateBonusFood = true;             // Ustawiam flagę zjedzenia bonusowego jedzenia na true
                     food = GenerateFood(snake);      // Generuję nową pozycję jedzenia na planszy
 
                     // Przyspieszam ruch węża po zjedzeniu jedzenia
