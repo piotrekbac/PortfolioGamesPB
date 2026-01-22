@@ -206,6 +206,12 @@ namespace ConsoleGames.Games
                 {
                     DrawPixel(bonusFood.Value.X, bonusFood.Value.Y, "$", ConsoleColor.Yellow);   // Rysuję bonusowe jedzenie na planszy
                 }
+
+                // Bonus znika samoczynnie po odświeżeniu ekranu w ManageBonusFood
+                else
+                {
+
+                }
             }
 
             Console.Clear();                    // Czyści ekran konsoli po zakończeniu gry
