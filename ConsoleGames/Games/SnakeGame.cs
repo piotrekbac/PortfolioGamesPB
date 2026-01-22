@@ -190,14 +190,7 @@ namespace ConsoleGames.Games
                     snake.RemoveAt(snake.Count - 1);                // Usuwam ogon węża z listy
                 }
 
-                // Jeśli wąż nie zjadł jedzenia, usuwam ostatni segment (ogon) naszego węża
-                else
-                {
-                    Point tail = snake[snake.Count - 1];            // Pobieram pozycję ogona węża
-                    Console.SetCursorPosition(tail.X, tail.Y);      // Ustawiam kursor na pozycji ogona węża
-                    Console.Write(" ");                             // Kasujemy ogon węża z ekranu 
-                    snake.RemoveAt(snake.Count - 1);                // Usuwam ogon węża z listy
-                }
+                ManageBonusFood(random, snake, food);               // Zarządzam logiką bonusowego jedzenia na planszy gry
 
                 // Rysuję głowę węża na nowej pozycji
                 Console.SetCursorPosition(newHead.X, newHead.Y);    // Ustawiam kursor na nowej pozycji głowy węża
