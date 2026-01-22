@@ -200,6 +200,12 @@ namespace ConsoleGames.Games
 
                 // Rysuję jedzenie na planszy gry
                 DrawPixel(food.X, food.Y, "@", ConsoleColor.Red);            // Rysuję jedzenie na planszy
+
+                // Rysuję bonusowe jedzenie na planszy gry, jeśli istnieje
+                if (bonusFood.HasValue)
+                {
+                    DrawPixel(bonusFood.Value.X, bonusFood.Value.Y, "$", ConsoleColor.Yellow);   // Rysuję bonusowe jedzenie na planszy
+                }
             }
 
             Console.Clear();                    // Czyści ekran konsoli po zakończeniu gry
