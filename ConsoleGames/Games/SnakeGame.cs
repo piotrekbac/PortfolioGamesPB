@@ -185,6 +185,7 @@ namespace ConsoleGames.Games
                 if (!ateBonusFood)
                 {
                     Point tail = snake[snake.Count - 1];            // Pobieram pozycję ogona węża
+                    Console.SetCursorPosition(tail.X, tail.Y);      // Ustawiam kursor na pozycji ogona węża
                 }
 
                 // Jeśli wąż nie zjadł jedzenia, usuwam ostatni segment (ogon) naszego węża
