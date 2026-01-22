@@ -197,6 +197,9 @@ namespace ConsoleGames.Games
 
                 DrawPixel(newHead.X, newHead.Y, "O", ConsoleColor.Green);    // Rysuję nową głowę węża na planszy
                 DrawPixel(head.X, head.Y, "o", ConsoleColor.DarkGreen);      // Rysuję tułów węża na planszy
+
+                // Rysuję jedzenie na planszy gry
+                DrawPixel(food.X, food.Y, "@", ConsoleColor.Red);            // Rysuję jedzenie na planszy
             }
 
             Console.Clear();                    // Czyści ekran konsoli po zakończeniu gry
