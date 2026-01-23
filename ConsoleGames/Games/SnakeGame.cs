@@ -222,6 +222,12 @@ namespace ConsoleGames.Games
                     bonusInfo = $" | Bonus za: {bonusFoodTimer} ";       // Informacja o czasie istnienia bonusowego jedzenia
                     Console.ForegroundColor = ConsoleColor.Yellow;       // Ustawiam kolor tekstu na żółty
                 }
+
+                // Obsługuję przypadek, gdy bonusowe jedzenie nie istnieje 
+                else
+                {
+                    bonusInfo = "              ";                        // Informacja o braku bonusowego jedzenia
+                }
             }
 
             Console.Clear();                    // Czyści ekran konsoli po zakończeniu gry
