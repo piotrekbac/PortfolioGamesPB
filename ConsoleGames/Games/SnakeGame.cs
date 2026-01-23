@@ -110,7 +110,8 @@ namespace ConsoleGames.Games
                     }
                 }
 
-                Point head = snake[0];      // Pobieram aktualną pozycję głowy węża
+                // Pobieram aktualną pozycję głowy węża
+                Point head = snake[0];      
 
                 // Aktualizuję pozycję głowy węża na podstawie aktualnego kierunku ruchu
                 Point newHead = new Point(head.X, head.Y);
@@ -207,26 +208,11 @@ namespace ConsoleGames.Games
                     DrawPixel(bonusFood.Value.X, bonusFood.Value.Y, "$", ConsoleColor.Yellow);   // Rysuję bonusowe jedzenie na planszy
                 }
 
-                // Bonus znika samoczynnie po odświeżeniu ekranu w ManageBonusFood
-                else
-                {
-                    /* 
-                     * Jeżeli bonus zniknął w tej klatce, to musimy zamazać go spacją. 
-                     * Jest to uproszczenie - bonus znika samoczynnie po odświeżeniu ekranu w ManageBonusFood.
-                    */
-                }
 
-                Console.SetCursorPosition(0, height + 1);           // Ustawiam kursor poniżej planszy gry
-                Console.ForegroundColor = ConsoleColor.White;       // Ustawiam kolor tekstu na biały
+                // Wyświetlam licznik czasu dla bonusowego jedzenia, jeśli istnieje
 
-                // Wyświetlam aktualny wynik gracza i liczbę przeszkód na planszy gry
-                Console.Write($"Wynik: {score} | Przeszkody: {obstacles.Count} ");
-
-                // W sytuacji, gdy prędkość jest niezerowa - opóźniam kolejną iterację pętli na podstawie prędkości ruchu węża
-                if (speed > 0)
-                {
-                    Thread.Sleep(speed);      // Opóźniam kolejną iterację pętli na podstawie prędkości ruchu węża
-                }
+                Console.SetCursorPosition(0, height + 1);               // Ustawiam kursor poniżej planszy gry
+                Console.ForegroundColor = ConsoleColor.DarkYellow;      // Ustawiam kolor tekstu na ciemnożółty
             }
 
             Console.Clear();                    // Czyści ekran konsoli po zakończeniu gry
