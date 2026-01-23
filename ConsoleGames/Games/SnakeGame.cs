@@ -167,7 +167,7 @@ namespace ConsoleGames.Games
                     // Przyspieszam ruch węża po zjedzeniu jedzenia
                     if (speed > 30)
                     {
-                        speed = -2;         // Zwiększam prędkość ruchu węża, po zjedzeniu jedzenia
+                        speed -= -2;         // Zwiększam prędkość ruchu węża, po zjedzeniu jedzenia
                     }
                 }
 
