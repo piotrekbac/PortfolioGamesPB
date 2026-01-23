@@ -232,7 +232,14 @@ namespace ConsoleGames.Games
 
                 // Wyświetlam aktualny wynik gracza oraz informacje o bonusowym jedzeniu
 
-                Console.ForegroundColor = ConsoleColor.White;            // Ustawiam kolor tekstu na biały
+                Console.ForegroundColor = ConsoleColor.White;                           // Ustawiam kolor tekstu na biały
+                Console.Write($"Wynik: {score} | Przeszkody: {obstacles.Count}");       // Wyświetlam aktualny wynik gracza oraz liczbę przeszkód na planszy
+
+                // Wyświetlam informacje o bonusowym jedzeniu
+                if (bonusFood.HasValue)
+                {
+                    
+                }
             }
 
             Console.Clear();                    // Czyści ekran konsoli po zakończeniu gry
