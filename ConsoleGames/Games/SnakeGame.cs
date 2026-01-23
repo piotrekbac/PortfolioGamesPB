@@ -252,7 +252,8 @@ namespace ConsoleGames.Games
 
             // Obsługa ekranu końcowego bez czyszczenia ekranu konsoli
 
-            int messageY = height + 3;      // Pozycja Y dla komunikatów końcowych
+            int messageY = height + 3;                  // Pozycja Y dla komunikatów końcowych
+            Console.SetCursorPosition(0, messageY);     // Ustawiam kursor na pozycji komunikatów końcowych
         }
 
         // Definiuję metodę rysującą pojedynczy piksel na planszy gry - metoda pomocnicza
