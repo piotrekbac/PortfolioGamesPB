@@ -238,7 +238,9 @@ namespace ConsoleGames.Games
                 // Wyświetlam informacje o bonusowym jedzeniu
                 if (bonusFood.HasValue)
                 {
-                    
+                    Console.ForegroundColor = ConsoleColor.Yellow;       // Ustawiam kolor tekstu na żółty
+                    Console.Write(bonusInfo);                            // Wyświetlam informacje o bonusowym jedzeniu
+                    Console.ResetColor();                                // Resetuję kolor konsoli do domyślnego
                 }
             }
 
