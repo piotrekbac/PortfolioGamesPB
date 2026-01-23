@@ -242,6 +242,12 @@ namespace ConsoleGames.Games
                     Console.Write(bonusInfo);                            // Wyświetlam informacje o bonusowym jedzeniu
                     Console.ResetColor();                                // Resetuję kolor konsoli do domyślnego
                 }
+
+                // Dodaję opóźnienie do pętli gry, aby kontrolować prędkość ruchu węża
+                if (speed > 0)
+                {
+                    Thread.Sleep(speed);      // Opóźniam pętlę gry na określony czas, aby kontrolować prędkość ruchu węża
+                }
             }
 
             Console.Clear();                    // Czyści ekran konsoli po zakończeniu gry
