@@ -213,6 +213,14 @@ namespace ConsoleGames.Games
 
                 Console.SetCursorPosition(0, height + 1);               // Ustawiam kursor poniżej planszy gry
                 Console.ForegroundColor = ConsoleColor.DarkYellow;      // Ustawiam kolor tekstu na ciemnożółty
+
+                string bonusInfo = "";  // Inicjalizuję zmienną do przechowywania informacji o bonusowym jedzeniu
+
+                // Sprawdzam, czy bonusowe jedzenie istnieje i wyświetlam odpowiednią informację
+                if (bonusFood.HasValue)
+                {
+
+                }
             }
 
             Console.Clear();                    // Czyści ekran konsoli po zakończeniu gry
