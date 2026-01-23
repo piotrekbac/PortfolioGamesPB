@@ -219,7 +219,8 @@ namespace ConsoleGames.Games
                 // Sprawdzam, czy bonusowe jedzenie istnieje i wyświetlam odpowiednią informację
                 if (bonusFood.HasValue)
                 {
-
+                    bonusInfo = $" | Bonus za: {bonusFoodTimer} ";       // Informacja o czasie istnienia bonusowego jedzenia
+                    Console.ForegroundColor = ConsoleColor.Yellow;       // Ustawiam kolor tekstu na żółty
                 }
             }
 
