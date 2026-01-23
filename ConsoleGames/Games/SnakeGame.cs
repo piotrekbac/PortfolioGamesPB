@@ -250,19 +250,9 @@ namespace ConsoleGames.Games
                 }
             }
 
-            Console.Clear();                    // Czyści ekran konsoli po zakończeniu gry
-            Console.CursorVisible = true;       // Przywracam widoczność kursora konsoli
+            // Obsługa ekranu końcowego bez czyszczenia ekranu konsoli
 
-            // Wyświetlam komunikat o zakończeniu gry
-            AuthorInfo.WriteColor("\nKoniec gry", ConsoleColor.DarkRed);
-
-            // Wyświetlam końcowy wynik gracza
-            Console.WriteLine($"Twój wynik końcowy: {score}\n");
-
-            // Wyświetlam instrukcję powrotu do menu głównego
-            AuthorInfo.WriteColor("Naciśnij dowolny klawisz, aby wrócić do menu głównego...", ConsoleColor.Gray);
-
-            Console.ReadKey();      // Czekam na naciśnięcie dowolnego klawisza przez gracza
+            int messageY = height + 3;      // Pozycja Y dla komunikatów końcowych
         }
 
         // Definiuję metodę rysującą pojedynczy piksel na planszy gry - metoda pomocnicza
