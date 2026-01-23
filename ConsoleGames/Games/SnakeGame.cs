@@ -210,7 +210,10 @@ namespace ConsoleGames.Games
                 // Bonus znika samoczynnie po odświeżeniu ekranu w ManageBonusFood
                 else
                 {
-
+                    /* 
+                     * Jeżeli bonus zniknął w tej klatce, to musimy zamazać go spacją. 
+                     * Jest to uproszczenie - bonus znika samoczynnie po odświeżeniu ekranu w ManageBonusFood.
+                    */
                 }
 
                 Console.SetCursorPosition(0, height + 1);           // Ustawiam kursor poniżej planszy gry
