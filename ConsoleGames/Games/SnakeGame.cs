@@ -220,9 +220,13 @@ namespace ConsoleGames.Games
                 Console.ForegroundColor = ConsoleColor.White;       // Ustawiam kolor tekstu na biały
 
                 // Wyświetlam aktualny wynik gracza i liczbę przeszkód na planszy gry
-                Console.WriteLine($"Wynik: {score} | Przeszkody: {obstacles.Count} ");
+                Console.Write($"Wynik: {score} | Przeszkody: {obstacles.Count} ");
 
-                Thread.Sleep(speed);      // Opóźniam kolejną iterację pętli na podstawie prędkości ruchu węża
+                // W sytuacji, gdy prędkość jest niezerowa - opóźniam kolejną iterację pętli na podstawie prędkości ruchu węża
+                if (speed > 0)
+                {
+                    Thread.Sleep(speed);      // Opóźniam kolejną iterację pętli na podstawie prędkości ruchu węża
+                }
             }
 
             Console.Clear();                    // Czyści ekran konsoli po zakończeniu gry
