@@ -228,6 +228,11 @@ namespace ConsoleGames.Games
                 {
                     bonusInfo = "              ";                        // Informacja o braku bonusowego jedzenia
                 }
+
+
+                // Wyświetlam aktualny wynik gracza oraz informacje o bonusowym jedzeniu
+
+                Console.ForegroundColor = ConsoleColor.White;            // Ustawiam kolor tekstu na biały
             }
 
             Console.Clear();                    // Czyści ekran konsoli po zakończeniu gry
