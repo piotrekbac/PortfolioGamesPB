@@ -265,7 +265,8 @@ namespace ConsoleGames.Games
             Console.SetCursorPosition(0, messageY + 3);                                           // Ustawiam kursor na pozycji komunikatu z instrukcją zakończenia gry
             AuthorInfo.WriteColor("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=", ConsoleColor.DarkCyan);    // Rysuję dolną linię dekoracyjną
 
-
+            Console.WriteLine();                                                       // Dodaję pustą linię dla lepszej czytelności 
+            AuthorInfo.WriteError("Naciśnij dowolny klawisz, aby zakończyć grę...");   // Wyświetlam instrukcję zakończenia gry
         }
 
         // Definiuję metodę rysującą pojedynczy piksel na planszy gry - metoda pomocnicza
