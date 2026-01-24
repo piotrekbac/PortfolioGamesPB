@@ -310,6 +310,12 @@ namespace ConsoleGames.Games
                 else
                 {
                     bonusFoodTimer--;      // Zmniejszam licznik czasu bonusowego jedzenia
+
+                    // Sprawdzam, czy licznik czasu bonusowego jedzenia osiągnął 0
+                    if (bonusFoodTimer <= 0)
+                    {
+
+                    }
                 }
             }
         }
