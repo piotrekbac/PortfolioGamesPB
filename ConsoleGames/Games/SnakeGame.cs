@@ -300,32 +300,10 @@ namespace ConsoleGames.Games
             // Jeżeli bonusowego jedzenia nie ma, to mamy 2% szany na jego pojawienie się w każdej klatce, na planszy
             if (bonusFood == null)
             {
-                // Obsługujemy 1 na 50 szansę na pojawienie się bonusowego jedzenia - 2% szans
-                if (random.Next(0, 50) == 0)
+                if (random.Next(0,100) == 0)    // ustawiamy 1% szansy na pojawienie się bonusowego jedzenia
                 {
-                    bonusFood = GenerateFood(snake);      // Generuję pozycję bonusowego jedzenia na planszy
-
-                    // Musimy upewnić się, że bonus nie wpadł na normalne jedzenie 
-                    while (bonusFood.Value.X == normalFood.X && bonusFood.Value.Y == normalFood.Y)
-                    {
-                        bonusFood = GenerateFood(snake);  // Upewniam się, że bonusowe jedzenie nie koliduje z normalnym jedzeniem
-                    }
-
-                    bonusFoodTimer = 40;    // Ustawiam czas istnienia bonusowego jedzenia na 40 klatek
-                }
-            }
-
-            // Jeżeli bonusowe jedzenie istnieje, to zmniejszamy jego licznik czasu i usuwamy je, gdy czas się skończy
-            else
-            {
-                bonusFoodTimer--;      // Zmniejszam licznik czasu bonusowego jedzenia
-
-                // Jeżeli czas bonusowego jedzenia się skończył, to usuwamy je z planszy
-                if (bonusFoodTimer <= 0)
-                {
-                    Console.SetCursorPosition(bonusFood.Value.X, bonusFood.Value.Y);    // Ustawiam kursor na pozycji bonusowego jedzenia
-                    Console.Write(" ");                                                 // Czyścimy znak $ z planszy
-                    bonusFood = null;                                                   // Usuwam bonusowe jedzenie z planszy
+                    bonusFood = GenerateFood(snake);   // Generuję nową pozycję bonusowego jedzenia na planszy
+                    bonusFoodTimer = 50;               // Ustawiam licznik czasu bonusowego jedzenia na 50 klatek
                 }
             }
         }
