@@ -162,13 +162,13 @@ namespace ConsoleGames.Games
                 // Inicjujemy ruch węża 
                 snake.Insert(0, newHead);      // Dodaję nową głowę węża na początku listy
 
-                bool ateBonusFood = false;    // Flaga zjedzenia bonusowego jedzenia
+                bool shouldRemoveTail = true;    // Flaga wskazująca, czy należy usunąć ogon węża - domyślnie usuwamy ogon
 
                 // Definiuję logikę zjedzenia jedzenia przez węża
                 if (newHead.X == food.X && newHead.Y == food.Y)
                 {
                     score += 10;                     // Zwiększam wynik gracza o 10 punktów
-                    ateBonusFood = true;             // Ustawiam flagę zjedzenia bonusowego jedzenia na true
+                    shouldRemoveTail = false;        // Ustawiam flagę usunięcia ogona na false (wąż rośnie) 
                     food = GenerateFood(snake);      // Generuję nową pozycję jedzenia na planszy
 
                     // Przyspieszam ruch węża po zjedzeniu jedzenia
@@ -182,20 +182,12 @@ namespace ConsoleGames.Games
                 else if (bonusFood.HasValue && newHead.X == bonusFood.Value.X && newHead.Y == bonusFood.Value.Y)
                 {
                     score += 50;                     // Zwiększam wynik gracza o 50 punktów za zjedzenie bonusowego jedzenia
-                    ateBonusFood = true;             // Ustawiam flagę zjedzenia bonusowego jedzenia na true
+                    shouldRemoveTail = false;        // Ustawiam fkagę usunięcia ogona na false (wąż rośnie)
                     bonusFood = null;                // Usuwam bonusowe jedzenie z planszy
 
                     AuthorInfo.WriteColor("BONUS!", ConsoleColor.Yellow, false);   // Wyświetlam komunikat o zjedzeniu bonusowego jedzenia
                 }
 
-                // Zarządzam logiką bonusowego jedzenia na planszy gry
-                if (!ateBonusFood)
-                {
-                    Point tail = snake[snake.Count - 1];            // Pobieram pozycję ogona węża
-                    Console.SetCursorPosition(tail.X, tail.Y);      // Ustawiam kursor na pozycji ogona węża
-                    Console.Write(" ");                             // Kasujemy ogon węża z ekranu
-                    snake.RemoveAt(snake.Count - 1);                // Usuwam ogon węża z listy
-                }
 
                 ManageBonusFood(random, snake, food);               // Zarządzam logiką bonusowego jedzenia na planszy gry
 
@@ -276,6 +268,12 @@ namespace ConsoleGames.Games
 
             Console.CursorVisible = true;       // Przywracam widoczność kursora konsoli
             Console.ReadKey();                  // Czekam na naciśnięcie dowolnego klawisza przez gracza
+        }
+
+        // Definiuję metodę wyświetlającą powiadomienia dla gracza - metoda pomocnicza
+        private void ShowNotification(string message)
+        {
+
         }
 
         // Definiuję metodę rysującą pojedynczy piksel na planszy gry - metoda pomocnicza
