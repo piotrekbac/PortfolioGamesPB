@@ -423,10 +423,18 @@ namespace ConsoleGames.Games
                 p = new Point(random.Next(1, width), random.Next(1,height));   // Generuję losową pozycję punktu w obrębie planszy
             }
 
-            while()
+
+            // Dopóki punkt koliduje z ciałem węża, przeszkodami, normalnym jedzeniem, bonusowym jedzeniem lub zepsutym jedzeniem
+
+            while (snake.Any(s => s.X == p.X && s.Y == p.Y) ||                                          // Sprawdzam kolizję z ciałem węża
+                   obstacles.Any(o => o.X == p.X && o.Y == p.Y) ||                                      // Sprawdzam kolizję z przeszkodami
+                   (p.X == normalFood.X && p.Y == normalFood.Y) ||                                      // Sprawdzam kolizję z normalnym jedzeniem
+                   (bonusFood.HasValue && p.X == bonusFood.Value.X && p.Y == bonusFood.Value.Y) ||      // Sprawdzam kolizję z bonusowym jedzeniem
+                   (rottenFood.HasValue && p.X == rottenFood.Value.X && p.Y == rottenFood.Value.Y));    // Sprawdzam kolizję ze zepsutym jedzeniem
             {
 
             }
+
         }
     }
 }
