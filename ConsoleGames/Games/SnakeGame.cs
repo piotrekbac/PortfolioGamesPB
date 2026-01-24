@@ -323,7 +323,8 @@ namespace ConsoleGames.Games
         // Definiuję metodę czyszczącą punkt na planszy gry - metoda pomocnicza
         private void ClearPoint(Point p)
         {
-            
+            Console.SetCursorPosition(p.X, p.y);    // Ustawiam kursor na podanej pozycji
+            Console.Write(" ");                     // Czyścimy znak z planszy
         }
 
         // Definiuję metodę rysującą obramowanie planszy gry 
