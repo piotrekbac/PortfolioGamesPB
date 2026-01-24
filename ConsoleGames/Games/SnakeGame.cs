@@ -314,7 +314,8 @@ namespace ConsoleGames.Games
                     // Sprawdzam, czy licznik czasu bonusowego jedzenia osiągnął 0
                     if (bonusFoodTimer <= 0)
                     {
-                        
+                        ClearPoint(rottenFood.Value);    // Czyścimy zepsute jedzenie z planszy
+                        bonusFood = null;                // Usuwam bonusowe jedzenie z planszy
                     }
                 }
             }
