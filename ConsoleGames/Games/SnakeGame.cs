@@ -267,6 +267,9 @@ namespace ConsoleGames.Games
 
             Console.WriteLine();                                                       // Dodaję pustą linię dla lepszej czytelności 
             AuthorInfo.WriteError("Naciśnij dowolny klawisz, aby zakończyć grę...");   // Wyświetlam instrukcję zakończenia gry
+
+            Console.CursorVisible = true;       // Przywracam widoczność kursora konsoli
+            Console.ReadKey();                  // Czekam na naciśnięcie dowolnego klawisza przez gracza
         }
 
         // Definiuję metodę rysującą pojedynczy piksel na planszy gry - metoda pomocnicza
