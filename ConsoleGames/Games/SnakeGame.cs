@@ -414,6 +414,8 @@ namespace ConsoleGames.Games
         // Definiuję metodę generującą ważny punkt na planszy gry, unikając kolizji z wężem i normalnym jedzeniem
         private Point GenerateValidPoint(List<Point> snake, Point normalFood)
         {
+            Random random = new Random();        // Tworzę nową instancję generatora liczb losowych
+            Point p;                             // Deklaruję zmienną do przechowywania pozycji punktu - przechowuję wartość w zmiennej o nazwie "p"
 
         }
     }
