@@ -273,7 +273,8 @@ namespace ConsoleGames.Games
         // Definiuję metodę wyświetlającą powiadomienia dla gracza - metoda pomocnicza
         private void ShowNotification(string message)
         {
-
+            notification = message;          // Ustawiam komunikat powiadomienia
+            notificationTimer = 20;          // Ustawiam licznik czasu powiadomienia na 20 klatek
         }
 
         // Definiuję metodę rysującą pojedynczy piksel na planszy gry - metoda pomocnicza
