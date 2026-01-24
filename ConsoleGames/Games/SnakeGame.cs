@@ -229,7 +229,6 @@ namespace ConsoleGames.Games
                     bonusInfo = "              ";                        // Informacja o braku bonusowego jedzenia
                 }
 
-
                 // Wyświetlam aktualny wynik gracza oraz informacje o bonusowym jedzeniu
 
                 Console.ForegroundColor = ConsoleColor.White;                           // Ustawiam kolor tekstu na biały
@@ -254,6 +253,10 @@ namespace ConsoleGames.Games
 
             int messageY = height + 3;                  // Pozycja Y dla komunikatów końcowych
             Console.SetCursorPosition(0, messageY);     // Ustawiam kursor na pozycji komunikatów końcowych
+
+            AuthorInfo.WriteColor("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=", ConsoleColor.DarkCyan);   // Rysuję górną linię dekoracyjną
+
+
         }
 
         // Definiuję metodę rysującą pojedynczy piksel na planszy gry - metoda pomocnicza
