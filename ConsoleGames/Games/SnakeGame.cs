@@ -277,6 +277,12 @@ namespace ConsoleGames.Games
             notificationTimer = 20;          // Ustawiam licznik czasu powiadomienia na 20 klatek
         }
 
+        // Definiuję metodę czyszczącą ogon węża - metoda pomocnicza
+        private void ClearTail(List<Point> snake)
+        {
+
+        }
+
         // Definiuję metodę rysującą pojedynczy piksel na planszy gry - metoda pomocnicza
         private void DrawPixel(int x, int y, string symbol, ConsoleColor color)
         {
