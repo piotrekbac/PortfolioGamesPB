@@ -256,6 +256,9 @@ namespace ConsoleGames.Games
 
             AuthorInfo.WriteColor("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=", ConsoleColor.DarkCyan);   // Rysuję górną linię dekoracyjną
 
+            Console.SetCursorPosition(0, messageY + 1);                                         // Ustawiam kursor na pozycji komunikatu o zakończeniu gry
+            AuthorInfo.WriteColor("        KONIEC GRY SNAKE        ", ConsoleColor.Yellow);     // Wyświetlam komunikat o zakończeniu gry
+
 
         }
 
