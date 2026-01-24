@@ -314,10 +314,16 @@ namespace ConsoleGames.Games
                     // Sprawdzam, czy licznik czasu bonusowego jedzenia osiągnął 0
                     if (bonusFoodTimer <= 0)
                     {
-
+                        
                     }
                 }
             }
+        }
+
+        // Definiuję metodę czyszczącą punkt na planszy gry - metoda pomocnicza
+        private void ClearPoint(Point p)
+        {
+            
         }
 
         // Definiuję metodę rysującą obramowanie planszy gry 
