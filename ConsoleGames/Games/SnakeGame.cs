@@ -432,7 +432,7 @@ namespace ConsoleGames.Games
                    (bonusFood.HasValue && p.X == bonusFood.Value.X && p.Y == bonusFood.Value.Y) ||      // Sprawdzam kolizję z bonusowym jedzeniem
                    (rottenFood.HasValue && p.X == rottenFood.Value.X && p.Y == rottenFood.Value.Y));    // Sprawdzam kolizję ze zepsutym jedzeniem
             {
-
+                return p;      // Zwracam wygenerowaną ważną pozycję punktu
             }
 
         }
