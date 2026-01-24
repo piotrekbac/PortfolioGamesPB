@@ -37,9 +37,13 @@ namespace ConsoleGames.Games
         private int score;                       // Aktualny wynik gracza
         private int speed;                       // Prędkość ruchu węża
 
-        private List<Point> obstacles;             // Lista obiektów na planszy gry
+        private List<Point> obstacles;           // Lista obiektów na planszy gry
         private Point? bonusFood;                // Pozycja bonusowego jedzenia na planszy gry - możliwy null
         private int bonusFoodTimer;              // Licznik czasu dla bonusowego jedzenia
+
+        private Point? rottenFood;               // Pozycja zepsutego jedzenia na planszy gry - możliwy null
+        private string notification = "";        // Komunikat wyświetlany graczowi
+        private int notificationTimer = 0;       // Licznik czasu dla komunikatu
 
         // Główna metoda uruchamiająca grę Snake
         public void Run()
@@ -168,7 +172,7 @@ namespace ConsoleGames.Games
                     // Przyspieszam ruch węża po zjedzeniu jedzenia
                     if (speed > 30)
                     {
-                        speed -= -2;         // Zwiększam prędkość ruchu węża, po zjedzeniu jedzenia
+                        speed -= 2;         // Zwiększam prędkość ruchu węża, po zjedzeniu jedzenia
                     }
                 }
 
