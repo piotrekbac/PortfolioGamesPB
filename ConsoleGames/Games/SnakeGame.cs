@@ -410,5 +410,11 @@ namespace ConsoleGames.Games
                 return newFood;      // Zwracam wygenerowaną pozycję jedzenia
             }
         }
+
+        // Definiuję metodę generującą ważny punkt na planszy gry, unikając kolizji z wężem i normalnym jedzeniem
+        private Point GenerateValidPoint(List<Point> snake, Point normalFood)
+        {
+
+        }
     }
 }
