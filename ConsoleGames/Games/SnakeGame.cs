@@ -305,6 +305,12 @@ namespace ConsoleGames.Games
                     bonusFood = GenerateFood(snake);   // Generuję nową pozycję bonusowego jedzenia na planszy
                     bonusFoodTimer = 50;               // Ustawiam licznik czasu bonusowego jedzenia na 50 klatek
                 }
+
+                // Jeżeli bonusowe jedzenie istnieje, to zmniejszamy jego licznik czasu
+                else
+                {
+                    bonusFoodTimer--;      // Zmniejszam licznik czasu bonusowego jedzenia
+                }
             }
         }
 
