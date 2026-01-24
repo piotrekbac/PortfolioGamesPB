@@ -259,6 +259,9 @@ namespace ConsoleGames.Games
             Console.SetCursorPosition(0, messageY + 1);                                         // Ustawiam kursor na pozycji komunikatu o zakończeniu gry
             AuthorInfo.WriteColor("        KONIEC GRY SNAKE        ", ConsoleColor.Yellow);     // Wyświetlam komunikat o zakończeniu gry
 
+            Console.SetCursorPosition(0, messageY + 2);                                                 // Ustawiam kursor na pozycji komunikatu z wynikiem końcowym
+            AuthorInfo.WriteColor($"       Twój końcowy wynik: {score}       ", ConsoleColor.White);    // Wyświetlam komunikat z wynikiem końcowym
+
 
         }
 
