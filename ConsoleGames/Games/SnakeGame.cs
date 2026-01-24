@@ -417,6 +417,16 @@ namespace ConsoleGames.Games
             Random random = new Random();        // Tworzę nową instancję generatora liczb losowych
             Point p;                             // Deklaruję zmienną do przechowywania pozycji punktu - przechowuję wartość w zmiennej o nazwie "p"
 
+            // Pętla sprawdzająca, czy punkt nie pojawi się na ciele węża lub na normalnym jedzeniu
+            do
+            {
+                p = new Point(random.Next(1, width), random.Next(1,height));   // Generuję losową pozycję punktu w obrębie planszy
+            }
+
+            while()
+            {
+
+            }
         }
     }
 }
