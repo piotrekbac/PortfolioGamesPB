@@ -280,7 +280,9 @@ namespace ConsoleGames.Games
         // Definiuję metodę czyszczącą ogon węża - metoda pomocnicza
         private void ClearTail(List<Point> snake)
         {
-
+            Point tail = snake[snake.Count - 1];            // Pobieram pozycję ogona węża
+            Console.SetCursorPosition(tail.X, tail.Y);      // Ustawiam kursor na pozycji ogona węża
+            Console.Write(" ");                             // Czyścimy znak ogona z planszy
         }
 
         // Definiuję metodę rysującą pojedynczy piksel na planszy gry - metoda pomocnicza
