@@ -321,7 +321,11 @@ namespace ConsoleGames.Games
             }
         }
 
+        // Definiuję metodę zarządzającą logiką zepsutego jedzenia na planszy gry
+        private void ManageRottenFood(Random random, List<Point> snake, Point normalFood)
+        {
 
+        }
 
         // Definiuję metodę czyszczącą punkt na planszy gry - metoda pomocnicza
         private void ClearPoint(Point p)
