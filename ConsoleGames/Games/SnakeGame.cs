@@ -302,8 +302,8 @@ namespace ConsoleGames.Games
             {
                 if (random.Next(0,100) == 0)    // ustawiamy 1% szansy na pojawienie się bonusowego jedzenia
                 {
-                    bonusFood = GenerateFood(snake);   // Generuję nową pozycję bonusowego jedzenia na planszy
-                    bonusFoodTimer = 50;               // Ustawiam licznik czasu bonusowego jedzenia na 50 klatek
+                    bonusFood = GenerateValidPoint(snake, normalFood);      // Generuję nową pozycję bonusowego jedzenia na planszy
+                    bonusFoodTimer = 50;                                    // Ustawiam licznik czasu bonusowego jedzenia na 50 klatek
                 }
 
                 // Jeżeli bonusowe jedzenie istnieje, to zmniejszamy jego licznik czasu
@@ -320,6 +320,8 @@ namespace ConsoleGames.Games
                 }
             }
         }
+
+
 
         // Definiuję metodę czyszczącą punkt na planszy gry - metoda pomocnicza
         private void ClearPoint(Point p)
