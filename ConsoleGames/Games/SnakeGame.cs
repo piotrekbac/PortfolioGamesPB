@@ -257,6 +257,14 @@ namespace ConsoleGames.Games
                     Console.Write(" >> " + notification);                       // Wyświetlam powiadomienie z prefiksem " >> " - dla urozmaicenia
                     notificationTimer--;                                        // Zmniejszam licznik czasu powiadomienia
                 }
+
+                // Wyświetlam licznik w sytuacji, gdy nie ma powiadomienia
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.Yellow;              // Ustawiam kolor tekstu na żółty
+                    Console.Write($"Czas bonusu: {bonusFoodTimer}   ");         // Wyświetlam licznik czasu bonusowego jedzenia
+                }
+
             }
 
             // Obsługa ekranu końcowego bez czyszczenia ekranu konsoli
