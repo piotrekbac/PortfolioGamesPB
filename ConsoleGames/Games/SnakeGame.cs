@@ -335,6 +335,12 @@ namespace ConsoleGames.Games
                     // nie ma licznika czasu dla zepsutego jedzenia - pozostaje na planszy do momentu zjedzenia lub zakończenia gry
                 }
             }
+
+            // Warunek obsługujący logikę, gdy zepsute jedzenie jest na planszy
+            else
+            {
+
+            }
         }
 
         // Definiuję metodę czyszczącą punkt na planszy gry - metoda pomocnicza
