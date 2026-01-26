@@ -196,6 +196,12 @@ namespace ConsoleGames.Games
                     score -= 20;                     // Zmniejszam wynik gracza o 20 punktów za zjedzenie zepsutego jedzenia
                     rottenFood = null;               // Usuwam zepsute jedzenie z planszy
                     ShowNotification("Zjedzono TRUCIZNĘ! -20 pkt");   // Wyświetlam powiadomienie o zjedzeniu zepsutego jedzenia
+
+                    // Efekt trucizny - wąż traci długość
+                    if (snake.Count > 1)
+                    {
+
+                    }
                 }
 
 
