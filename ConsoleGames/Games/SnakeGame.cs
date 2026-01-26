@@ -200,7 +200,8 @@ namespace ConsoleGames.Games
                     // Efekt trucizny - wąż traci długość
                     if (snake.Count > 1)
                     {
-
+                        ClearTail(snake);                   // Czyścimy ogon węża z planszy  
+                        snake.RemoveAt(snake.Count - 1);    // Usuwam ogon węża z listy (wąż skraca się)
                     }
                 }
 
