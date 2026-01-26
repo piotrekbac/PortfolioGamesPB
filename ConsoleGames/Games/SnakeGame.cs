@@ -212,18 +212,18 @@ namespace ConsoleGames.Games
                     snake.RemoveAt(snake.Count - 1);         // Usuwam ogon węża z listy
                 }
 
-
                 ManageBonusFood(random, snake, food);               // Zarządzam logiką bonusowego jedzenia na planszy gry
                 ManageRottenFood(random, snake, food);              // Zarządzam logiką zepsutego jedzenia na planszy gry
 
 
                 // Rysuję wężą na planszy gry
 
-                DrawPixel(newHead.X, newHead.Y, "O", ConsoleColor.Green);    // Rysuję nową głowę węża na planszy
+                DrawPixel(newHead.X, newHead.Y, "O", ConsoleColor.Green);    // Rysujsę nową głowę węża na planszy
                 DrawPixel(head.X, head.Y, "o", ConsoleColor.DarkGreen);      // Rysuję tułów węża na planszy
 
                 // Rysuję jedzenie na planszy gry
                 DrawPixel(food.X, food.Y, "@", ConsoleColor.Red);            // Rysuję jedzenie na planszy
+
 
                 // Rysuję bonusowe jedzenie na planszy gry, jeśli istnieje
                 if (bonusFood.HasValue)
@@ -237,45 +237,11 @@ namespace ConsoleGames.Games
                     DrawPixel(rottenFood.Value.X, rottenFood.Value.Y, "X", ConsoleColor.Magenta);   // Rysuję zepsute jedzenie na planszy
                 }
 
+                // Obsługuję interfejs użytkownika gry - UI - podział na 2 linie
 
-                // Wyświetlam licznik czasu dla bonusowego jedzenia, jeśli istnieje
+                // Linia 1 - Statystyki stałe gry
+                Console.SetCursorPosition(0, height + 1);                    // Ustawiam kursor na początku linii 1 pod planszą gry
 
-                Console.SetCursorPosition(0, height + 1);               // Ustawiam kursor poniżej planszy gry
-                Console.ForegroundColor = ConsoleColor.DarkYellow;      // Ustawiam kolor tekstu na ciemnożółty
-
-                string bonusInfo = "";  // Inicjalizuję zmienną do przechowywania informacji o bonusowym jedzeniu
-
-                // Sprawdzam, czy bonusowe jedzenie istnieje i wyświetlam odpowiednią informację
-                if (bonusFood.HasValue)
-                {
-                    bonusInfo = $" | Bonus za: {bonusFoodTimer} ";       // Informacja o czasie istnienia bonusowego jedzenia
-                    Console.ForegroundColor = ConsoleColor.Yellow;       // Ustawiam kolor tekstu na żółty
-                }
-
-                // Obsługuję przypadek, gdy bonusowe jedzenie nie istnieje 
-                else
-                {
-                    bonusInfo = "              ";                        // Informacja o braku bonusowego jedzenia
-                }
-
-                // Wyświetlam aktualny wynik gracza oraz informacje o bonusowym jedzeniu
-
-                Console.ForegroundColor = ConsoleColor.White;                           // Ustawiam kolor tekstu na biały
-                Console.Write($"Wynik: {score} | Przeszkody: {obstacles.Count}");       // Wyświetlam aktualny wynik gracza oraz liczbę przeszkód na planszy
-
-                // Wyświetlam informacje o bonusowym jedzeniu
-                if (bonusFood.HasValue)
-                {
-                    Console.ForegroundColor = ConsoleColor.Yellow;       // Ustawiam kolor tekstu na żółty
-                    Console.Write(bonusInfo);                            // Wyświetlam informacje o bonusowym jedzeniu
-                    Console.ResetColor();                                // Resetuję kolor konsoli do domyślnego
-                }
-
-                // Dodaję opóźnienie do pętli gry, aby kontrolować prędkość ruchu węża
-                if (speed > 0)
-                {
-                    Thread.Sleep(speed);      // Opóźniam pętlę gry na określony czas, aby kontrolować prędkość ruchu węża
-                }
             }
 
             // Obsługa ekranu końcowego bez czyszczenia ekranu konsoli
