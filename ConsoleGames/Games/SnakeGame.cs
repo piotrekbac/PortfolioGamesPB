@@ -272,27 +272,9 @@ namespace ConsoleGames.Games
                 }
             }
 
-            // Obsługa ekranu końcowego bez czyszczenia ekranu konsoli
+            // Obsługa ekranu końcowego
 
-            int messageY = height + 3;                  // Pozycja Y dla komunikatów końcowych
-            Console.SetCursorPosition(0, messageY);     // Ustawiam kursor na pozycji komunikatów końcowych
-
-            AuthorInfo.WriteColor("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=", ConsoleColor.DarkCyan);   // Rysuję górną linię dekoracyjną
-
-            Console.SetCursorPosition(0, messageY + 1);                                         // Ustawiam kursor na pozycji komunikatu o zakończeniu gry
-            AuthorInfo.WriteColor("        KONIEC GRY SNAKE        ", ConsoleColor.Yellow);     // Wyświetlam komunikat o zakończeniu gry
-
-            Console.SetCursorPosition(0, messageY + 2);                                                 // Ustawiam kursor na pozycji komunikatu z wynikiem końcowym
-            AuthorInfo.WriteColor($"       Twój końcowy wynik: {score}       ", ConsoleColor.White);    // Wyświetlam komunikat z wynikiem końcowym
-
-            Console.SetCursorPosition(0, messageY + 3);                                           // Ustawiam kursor na pozycji komunikatu z instrukcją zakończenia gry
-            AuthorInfo.WriteColor("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=", ConsoleColor.DarkCyan);    // Rysuję dolną linię dekoracyjną
-
-            Console.WriteLine();                                                       // Dodaję pustą linię dla lepszej czytelności 
-            AuthorInfo.WriteError("Naciśnij dowolny klawisz, aby zakończyć grę...");   // Wyświetlam instrukcję zakończenia gry
-
-            Console.CursorVisible = true;       // Przywracam widoczność kursora konsoli
-            Console.ReadKey();                  // Czekam na naciśnięcie dowolnego klawisza przez gracza
+            int messageY = height + 4;        // Pozycja Y dla komunikatu końcowego - przesuwamy w dół, aby nie zasłonić interfejsu gry UI
         }
 
         // Definiuję metodę wyświetlającą powiadomienia dla gracza - metoda pomocnicza
