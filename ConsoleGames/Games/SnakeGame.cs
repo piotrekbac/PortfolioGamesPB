@@ -339,7 +339,11 @@ namespace ConsoleGames.Games
             // Warunek obsługujący logikę, gdy zepsute jedzenie jest na planszy
             else
             {
+                // Trucizna znika sama po jakimś czasie
+                if (random.Next(0, 100) == 0)
+                {
 
+                }
             }
         }
 
