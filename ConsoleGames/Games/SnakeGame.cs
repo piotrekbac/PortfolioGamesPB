@@ -176,6 +176,8 @@ namespace ConsoleGames.Games
                     {
                         speed -= 2;         // Zwiększam prędkość ruchu węża, po zjedzeniu jedzenia
                     }
+
+                    ShowNotification("Zjedzono jedzenie! +10 pkt");   // Wyświetlam powiadomienie o zjedzeniu jedzenia
                 }
 
                 // Obsługa logiki zjedzenia bonusowego jedzenia przez węża
@@ -351,7 +353,7 @@ namespace ConsoleGames.Games
         // Definiuję metodę czyszczącą punkt na planszy gry - metoda pomocnicza
         private void ClearPoint(Point p)
         {
-            Console.SetCursorPosition(p.X, p.y);    // Ustawiam kursor na podanej pozycji
+            Console.SetCursorPosition(p.X, p.Y);    // Ustawiam kursor na podanej pozycji
             Console.Write(" ");                     // Czyścimy znak z planszy
         }
 
