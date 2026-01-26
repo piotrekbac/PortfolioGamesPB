@@ -342,7 +342,8 @@ namespace ConsoleGames.Games
                 // Trucizna znika sama po jakimś czasie
                 if (random.Next(0, 100) == 0)
                 {
-
+                    ClearPoint(rottenFood.Value);     // Czyścimy zepsute jedzenie z planszy
+                    rottenFood = null;                // Usuwam zepsute jedzenie z planszy
                 }
             }
         }
