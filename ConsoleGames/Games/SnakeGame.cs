@@ -265,6 +265,11 @@ namespace ConsoleGames.Games
                     Console.Write($"Czas bonusu: {bonusFoodTimer}   ");         // Wyświetlam licznik czasu bonusowego jedzenia
                 }
 
+                // Sprawdzam prędkość ruchu węża i wprowadzam opóźnienie na podstawie prędkości
+                if (speed > 0)
+                {
+                    Thread.Sleep(speed);      // Wprowadzam opóźnienie na podstawie prędkości ruchu węża
+                }
             }
 
             // Obsługa ekranu końcowego bez czyszczenia ekranu konsoli
