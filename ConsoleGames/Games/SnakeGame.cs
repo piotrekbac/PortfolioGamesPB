@@ -190,8 +190,14 @@ namespace ConsoleGames.Games
                     ShowNotification("Zjedzono BONUS! +50 pkt");   // Wyświetlam powiadomienie o zjedzeniu bonusowego jedzenia
                 }
 
+                // Obsługa logiki zjedzenia zepsutego jedzenia przez węża
+                else if (rottenFood.HasValue && newHead.X == rottenFood.Value.X && newHead.Y == rottenFood.Value.Y)
+                {
 
-                ManageBonusFood(random, snake, food);               // Zarządzam logiką bonusowego jedzenia na planszy gry
+                }
+
+
+                    ManageBonusFood(random, snake, food);               // Zarządzam logiką bonusowego jedzenia na planszy gry
 
 
                 // Rysuję wężą na planszy gry
