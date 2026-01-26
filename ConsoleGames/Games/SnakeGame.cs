@@ -255,6 +255,7 @@ namespace ConsoleGames.Games
                 {
                     Console.ForegroundColor = ConsoleColor.Cyan;                // Ustawiam kolor tekstu na cyjanowy
                     Console.Write(" >> " + notification);                       // Wyświetlam powiadomienie z prefiksem " >> " - dla urozmaicenia
+                    notificationTimer--;                                        // Zmniejszam licznik czasu powiadomienia
                 }
             }
 
