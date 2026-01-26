@@ -245,6 +245,11 @@ namespace ConsoleGames.Games
 
                 Console.Write($"Wynik: {score} | Prędkość: {110 - speed} | Długość: {snake.Count}   ");   // Wyświetlam wynik, prędkość i długość węża
 
+
+                // Linia 2 - Powiadomienia dynamiczne oraz timer
+                Console.SetCursorPosition(0, height + 2);                    // Ustawiam kursor na początku linii 2 pod planszą gry`
+                Console.Write(new string(' ', 40));                          // Czyścimy linię powiadomień spacjami, aby stare napisany nie zostawały
+
             }
 
             // Obsługa ekranu końcowego bez czyszczenia ekranu konsoli
