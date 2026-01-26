@@ -250,6 +250,12 @@ namespace ConsoleGames.Games
                 Console.SetCursorPosition(0, height + 2);                    // Ustawiam kursor na początku linii 2 pod planszą gry`
                 Console.Write(new string(' ', 40));                          // Czyścimy linię powiadomień spacjami, aby stare napisany nie zostawały
 
+                // Sprawdzam, czy licznik powiadomień jest większy od 0 i wyświetlam odpowiednie powiadomienie
+                if (notificationTimer > 0)
+                {
+                    Console.ForegroundColor = ConsoleColor.Cyan;                // Ustawiam kolor tekstu na cyjanowy
+                    Console.Write(" >> " + notification);                       // Wyświetlam powiadomienie z prefiksem " >> " - dla urozmaicenia
+                }
             }
 
             // Obsługa ekranu końcowego bez czyszczenia ekranu konsoli
