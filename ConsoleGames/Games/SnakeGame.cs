@@ -205,6 +205,12 @@ namespace ConsoleGames.Games
                     }
                 }
 
+                // Usuwanie ogona węża - skutek ruchu węża 
+                if (shouldRemoveTail)
+                {
+
+                }
+
 
                     ManageBonusFood(random, snake, food);               // Zarządzam logiką bonusowego jedzenia na planszy gry
 
