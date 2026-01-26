@@ -231,6 +231,12 @@ namespace ConsoleGames.Games
                     DrawPixel(bonusFood.Value.X, bonusFood.Value.Y, "$", ConsoleColor.Yellow);   // Rysuję bonusowe jedzenie na planszy
                 }
 
+                // Rysuję zepsute jedzenie na planszy gry, jeśli istnieje
+                if (rottenFood.HasValue)
+                {
+                    DrawPixel(rottenFood.Value.X, rottenFood.Value.Y, "X", ConsoleColor.Magenta);   // Rysuję zepsute jedzenie na planszy
+                }
+
 
                 // Wyświetlam licznik czasu dla bonusowego jedzenia, jeśli istnieje
 
