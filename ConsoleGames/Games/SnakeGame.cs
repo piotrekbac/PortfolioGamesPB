@@ -213,7 +213,8 @@ namespace ConsoleGames.Games
                 }
 
 
-                    ManageBonusFood(random, snake, food);               // Zarządzam logiką bonusowego jedzenia na planszy gry
+                ManageBonusFood(random, snake, food);               // Zarządzam logiką bonusowego jedzenia na planszy gry
+                ManageRottenFood(random, snake, food);              // Zarządzam logiką zepsutego jedzenia na planszy gry
 
 
                 // Rysuję wężą na planszy gry
