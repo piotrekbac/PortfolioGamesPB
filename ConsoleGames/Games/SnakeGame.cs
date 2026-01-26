@@ -193,7 +193,9 @@ namespace ConsoleGames.Games
                 // Obsługa logiki zjedzenia zepsutego jedzenia przez węża
                 else if (rottenFood.HasValue && newHead.X == rottenFood.Value.X && newHead.Y == rottenFood.Value.Y)
                 {
-
+                    score -= 20;                     // Zmniejszam wynik gracza o 20 punktów za zjedzenie zepsutego jedzenia
+                    rottenFood = null;               // Usuwam zepsute jedzenie z planszy
+                    ShowNotification("Zjedzono TRUCIZNĘ! -20 pkt");   // Wyświetlam powiadomienie o zjedzeniu zepsutego jedzenia
                 }
 
 
