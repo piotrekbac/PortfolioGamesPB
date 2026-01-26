@@ -330,7 +330,7 @@ namespace ConsoleGames.Games
                 // Trucizna pojawia się częściej niż bonus 
                 if (random.Next(0, 80) == 0)
                 {
-
+                    rottenFood = GenerateValidPoint(snake, normalFood);    // Generuję nową pozycję zepsutego jedzenia na planszy   
                 }
             }
         }
