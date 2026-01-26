@@ -324,10 +324,14 @@ namespace ConsoleGames.Games
         // Definiuję metodę zarządzającą logiką zepsutego jedzenia na planszy gry
         private void ManageRottenFood(Random random, List<Point> snake, Point normalFood)
         {
-            // Jeżeli zepsutego jedzenia nie ma, to mamy 1% szany na jego pojawienie się w każdej klatce, na planszy
+            // Warunek obsługujący logikę, gdy zepsutego jedzenia nie ma na planszy
             if (rottenFood == null)
             {
+                // Trucizna pojawia się częściej niż bonus 
+                if (random.Next(0, 80) == 0)
+                {
 
+                }
             }
         }
 
