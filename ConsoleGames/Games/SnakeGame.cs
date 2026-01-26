@@ -331,6 +331,8 @@ namespace ConsoleGames.Games
                 if (random.Next(0, 80) == 0)
                 {
                     rottenFood = GenerateValidPoint(snake, normalFood);    // Generuję nową pozycję zepsutego jedzenia na planszy   
+
+                    // nie ma licznika czasu dla zepsutego jedzenia - pozostaje na planszy do momentu zjedzenia lub zakończenia gry
                 }
             }
         }
