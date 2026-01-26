@@ -241,6 +241,9 @@ namespace ConsoleGames.Games
 
                 // Linia 1 - Statystyki stałe gry
                 Console.SetCursorPosition(0, height + 1);                    // Ustawiam kursor na początku linii 1 pod planszą gry
+                Console.ForegroundColor = ConsoleColor.White;                // Ustawiam kolor tekstu na biały
+
+                Console.Write($"Wynik: {score} | Prędkość: {110 - speed} | Długość: {snake.Count}   ");   // Wyświetlam wynik, prędkość i długość węża
 
             }
 
