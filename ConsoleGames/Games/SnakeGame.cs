@@ -187,7 +187,7 @@ namespace ConsoleGames.Games
                     shouldRemoveTail = false;        // Ustawiam fkagę usunięcia ogona na false (wąż rośnie)
                     bonusFood = null;                // Usuwam bonusowe jedzenie z planszy
 
-                    AuthorInfo.WriteColor("BONUS!", ConsoleColor.Yellow, false);   // Wyświetlam komunikat o zjedzeniu bonusowego jedzenia
+                    ShowNotification("Zjedzono BONUS! +50 pkt");   // Wyświetlam powiadomienie o zjedzeniu bonusowego jedzenia
                 }
 
 
