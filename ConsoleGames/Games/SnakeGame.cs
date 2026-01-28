@@ -280,17 +280,16 @@ namespace ConsoleGames.Games
             AuthorInfo.WriteColor("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=", ConsoleColor.DarkBlue);      // Rysuję dekoracyjną linię
 
             Console.SetCursorPosition(0, messageY + 1);                                                     // Ustawiam kursor na początku linii komunikatu końcowego
-            AuthorInfo.WriteColor("KONIEC GRY! Dziękujemy za grę w Snake!", ConsoleColor.DarkRed);          // Wyświetlam komunikat końcowy gry
+            AuthorInfo.WriteColor("KONIEC GRY! Dziękuję za grę w Snake!", ConsoleColor.DarkRed);          // Wyświetlam komunikat końcowy gry
 
             Console.SetCursorPosition(0, messageY + 2);                                                     // Ustawiam kursor na początku linii komunikatu końcowego
             AuthorInfo.WriteColor($"Twój końcowy wynik to: {score} punktów.", ConsoleColor.Yellow);         // Wyświetlam końcowy wynik gracza
 
             Console.SetCursorPosition(0, messageY + 3);                                                     // Ustawiam kursor na początku linii komunikatu końcowego
-            AuthorInfo.WriteColor("Naciśnij dowolny klawisz, aby zakończyć...", ConsoleColor.Gray);         // Wyświetlam komunikat o zakończeniu gry
+            AuthorInfo.WriteColor("Naciśnij dowolny klawisz, aby zakończyć i wrócić do menu...\n", ConsoleColor.Gray);         // Wyświetlam komunikat o zakończeniu gry
 
             Console.WriteLine();                                         // Dodaję pustą linię dla lepszego formatowania
-            AuthorInfo.WriteError("Naciśnij dowolny klawisz...");        // Wyświetlam prośbę o naciśnięcie dowolnego klawisza przez gracza
-
+            
             Console.CursorVisible = true;       // Przywracam widoczność kursora konsoli
             Console.ReadKey();                  // Czekam na naciśnięcie dowolnego klawisza przez gracza przed zakończeniem gry
         }
@@ -330,18 +329,18 @@ namespace ConsoleGames.Games
                     bonusFood = GenerateValidPoint(snake, normalFood);      // Generuję nową pozycję bonusowego jedzenia na planszy
                     bonusFoodTimer = 50;                                    // Ustawiam licznik czasu bonusowego jedzenia na 50 klatek
                 }
+            }
 
-                // Jeżeli bonusowe jedzenie istnieje, to zmniejszamy jego licznik czasu
-                else
+            // Jeżeli bonusowe jedzenie istnieje, to zmniejszamy jego licznik czasu
+            else
+            {
+                bonusFoodTimer--;      // Zmniejszam licznik czasu bonusowego jedzenia
+
+                // Sprawdzam, czy licznik czasu bonusowego jedzenia osiągnął 0
+                if (bonusFoodTimer <= 0)
                 {
-                    bonusFoodTimer--;      // Zmniejszam licznik czasu bonusowego jedzenia
-
-                    // Sprawdzam, czy licznik czasu bonusowego jedzenia osiągnął 0
-                    if (bonusFoodTimer <= 0)
-                    {
-                        ClearPoint(rottenFood.Value);    // Czyścimy zepsute jedzenie z planszy
-                        bonusFood = null;                // Usuwam bonusowe jedzenie z planszy
-                    }
+                    ClearPoint(bonusFood.Value);     // Czyścimy jedzenie z planszy
+                    bonusFood = null;                // Usuwam bonusowe jedzenie z planszy
                 }
             }
         }
