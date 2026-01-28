@@ -36,6 +36,7 @@ namespace ConsoleGames.Games
         private int width = 40;                  // Szerokość planszy gry
         private int height = 20;                 // Wysokość planszy gry
         private int score;                       // Aktualny wynik gracza
+        private int highScore;                   // Najwyższy wynik gracza
         private int speed;                       // Prędkość ruchu węża
 
         private List<Point> obstacles;           // Lista obiektów na planszy gry
