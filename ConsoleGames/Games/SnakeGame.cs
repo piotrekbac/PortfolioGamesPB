@@ -47,6 +47,13 @@ namespace ConsoleGames.Games
         private string notification = "";        // Komunikat wyświetlany graczowi
         private int notificationTimer = 0;       // Licznik czasu dla komunikatu
 
+
+        // Definiujemy plik do zapisu wyniku
+
+        private const string HighScoreFIleName = "snake_highscore.txt";   // Nazwa pliku do przechowywania najwyższego wyniku
+
+
+
         // Główna metoda uruchamiająca grę Snake
         public void Run()
         {
