@@ -278,6 +278,9 @@ namespace ConsoleGames.Games
 
             Console.SetCursorPosition(0, messageY);                                                         // Ustawiam kursor na początku linii komunikatu końcowego
             AuthorInfo.WriteColor("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=", ConsoleColor.DarkBlue);      // Rysuję dekoracyjną linię
+
+            Console.SetCursorPosition(0, messageY + 1);                                                     // Ustawiam kursor na początku linii komunikatu końcowego
+            AuthorInfo.WriteColor("KONIEC GRY! Dziękujemy za grę w Snake!", ConsoleColor.DarkRed);          // Wyświetlam komunikat końcowy gry
         }
 
         // Definiuję metodę wyświetlającą powiadomienia dla gracza - metoda pomocnicza
