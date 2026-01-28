@@ -276,7 +276,8 @@ namespace ConsoleGames.Games
 
             int messageY = height + 4;        // Pozycja Y dla komunikatu końcowego - przesuwamy w dół, aby nie zasłonić interfejsu gry UI
 
-            Console.SetCursorPosition(0, messageY);      // Ustawiam kursor na początku linii komunikatu końcowego
+            Console.SetCursorPosition(0, messageY);                                                         // Ustawiam kursor na początku linii komunikatu końcowego
+            AuthorInfo.WriteColor("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=", ConsoleColor.DarkBlue);      // Rysuję dekoracyjną linię
         }
 
         // Definiuję metodę wyświetlającą powiadomienia dla gracza - metoda pomocnicza
