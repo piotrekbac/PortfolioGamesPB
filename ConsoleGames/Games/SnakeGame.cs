@@ -290,6 +290,9 @@ namespace ConsoleGames.Games
 
             Console.WriteLine();                                         // Dodaję pustą linię dla lepszego formatowania
             AuthorInfo.WriteError("Naciśnij dowolny klawisz...");        // Wyświetlam prośbę o naciśnięcie dowolnego klawisza przez gracza
+
+            Console.CursorVisible = true;       // Przywracam widoczność kursora konsoli
+            Console.ReadKey();                  // Czekam na naciśnięcie dowolnego klawisza przez gracza przed zakończeniem gry
         }
 
         // Definiuję metodę wyświetlającą powiadomienia dla gracza - metoda pomocnicza
