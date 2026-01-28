@@ -287,6 +287,9 @@ namespace ConsoleGames.Games
 
             Console.SetCursorPosition(0, messageY + 3);                                                     // Ustawiam kursor na początku linii komunikatu końcowego
             AuthorInfo.WriteColor("Naciśnij dowolny klawisz, aby zakończyć...", ConsoleColor.Gray);         // Wyświetlam komunikat o zakończeniu gry
+
+            Console.WriteLine();                                         // Dodaję pustą linię dla lepszego formatowania
+            AuthorInfo.WriteError("Naciśnij dowolny klawisz...");        // Wyświetlam prośbę o naciśnięcie dowolnego klawisza przez gracza
         }
 
         // Definiuję metodę wyświetlającą powiadomienia dla gracza - metoda pomocnicza
