@@ -284,6 +284,9 @@ namespace ConsoleGames.Games
 
             Console.SetCursorPosition(0, messageY + 2);                                                     // Ustawiam kursor na początku linii komunikatu końcowego
             AuthorInfo.WriteColor($"Twój końcowy wynik to: {score} punktów.", ConsoleColor.Yellow);         // Wyświetlam końcowy wynik gracza
+
+            Console.SetCursorPosition(0, messageY + 3);                                                     // Ustawiam kursor na początku linii komunikatu końcowego
+            AuthorInfo.WriteColor("Naciśnij dowolny klawisz, aby zakończyć...", ConsoleColor.Gray);         // Wyświetlam komunikat o zakończeniu gry
         }
 
         // Definiuję metodę wyświetlającą powiadomienia dla gracza - metoda pomocnicza
