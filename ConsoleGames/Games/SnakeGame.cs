@@ -324,9 +324,10 @@ namespace ConsoleGames.Games
                 }
             }
 
+            // Obsługa błędów odczytu pliku - w przypadku niepowodzenia, zwracam 0 jako domyślny najwyższy wynik
             catch
             {
-
+                // Nic nie robimy w przypadku błędu odczytu
             }
         }
 
