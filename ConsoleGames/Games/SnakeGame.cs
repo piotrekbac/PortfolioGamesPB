@@ -305,6 +305,12 @@ namespace ConsoleGames.Games
             Console.ReadKey();                  // Czekam na naciśnięcie dowolnego klawisza przez gracza przed zakończeniem gry
         }
 
+        // Definiuję metodę zapisującą najwyższy wynik do pliku - metoda pomocnicza
+        private void SaveHighScore(int newHighScore)
+        {
+
+        }
+
         // Definiuję metodę wyświetlającą powiadomienia dla gracza - metoda pomocnicza
         private void ShowNotification(string message)
         {
