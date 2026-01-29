@@ -314,7 +314,7 @@ namespace ConsoleGames.Games
                 // Sprawdzam czy plik istnieje przed próbą odczytu
                 if (File.Exists(HighScoreFIleName))
                 {
-
+                    string content = File.ReadAllText(HighScoreFIleName);    // Odczytuję zawartość pliku jako tekst
                 }
             }
 
