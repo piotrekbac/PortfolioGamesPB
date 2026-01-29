@@ -74,6 +74,7 @@ namespace ConsoleGames.Games
 
             Direction currentDirection = Direction.Up;      // Aktualny kierunek ruchu węża
             bool gameOver = false;                          // Flaga zakończenia gry 
+            bool gameWon = false;                           // Flaga zwycięstwa gry
             score = 0;                                      // Inicjalizacja wyniku gracza
             speed = 100;                                    // Inicjalizacja początkowej prędkości ruchu węża
 
