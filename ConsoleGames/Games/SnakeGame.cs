@@ -305,6 +305,12 @@ namespace ConsoleGames.Games
             Console.ReadKey();                  // Czekam na naciśnięcie dowolnego klawisza przez gracza przed zakończeniem gry
         }
 
+        // Definiuję metodę ładującą najwyższy wynik z pliku - metoda pomocnicza
+        private int LoadHighScore()
+        {
+
+        }
+
         // Definiuję metodę zapisującą najwyższy wynik do pliku - metoda pomocnicza
         private void SaveHighScore(int newHighScore)
         {
