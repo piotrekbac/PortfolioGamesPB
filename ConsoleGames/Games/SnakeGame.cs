@@ -95,7 +95,7 @@ namespace ConsoleGames.Games
             DrawObstacles();                                // Rysuję przeszkody na planszy gry
 
             // Główna pętla gry - w czasie rzeczywistym 
-            while (!gameOver)
+            while (!gameOver && !gameWon)
             {
                 // Obsługuję sprawdzenie kliknięcia klawisza przez gracza - bez zatrzymywania gry
                 if (Console.KeyAvailable)
@@ -224,6 +224,13 @@ namespace ConsoleGames.Games
                 {
                     ClearTail(snake);                        // Czyścimy ogon węża z planszy
                     snake.RemoveAt(snake.Count - 1);         // Usuwam ogon węża z listy
+                }
+
+                // Sprawdzam, czy gracz osiągnął warunek zwycięstwa
+                if (score >= WinningScore)
+                {
+                    gameWon = true;      // Ustawiam flagę zwycięstwa gry, jeśli gracz osiągnął próg punktowy
+                    continue;            // Przerywamy pętlę w trybie sukcesu
                 }
 
                 ManageBonusFood(random, snake, food);               // Zarządzam logiką bonusowego jedzenia na planszy gry
