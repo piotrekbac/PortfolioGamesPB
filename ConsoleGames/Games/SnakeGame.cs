@@ -308,7 +308,16 @@ namespace ConsoleGames.Games
         // Definiuję metodę zapisującą najwyższy wynik do pliku - metoda pomocnicza
         private void SaveHighScore(int newHighScore)
         {
+            // Próbuję zapisać najwyższy wynik do pliku
+            try
+            {
+                File.WriteAllText(HighScoreFIleName, newHighScore.ToString());   // Zapisuję najwyższy wynik do pliku jako tekst
+            }
 
+            catch
+            {
+
+            }
         }
 
         // Definiuję metodę wyświetlającą powiadomienia dla gracza - metoda pomocnicza
