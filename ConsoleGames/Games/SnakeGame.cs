@@ -329,6 +329,8 @@ namespace ConsoleGames.Games
             {
                 // Nic nie robimy w przypadku błędu odczytu
             }
+
+            return 0;      // Zwracam 0 jako domyślny najwyższy wynik, jeśli odczyt się nie powiódł
         }
 
         // Definiuję metodę zapisującą najwyższy wynik do pliku - metoda pomocnicza
