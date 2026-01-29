@@ -308,7 +308,20 @@ namespace ConsoleGames.Games
         // Definiuję metodę ładującą najwyższy wynik z pliku - metoda pomocnicza
         private int LoadHighScore()
         {
+            // Próbuję odczytać najwyższy wynik z pliku
+            try
+            {
+                // Sprawdzam czy plik istnieje przed próbą odczytu
+                if (File.Exists(HighScoreFIleName))
+                {
 
+                }
+            }
+
+            catch
+            {
+
+            }
         }
 
         // Definiuję metodę zapisującą najwyższy wynik do pliku - metoda pomocnicza
