@@ -316,7 +316,7 @@ namespace ConsoleGames.Games
 
             catch
             {
-
+                // Obsługa błędów zapisu pliku - w przypadku niepowodzenia, nic nie robimy
             }
         }
 
