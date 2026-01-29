@@ -315,6 +315,12 @@ namespace ConsoleGames.Games
                 if (File.Exists(HighScoreFIleName))
                 {
                     string content = File.ReadAllText(HighScoreFIleName);    // Odczytuję zawartość pliku jako tekst
+
+                    // Próbuję przekonwertować odczytany tekst na liczbę całkowitą
+                    if (int.TryParse(content, out int loadedScore))
+                    {
+                        return loadedScore;      // Zwracam odczytany najwyższy wynik jako liczbę całkowitą
+                    }
                 }
             }
 
