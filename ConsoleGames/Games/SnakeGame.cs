@@ -289,18 +289,20 @@ namespace ConsoleGames.Games
                 // Sprawdzam prędkość ruchu węża i wprowadzam opóźnienie na podstawie prędkości
                 if (speed > 0)
                 {
-                    Thread.Sleep(speed);      // Wprowadzam opóźnienie na podstawie prędkości ruchu węża
+                    Thread.Sleep(speed);       // Wprowadzam opóźnienie na podstawie prędkości ruchu węża
                 }
             }
 
             // Obsługa ekranu końcowego
 
-            bool newRecord = false;          // Flaga nowego rekordu
+            bool newRecord = false;           // Flaga nowego rekordu
 
             // Sprawdzam, czy gracz ustanowił nowy rekord wyniku
             if (score > highScore)
             {
-
+                highScore = score;            // Aktualizuję najwyższy wynik gracza
+                SaveHighScore(highScore);     // Zapisuję nowy najwyższy wynik do pliku
+                newRecord = true;             // Ustawiam flagę nowego rekordu na true
             }
 
             int messageY = height + 4;       // Pozycja Y dla komunikatu końcowego - przesuwamy w dół, aby nie zasłonić interfejsu gry UI
