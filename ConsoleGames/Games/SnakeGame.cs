@@ -335,6 +335,14 @@ namespace ConsoleGames.Games
                 Console.SetCursorPosition(0, messageY + 2);
                 Console.WriteLine($" Twój wynik: {score} pkt | Rekord: {highScore}");
             }
+
+            // Wyświetlam informację o nowym rekordzie, jeśli został ustanowiony
+            if (newRecord)
+            {
+                // Wyświetlam komunikat o nowym rekordzie
+                Console.SetCursorPosition(0, messageY + 3);
+                AuthorInfo.WriteColor(" NOWY REKORD! GRATULACJE! ", ConsoleColor.DarkYellow);
+            }
         }
 
         // Definiuję metodę ładującą najwyższy wynik z pliku - metoda pomocnicza
