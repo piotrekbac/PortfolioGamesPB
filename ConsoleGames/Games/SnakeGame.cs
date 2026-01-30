@@ -39,6 +39,9 @@ namespace ConsoleGames.Games
         private int highScore;                   // Najwyższy wynik gracza
         private int speed;                       // Prędkość ruchu węża
 
+        private int xOffset;                     // Offset X dla centrowania planszy 
+        private int yOffset;                     // Offset Y dla centrowania planszy 
+
         private List<Point> obstacles;           // Lista obiektów na planszy gry
         private Point? bonusFood;                // Pozycja bonusowego jedzenia na planszy gry - możliwy null
         private int bonusFoodTimer;              // Licznik czasu dla bonusowego jedzenia
