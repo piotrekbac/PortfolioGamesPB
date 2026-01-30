@@ -295,7 +295,9 @@ namespace ConsoleGames.Games
 
             // Obsługa ekranu końcowego
 
-            int messageY = height + 4;        // Pozycja Y dla komunikatu końcowego - przesuwamy w dół, aby nie zasłonić interfejsu gry UI
+            bool newRecord = false;          // Flaga nowego rekordu
+
+            int messageY = height + 4;       // Pozycja Y dla komunikatu końcowego - przesuwamy w dół, aby nie zasłonić interfejsu gry UI
 
             Console.SetCursorPosition(0, messageY);                                                         // Ustawiam kursor na początku linii komunikatu końcowego
             AuthorInfo.WriteColor("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=", ConsoleColor.DarkBlue);      // Rysuję dekoracyjną linię
