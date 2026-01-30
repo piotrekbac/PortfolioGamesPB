@@ -321,6 +321,14 @@ namespace ConsoleGames.Games
                 Console.SetCursorPosition(0, messageY + 1);
                 AuthorInfo.WriteColor("   GRATULACJE! WYGRAŁEŚ GRĘ SNAKE!   \n", ConsoleColor.Green);
             }
+
+            // Obsługuję komunikat o przegranej rozgrywce 
+            else
+            {
+                AuthorInfo.WriteColor("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n", ConsoleColor.Red);
+                Console.SetCursorPosition(0, messageY + 1);
+                AuthorInfo.WriteColor("        KONIEC GRY! PRZEGRAŁEŚ!        \n", ConsoleColor.Red);
+            }
         }
 
         // Definiuję metodę ładującą najwyższy wynik z pliku - metoda pomocnicza
