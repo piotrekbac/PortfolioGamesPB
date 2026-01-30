@@ -317,7 +317,9 @@ namespace ConsoleGames.Games
             // Wyświetlam komunikat końcowy w zależności od wyniku gry
             if (gameWon)
             {
-
+                AuthorInfo.WriteColor("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n", ConsoleColor.Green);
+                Console.SetCursorPosition(0, messageY + 1);
+                AuthorInfo.WriteColor("   GRATULACJE! WYGRAŁEŚ GRĘ SNAKE!   \n", ConsoleColor.Green);
             }
         }
 
