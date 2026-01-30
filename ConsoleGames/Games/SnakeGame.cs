@@ -131,7 +131,7 @@ namespace ConsoleGames.Games
                 }
 
                 // Pobieram aktualną pozycję głowy węża
-                Point head = snake[0];      
+                Point head = snake[0];
 
                 // Aktualizuję pozycję głowy węża na podstawie aktualnego kierunku ruchu
                 Point newHead = new Point(head.X, head.Y);
@@ -139,16 +139,20 @@ namespace ConsoleGames.Games
                 // Obsluga ruchu węża w zależności od kierunku
                 switch (currentDirection)
                 {
-                    case Direction.Up: newHead.Y--; 
+                    case Direction.Up:
+                        newHead.Y--;
                         break;          // Ruch w górę
 
-                    case Direction.Down: newHead.Y++; 
+                    case Direction.Down:
+                        newHead.Y++;
                         break;          // Ruch w dół
 
-                    case Direction.Left: newHead.X--;
+                    case Direction.Left:
+                        newHead.X--;
                         break;          // Ruch w lewo
 
-                    case Direction.Right: newHead.X++; 
+                    case Direction.Right:
+                        newHead.X++;
                         break;          // Ruch w prawo
                 }
 
@@ -167,7 +171,7 @@ namespace ConsoleGames.Games
                 }
 
                 // Sprawdzamy kolizję z przeszkodami na planszy gry 
-                if (obstacles.Any( o => o.X == newHead.X && o.Y == newHead.Y))
+                if (obstacles.Any(o => o.X == newHead.X && o.Y == newHead.Y))
                 {
                     gameOver = true;      // Kończę grę, jeśli wąż uderzy w przeszkodę
                     continue;             // Przechodzę do następnej iteracji pętli
@@ -307,22 +311,14 @@ namespace ConsoleGames.Games
 
             int messageY = height + 4;       // Pozycja Y dla komunikatu końcowego - przesuwamy w dół, aby nie zasłonić interfejsu gry UI
 
+            // Ustawiam kolor tekstu na biały dla komunikatu końcowego
             Console.SetCursorPosition(0, messageY);                                                         // Ustawiam kursor na początku linii komunikatu końcowego
-            AuthorInfo.WriteColor("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=", ConsoleColor.DarkBlue);      // Rysuję dekoracyjną linię
 
-            Console.SetCursorPosition(0, messageY + 1);                                                     // Ustawiam kursor na początku linii komunikatu końcowego
-            AuthorInfo.WriteColor("KONIEC GRY! Dziękuję za grę w Snake!", ConsoleColor.DarkRed);          // Wyświetlam komunikat końcowy gry
+            // Wyświetlam komunikat końcowy w zależności od wyniku gry
+            if (gameWon)
+            {
 
-            Console.SetCursorPosition(0, messageY + 2);                                                     // Ustawiam kursor na początku linii komunikatu końcowego
-            AuthorInfo.WriteColor($"Twój końcowy wynik to: {score} punktów.", ConsoleColor.Yellow);         // Wyświetlam końcowy wynik gracza
-
-            Console.SetCursorPosition(0, messageY + 3);                                                     // Ustawiam kursor na początku linii komunikatu końcowego
-            AuthorInfo.WriteColor("Naciśnij dowolny klawisz, aby zakończyć i wrócić do menu...\n", ConsoleColor.Gray);         // Wyświetlam komunikat o zakończeniu gry
-
-            Console.WriteLine();                                         // Dodaję pustą linię dla lepszego formatowania
-            
-            Console.CursorVisible = true;       // Przywracam widoczność kursora konsoli
-            Console.ReadKey();                  // Czekam na naciśnięcie dowolnego klawisza przez gracza przed zakończeniem gry
+            }
         }
 
         // Definiuję metodę ładującą najwyższy wynik z pliku - metoda pomocnicza
