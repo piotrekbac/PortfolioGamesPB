@@ -343,6 +343,10 @@ namespace ConsoleGames.Games
                 Console.SetCursorPosition(0, messageY + 3);
                 AuthorInfo.WriteColor(" NOWY REKORD! GRATULACJE! ", ConsoleColor.DarkYellow);
             }
+
+            // Wyświetlam odpowiedmią oprawę zakończenia gry
+            Console.SetCursorPosition(0, messageY + 4);
+            AuthorInfo.WriteColor("\n Naciśnij dowolny klawisz, aby zakończyć...", gameWon ? ConsoleColor.Green : ConsoleColor.Red);   // Instrukcja zakończenia gry
         }
 
         // Definiuję metodę ładującą najwyższy wynik z pliku - metoda pomocnicza
