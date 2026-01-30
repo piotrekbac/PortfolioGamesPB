@@ -347,6 +347,11 @@ namespace ConsoleGames.Games
             // Wyświetlam odpowiedmią oprawę zakończenia gry
             Console.SetCursorPosition(0, messageY + 4);
             AuthorInfo.WriteColor("\n Naciśnij dowolny klawisz, aby zakończyć...", gameWon ? ConsoleColor.Green : ConsoleColor.Red);   // Instrukcja zakończenia gry
+                               
+            AuthorInfo.WriteError("\nDziękuję za grę w Snake! Naciśnij dowolny klawisz, aby wyjść...");  
+            
+            Console.CursorVisible = true;       // Przywracam widoczność kursora konsoli
+            Console.ReadKey();                  // Czekam na naciśnięcie dowolnego klawisza przed zakończeniem gry
         }
 
         // Definiuję metodę ładującą najwyższy wynik z pliku - metoda pomocnicza
