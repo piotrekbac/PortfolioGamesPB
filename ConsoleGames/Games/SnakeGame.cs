@@ -317,6 +317,7 @@ namespace ConsoleGames.Games
             // Wyświetlam komunikat końcowy w zależności od wyniku gry
             if (gameWon)
             {
+                // Wyświetlam komunikat o zwycięstwie w grze
                 AuthorInfo.WriteColor("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n", ConsoleColor.Green);
                 Console.SetCursorPosition(0, messageY + 1);
                 AuthorInfo.WriteColor("   GRATULACJE! WYGRAŁEŚ GRĘ SNAKE!   \n", ConsoleColor.Green);
@@ -325,9 +326,14 @@ namespace ConsoleGames.Games
             // Obsługuję komunikat o przegranej rozgrywce 
             else
             {
+                // Wyświetlam komunikat o przegranej grze
                 AuthorInfo.WriteColor("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n", ConsoleColor.Red);
                 Console.SetCursorPosition(0, messageY + 1);
                 AuthorInfo.WriteColor("        KONIEC GRY! PRZEGRAŁEŚ!        \n", ConsoleColor.Red);
+
+                // Wyświetlam dodatkowy komunikat, jeśli gracz ustanowił nowy rekord
+                Console.SetCursorPosition(0, messageY + 2);
+                Console.WriteLine($" Twój wynik: {score} pkt | Rekord: {highScore}");
             }
         }
 
