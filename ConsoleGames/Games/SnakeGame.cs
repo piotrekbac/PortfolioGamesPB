@@ -374,6 +374,12 @@ namespace ConsoleGames.Games
             }
         }
 
+        // Definiuję metodę wyświetlającą ekran startowy gry - metoda pomocnicza
+        private void ShowStartScreen()
+        {
+
+        }
+
         // Definiuję metodę ładującą najwyższy wynik z pliku - metoda pomocnicza
         private int LoadHighScore()
         {
