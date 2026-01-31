@@ -377,7 +377,9 @@ namespace ConsoleGames.Games
         // Definiuję metodę wyświetlającą ekran startowy gry - metoda pomocnicza
         private void ShowStartScreen()
         {
-
+            Console.Clear();                            // Czyści ekran konsoli
+            int centerX = Console.WindowWidth / 2;      // Obliczam środek okna konsoli w osi X
+            int centerY = Console.WindowHeight / 2;     // Obliczam środek okna konsoli w osi Y
         }
 
         // Definiuję metodę ładującą najwyższy wynik z pliku - metoda pomocnicza
