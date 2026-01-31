@@ -382,6 +382,12 @@ namespace ConsoleGames.Games
             int centerY = Console.WindowHeight / 2;     // Obliczam środek okna konsoli w osi Y
         }
 
+        // Definiuję metodę rysującą wyśrodkowany tekst w konsoli - metoda pomocnicza
+        private void DrawCenteredText(string text, int y, ConsoleColor color)
+        {
+
+        }
+
         // Definiuję metodę ładującą najwyższy wynik z pliku - metoda pomocnicza
         private int LoadHighScore()
         {
