@@ -363,8 +363,15 @@ namespace ConsoleGames.Games
             Console.CursorVisible = false;      // Ukrywam kursor konsoli
 
             // Dokonujemy obliczeń offsetu dla centrowania planszy w oknie konsoli (zakładamy stały rozmiar okna 120x30) 
+
             xOffset = (Console.WindowWidth - width) / 2;        // Obliczam offset X dla centrowania planszy
             yOffset = (Console.WindowHeight - height) / 2;      // Obliczam offset Y dla centrowania planszy
+
+            // Dodanie lekkiej korekty w górę, żeby zrobić miejsce na HUD gry
+            if (yOffset > 2)
+            {
+                yOffset -= 2;      // Dodatkowe przesunięcie w górę, aby zrobić miejsce na nagłówek gry
+            }
         }
 
         // Definiuję metodę ładującą najwyższy wynik z pliku - metoda pomocnicza
