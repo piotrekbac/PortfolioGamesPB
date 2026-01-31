@@ -401,6 +401,12 @@ namespace ConsoleGames.Games
             Console.ResetColor();                                       // Resetuję kolor konsoli do domyślnego
         }
 
+        // Definiuję metodę rysującą pojedynczy piksel na planszy gry - metoda pomocnicza
+        private void DrawPixel(int x, int y, string symbol, ConsoleColor color)
+        {
+
+        }
+
         // Definiuję metodę ładującą najwyższy wynik z pliku - metoda pomocnicza
         private int LoadHighScore()
         {
