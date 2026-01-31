@@ -395,7 +395,10 @@ namespace ConsoleGames.Games
         // Definiuję metodę rysującą tekst w określonej pozycji w konsoli - metoda pomocnicza
         private void DrawAt(int x, int y, string text, ConsoleColor color)
         {
-
+            Console.SetCursorPosition(xOffset + x, yOffset + y);        // Ustawiam kursor na podanej pozycji z uwzględnieniem offsetu
+            Console.ForegroundColor = color;                            // Ustawiam kolor tekstu na podany kolor
+            Console.Write(text);                                        // Wyświetlam podany tekst w konsoli
+            Console.ResetColor();                                       // Resetuję kolor konsoli do domyślnego
         }
 
         // Definiuję metodę ładującą najwyższy wynik z pliku - metoda pomocnicza
