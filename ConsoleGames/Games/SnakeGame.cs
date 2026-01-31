@@ -53,11 +53,11 @@ namespace ConsoleGames.Games
 
         // Definiujemy plik do zapisu wyniku
 
-        private const string HighScoreFIleName = "snake_highscore.txt";   // Nazwa pliku do przechowywania najwyższego wyniku
+        private const string HighScoreFIleName = "snake_highscore.txt";     // Nazwa pliku do przechowywania najwyższego wyniku
         
         // Definiuję warunek zwycięstwa gry - próg punktowy do osiągnięcia zwycięstwa
 
-        private const int WinningScore = 777;    // Próg punktowy do osiągnięcia zwycięstwa
+        private const int WinningScore = 250;                               // Próg punktowy do osiągnięcia zwycięstwa
 
         // Główna metoda uruchamiająca grę Snake
         public void Run()
@@ -355,6 +355,12 @@ namespace ConsoleGames.Games
             
             Console.CursorVisible = true;       // Przywracam widoczność kursora konsoli
             Console.ReadKey();                  // Czekam na naciśnięcie dowolnego klawisza przed zakończeniem gry
+        }
+
+        // Definiuję metodę konfigurującą konsolę dla gry - metoda pomocnicza
+        private void SetupConsole()
+        {
+
         }
 
         // Definiuję metodę ładującą najwyższy wynik z pliku - metoda pomocnicza
