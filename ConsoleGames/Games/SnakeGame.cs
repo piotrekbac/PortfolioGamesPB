@@ -392,6 +392,12 @@ namespace ConsoleGames.Games
             Console.ResetColor();                               // Resetuję kolor konsoli do domyślnego
         }
 
+        // Definiuję metodę rysującą tekst w określonej pozycji w konsoli - metoda pomocnicza
+        private void DrawAt(int x, int y, string text, ConsoleColor color)
+        {
+
+        }
+
         // Definiuję metodę ładującą najwyższy wynik z pliku - metoda pomocnicza
         private int LoadHighScore()
         {
