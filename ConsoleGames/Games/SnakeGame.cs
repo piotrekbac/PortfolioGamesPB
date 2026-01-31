@@ -570,7 +570,10 @@ namespace ConsoleGames.Games
         // Definiuję metodę rysującą HUD gry - metoda pomocnicza
         private void DrawHUD()
         {
-
+            int hudY = yOffset - 2;                                         // Pozycja Y dla HUD gry (2 linie nad planszą gry)
+            Console.SetCursorPosition(xOffset, hudY);                       // Ustawiam kursor na pozycji HUD gry
+            Console.ForegroundColor = ConsoleColor.White;                   // Ustawiam kolor tekstu na biały
+            Console.Write($" Snake Game | Rekord: {highScore} pkt ");       // Wyświetlam tytuł gry i najwyższy wynik
         }
 
         // Definiuję metodę generującą przeszkody na planszy gry
