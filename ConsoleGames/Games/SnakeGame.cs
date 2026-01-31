@@ -385,7 +385,11 @@ namespace ConsoleGames.Games
         // Definiuję metodę rysującą wyśrodkowany tekst w konsoli - metoda pomocnicza
         private void DrawCenteredText(string text, int y, ConsoleColor color)
         {
-
+            int x = (Console.WindowWidth - text.Length) / 2;    // Obliczam pozycję X dla wyśrodkowania tekstu
+            Console.SetCursorPosition(x, y);                    // Ustawiam kursor na obliczoną pozycję
+            Console.ForegroundColor = color;                    // Ustawiam kolor tekstu na podany kolor
+            Console.Write(text);                                // Wyświetlam podany tekst w konsoli
+            Console.ResetColor();                               // Resetuję kolor konsoli do domyślnego
         }
 
         // Definiuję metodę ładującą najwyższy wynik z pliku - metoda pomocnicza
