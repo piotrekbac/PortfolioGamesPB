@@ -360,7 +360,11 @@ namespace ConsoleGames.Games
         // Definiuję metodę konfigurującą konsolę dla gry - metoda pomocnicza
         private void SetupConsole()
         {
+            Console.CursorVisible = false;      // Ukrywam kursor konsoli
 
+            // Dokonujemy obliczeń offsetu dla centrowania planszy w oknie konsoli (zakładamy stały rozmiar okna 120x30) 
+            xOffset = (Console.WindowWidth - width) / 2;        // Obliczam offset X dla centrowania planszy
+            yOffset = (Console.WindowHeight - height) / 2;      // Obliczam offset Y dla centrowania planszy
         }
 
         // Definiuję metodę ładującą najwyższy wynik z pliku - metoda pomocnicza
