@@ -465,15 +465,6 @@ namespace ConsoleGames.Games
             Console.Write(" ");                             // Czyścimy znak ogona z planszy
         }
 
-        // Definiuję metodę rysującą pojedynczy piksel na planszy gry - metoda pomocnicza
-        private void DrawPixel(int x, int y, string symbol, ConsoleColor color)
-        {
-            Console.SetCursorPosition(x, y);      // Ustawiam kursor na podanej pozycji
-            Console.ForegroundColor = color;      // Ustawiam kolor tekstu na podany kolor
-            Console.Write(symbol);                // Rysuję podany symbol na planszy
-            Console.ResetColor();                 // Resetuję kolor konsoli do domyślnego
-        }
-
         // Definiuję metodę zarządzającą logiką bonusowego jedzenia na planszy gry
         private void ManageBonusFood(Random random, List<Point> snake, Point normalFood)
         {
@@ -574,6 +565,12 @@ namespace ConsoleGames.Games
             }
 
             Console.ResetColor();      // Resetuję kolor konsoli do domyślnego
+        }
+
+        // Definiuję metodę rysującą HUD gry - metoda pomocnicza
+        private void DrawHUD()
+        {
+
         }
 
         // Definiuję metodę generującą przeszkody na planszy gry
