@@ -404,7 +404,7 @@ namespace ConsoleGames.Games
         // Definiuję metodę rysującą pojedynczy piksel na planszy gry - metoda pomocnicza
         private void DrawPixel(int x, int y, string symbol, ConsoleColor color)
         {
-
+            DrawAt(x, y, symbol, color);      // Rysuję podany symbol na podanej pozycji z podanym kolorem
         }
 
         // Definiuję metodę ładującą najwyższy wynik z pliku - metoda pomocnicza
