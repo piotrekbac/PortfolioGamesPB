@@ -576,6 +576,12 @@ namespace ConsoleGames.Games
             Console.Write($" Snake Game | Rekord: {highScore} pkt ");       // Wyświetlam tytuł gry i najwyższy wynik
         }
 
+        // Definiuję metodę aktualizującą HUD gry - metoda pomocnicza
+        private void UpdateHUD()
+        {
+
+        }
+
         // Definiuję metodę generującą przeszkody na planszy gry
         private void GenerateObstacles(int count, List<Point> snake)
         {
