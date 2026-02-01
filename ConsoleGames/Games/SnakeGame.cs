@@ -449,6 +449,12 @@ namespace ConsoleGames.Games
             // Rysujemy tło okienka 
             Console.ForegroundColor = ConsoleColor.White;      // Ustawiam kolor tekstu na biały
 
+            // Rysuję tło okienka jako spacje
+            for (int y = 0; y < boxHeight; y++)
+            {
+                Console.SetCursorPosition(bX, bY + y);                     // Ustawiam kursor na początku linii okienka
+                Console.Write(new string(' ', boxWidth));                  // Rysuję tło okienka jako spacje
+            }
         }
 
         // Definiuję metodę zapisującą najwyższy wynik do pliku - metoda pomocnicza
