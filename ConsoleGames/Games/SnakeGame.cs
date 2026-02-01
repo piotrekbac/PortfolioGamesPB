@@ -442,6 +442,10 @@ namespace ConsoleGames.Games
 
             int boxWidth = 40;              // Szerokość okienka
             int boxHeight = 10;             // Wysokość okienka
+
+            int bX = (Console.WindowWidth - boxWidth) / 2;      // Pozycja X okienka
+            int bY = (Console.WindowHeight - boxHeight) / 2;    // Pozycja Y okienka
+
         }
 
         // Definiuję metodę zapisującą najwyższy wynik do pliku - metoda pomocnicza
