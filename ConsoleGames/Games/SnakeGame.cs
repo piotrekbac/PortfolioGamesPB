@@ -598,6 +598,13 @@ namespace ConsoleGames.Games
                 Console.ForegroundColor = ConsoleColor.Yellow;              // Ustawiam kolor tekstu na żółty
                 Console.Write($" Czas bonusu: {bonusFoodTimer}   ");        // Wyświetlam licznik czasu bonusowego jedzenia
             }
+
+            // Jeśli nie ma powiadomienia ani bonusowego jedzenia, czyścimy linię HUD
+            else
+            {
+                Console.Write("                                       ");   // Czyścimy linię HUD
+                Console.ResetColor();                                       // Resetuję kolor konsoli do domyślnego
+            }
         }
 
         // Definiuję metodę generującą przeszkody na planszy gry
