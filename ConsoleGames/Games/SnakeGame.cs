@@ -435,6 +435,12 @@ namespace ConsoleGames.Games
             return 0;      // Zwracam 0 jako domyślny najwyższy wynik, jeśli odczyt się nie powiódł
         }
 
+        // Definiuję metodę wyświetlającą ekran końcowy gry - metoda pomocnicza
+        private void ShowGameOverScreen(bool won, bool newRecord)
+        {
+
+        }
+
         // Definiuję metodę zapisującą najwyższy wynik do pliku - metoda pomocnicza
         private void SaveHighScore(int newHighScore)
         {
