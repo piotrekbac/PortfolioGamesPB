@@ -591,6 +591,13 @@ namespace ConsoleGames.Games
                 Console.Write(" >> " + notification + " <<");               // Wyświetlam powiadomienie
                 notificationTimer--;                                        // Zmniejszam licznik czasu powiadomienia
             }
+
+            // Obsłguję wyświetlanie licznika czasu bonusowego jedzenia
+            else if (bonusFood.HasValue)
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;              // Ustawiam kolor tekstu na żółty
+                Console.Write($" Czas bonusu: {bonusFoodTimer}   ");        // Wyświetlam licznik czasu bonusowego jedzenia
+            }
         }
 
         // Definiuję metodę generującą przeszkody na planszy gry
