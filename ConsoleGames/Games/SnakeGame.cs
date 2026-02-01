@@ -438,7 +438,10 @@ namespace ConsoleGames.Games
         // Definiuję metodę wyświetlającą ekran końcowy gry - metoda pomocnicza
         private void ShowGameOverScreen(bool won, bool newRecord)
         {
+            // Rusujemy okienko na środku
 
+            int boxWidth = 40;              // Szerokość okienka
+            int boxHeight = 10;             // Wysokość okienka
         }
 
         // Definiuję metodę zapisującą najwyższy wynik do pliku - metoda pomocnicza
