@@ -446,6 +446,9 @@ namespace ConsoleGames.Games
             int bX = (Console.WindowWidth - boxWidth) / 2;      // Pozycja X okienka
             int bY = (Console.WindowHeight - boxHeight) / 2;    // Pozycja Y okienka
 
+            // Rysujemy tło okienka 
+            Console.ForegroundColor = ConsoleColor.White;      // Ustawiam kolor tekstu na biały
+
         }
 
         // Definiuję metodę zapisującą najwyższy wynik do pliku - metoda pomocnicza
