@@ -465,6 +465,15 @@ namespace ConsoleGames.Games
             Console.SetCursorPosition(bX + (boxWidth - scoreText.Length) / 2, bY + 4);    // Ustawiam kursor na środku tekstu z wynikiem
             Console.ForegroundColor = ConsoleColor.White;                                 // Ustawiam kolor tekstu na biały
             Console.Write(scoreText);                                                     // Wyświetlam tekst z wynikiem gracza
+
+            // Wyświetlam informację o nowym rekordzie, jeśli został ustanowiony
+            if (newRecord)
+            {
+                string recordText = "NOWY REKORD! GRATULACJE!";                                 // Tekst informujący o nowym rekordzie
+                Console.SetCursorPosition(bX + (boxWidth - recordText.Length) / 2, bY + 5);     // Ustawiam kursor na środku tekstu z informacją o nowym rekordzie
+                Console.ForegroundColor = ConsoleColor.Yellow;                                  // Ustawiam kolor tekstu na żółty
+                Console.Write(recordText);                                                      // Wyświetlam tekst informujący o nowym rekordzie
+            }
         }
 
         // Definiuję metodę zapisującą najwyższy wynik do pliku - metoda pomocnicza
