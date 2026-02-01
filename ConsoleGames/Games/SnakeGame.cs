@@ -460,6 +460,11 @@ namespace ConsoleGames.Games
             Console.SetCursorPosition(bX + (boxWidth - title.Length) / 2, bY + 1);        // Ustawiam kursor na środku tytułu okienka
             Console.ForegroundColor = won ? ConsoleColor.Green : ConsoleColor.Red;        // Ustawiam kolor tytułu na zielony lub czerwony w zależności od wyniku gry
             Console.Write(title);                                                         // Wyświetlam tytuł okienka
+
+            string scoreText = $"Twój wynik: {score} pkt";                                // Tekst z wynikiem gracza
+            Console.SetCursorPosition(bX + (boxWidth - scoreText.Length) / 2, bY + 4);    // Ustawiam kursor na środku tekstu z wynikiem
+            Console.ForegroundColor = ConsoleColor.White;                                 // Ustawiam kolor tekstu na biały
+            Console.Write(scoreText);                                                     // Wyświetlam tekst z wynikiem gracza
         }
 
         // Definiuję metodę zapisującą najwyższy wynik do pliku - metoda pomocnicza
