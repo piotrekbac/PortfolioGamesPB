@@ -583,6 +583,14 @@ namespace ConsoleGames.Games
             Console.SetCursorPosition(xOffset, hudY);                       // Ustawiam kursor na pozycji HUD gry
             Console.ForegroundColor = ConsoleColor.Gray;                    // Ustawiam kolor tekstu na szary
             Console.Write($" Snake Game | Rekord: {highScore} pkt ");       // Wyświetlam tytuł gry i najwyższy wynik
+
+            // Obsługuję odliczanie czasu powiadomień
+            if (notificationTimer > 0)
+            {
+                Console.ForegroundColor = ConsoleColor.Cyan;                // Ustawiam kolor tekstu na cyjanowy
+                Console.Write(" >> " + notification + " <<");               // Wyświetlam powiadomienie
+                notificationTimer--;                                        // Zmniejszam licznik czasu powiadomienia
+            }
         }
 
         // Definiuję metodę generującą przeszkody na planszy gry
