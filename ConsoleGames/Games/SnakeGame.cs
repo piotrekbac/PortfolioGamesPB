@@ -320,6 +320,7 @@ namespace ConsoleGames.Games
 
             DrawCenteredText(" Cel: Zdobądź " + WinningScore + " punktów", centerY + 5, ConsoleColor.Gray);       // Rysuję cel gry z progiem punktowym do zwycięstwa
             DrawCenteredText(" Legenda: ", centerY + 7, ConsoleColor.Gray);                                       // Rysuję legendę gry - inicjalizacja
+            DrawCenteredText(" O - Głowa węża ", centerY + 8, ConsoleColor.Green);                                // Rysuję legendę dla głowy węża
         }
 
         // Definiuję metodę rysującą wyśrodkowany tekst w konsoli - metoda pomocnicza
