@@ -267,34 +267,6 @@ namespace ConsoleGames.Games
 
                 UpdateHUD();        // Aktualizuję interfejs użytkownika gry - HUD
 
-                // Obsługuję interfejs użytkownika gry - UI - podział na 2 linie
-
-                // Linia 1 - Statystyki stałe gry
-                Console.SetCursorPosition(0, height + 1);                    // Ustawiam kursor na początku linii 1 pod planszą gry
-                Console.ForegroundColor = ConsoleColor.White;                // Ustawiam kolor tekstu na biały
-
-                Console.Write($"Wynik: {score} | Prędkość: {110 - speed} | Długość: {snake.Count}   ");   // Wyświetlam wynik, prędkość i długość węża
-
-
-                // Linia 2 - Powiadomienia dynamiczne oraz timer
-                Console.SetCursorPosition(0, height + 2);                    // Ustawiam kursor na początku linii 2 pod planszą gry`
-                Console.Write(new string(' ', 40));                          // Czyścimy linię powiadomień spacjami, aby stare napisany nie zostawały
-
-                // Sprawdzam, czy licznik powiadomień jest większy od 0 i wyświetlam odpowiednie powiadomienie
-                if (notificationTimer > 0)
-                {
-                    Console.ForegroundColor = ConsoleColor.Cyan;                // Ustawiam kolor tekstu na cyjanowy
-                    Console.Write(" >> " + notification);                       // Wyświetlam powiadomienie z prefiksem " >> " - dla urozmaicenia
-                    notificationTimer--;                                        // Zmniejszam licznik czasu powiadomienia
-                }
-
-                // Wyświetlam licznik w sytuacji, gdy nie ma powiadomienia
-                else
-                {
-                    Console.ForegroundColor = ConsoleColor.Yellow;              // Ustawiam kolor tekstu na żółty
-                    Console.Write($"Czas bonusu: {bonusFoodTimer}   ");         // Wyświetlam licznik czasu bonusowego jedzenia
-                }
-
                 // Sprawdzam prędkość ruchu węża i wprowadzam opóźnienie na podstawie prędkości
                 if (speed > 0)
                 {
