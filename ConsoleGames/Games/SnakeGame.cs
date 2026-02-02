@@ -319,6 +319,7 @@ namespace ConsoleGames.Games
             DrawCenteredText(" Sterowanie: Strzałki ", centerY + 4, ConsoleColor.Gray);                     // Rysuję instrukcję sterowania grą
 
             DrawCenteredText(" Cel: Zdobądź " + WinningScore + " punktów", centerY + 5, ConsoleColor.Gray);       // Rysuję cel gry z progiem punktowym do zwycięstwa
+            DrawCenteredText(" Legenda: ", centerY + 7, ConsoleColor.Gray);                                       // Rysuję legendę gry - inicjalizacja
         }
 
         // Definiuję metodę rysującą wyśrodkowany tekst w konsoli - metoda pomocnicza
