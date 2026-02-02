@@ -480,6 +480,9 @@ namespace ConsoleGames.Games
             Console.SetCursorPosition(bX + (boxWidth - exitText.Length) / 2, bY + 7);    // Ustawiam kursor na środku tekstu z instrukcją zakończenia gry
             Console.ForegroundColor = ConsoleColor.Gray;                                 // Ustawiam kolor tekstu na biały
             Console.Write(exitText);                                                     // Wyświetlam tekst instrukcji zakończenia gry
+
+            Console.ReadKey();          // Czekam na naciśnięcie dowolnego klawisza, aby zakończyć grę
+            Console.Clear();            // Czyści ekran konsoli
         }
 
         // Definiuję metodę zapisującą najwyższy wynik do pliku - metoda pomocnicza
