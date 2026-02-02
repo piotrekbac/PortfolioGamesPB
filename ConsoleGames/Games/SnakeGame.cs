@@ -322,6 +322,7 @@ namespace ConsoleGames.Games
             DrawCenteredText(" Legenda: ", centerY + 7, ConsoleColor.Gray);                                       // Rysuję legendę gry - inicjalizacja
             DrawCenteredText(" O - Głowa węża ", centerY + 8, ConsoleColor.Green);                                // Rysuję legendę dla głowy węża
             DrawCenteredText(" o - Tułów węża ", centerY + 9, ConsoleColor.DarkGreen);                            // Rysuję legendę dla tułowia węża
+            DrawCenteredText(" @ - Jedzenie (+10 pkt) ", centerY + 10, ConsoleColor.Red);                         // Rysuję legendę dla jedzenia
         }
 
         // Definiuję metodę rysującą wyśrodkowany tekst w konsoli - metoda pomocnicza
