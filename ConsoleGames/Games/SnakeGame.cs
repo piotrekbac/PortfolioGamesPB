@@ -316,8 +316,9 @@ namespace ConsoleGames.Games
             DrawCenteredText(" GRA SNAKE ", centerY, ConsoleColor.Green);                                   // Rysuję tytuł gry na środku ekranu
             DrawCenteredText(" Autor: Piotr Bacior ", centerY + 1, ConsoleColor.DarkGray);                  // Rysuję autora gry pod tytułem
             DrawCenteredText("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=", centerY + 2, ConsoleColor.DarkGreen);     // Rysuję dekoracyjną linię pod tytułem gry
-
             DrawCenteredText(" Sterowanie: Strzałki ", centerY + 4, ConsoleColor.Gray);                     // Rysuję instrukcję sterowania grą
+
+            DrawCenteredText(" Cel: Zdobądź " + WinningScore + " punktów", centerY + 5, ConsoleColor.Gray);       // Rysuję cel gry z progiem punktowym do zwycięstwa
         }
 
         // Definiuję metodę rysującą wyśrodkowany tekst w konsoli - metoda pomocnicza
