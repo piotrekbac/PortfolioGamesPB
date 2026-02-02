@@ -286,49 +286,7 @@ namespace ConsoleGames.Games
                 newRecord = true;             // Ustawiam flagę nowego rekordu na true
             }
 
-            int messageY = height + 4;       // Pozycja Y dla komunikatu końcowego - przesuwamy w dół, aby nie zasłonić interfejsu gry UI
-
-            // Ustawiam kolor tekstu na biały dla komunikatu końcowego
-            Console.SetCursorPosition(0, messageY);                                                         // Ustawiam kursor na początku linii komunikatu końcowego
-
-            // Wyświetlam komunikat końcowy w zależności od wyniku gry
-            if (gameWon)
-            {
-                // Wyświetlam komunikat o zwycięstwie w grze
-                AuthorInfo.WriteColor("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n", ConsoleColor.Green);
-                Console.SetCursorPosition(0, messageY + 1);
-                AuthorInfo.WriteColor("   GRATULACJE! WYGRAŁEŚ GRĘ SNAKE!   \n", ConsoleColor.Green);
-            }
-
-            // Obsługuję komunikat o przegranej rozgrywce 
-            else
-            {
-                // Wyświetlam komunikat o przegranej grze
-                AuthorInfo.WriteColor("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n", ConsoleColor.Red);
-                Console.SetCursorPosition(0, messageY + 1);
-                AuthorInfo.WriteColor("        KONIEC GRY! PRZEGRAŁEŚ!        \n", ConsoleColor.Red);
-
-                // Wyświetlam dodatkowy komunikat, jeśli gracz ustanowił nowy rekord
-                Console.SetCursorPosition(0, messageY + 2);
-                Console.WriteLine($" Twój wynik: {score} pkt | Rekord: {highScore}");
-            }
-
-            // Wyświetlam informację o nowym rekordzie, jeśli został ustanowiony
-            if (newRecord)
-            {
-                // Wyświetlam komunikat o nowym rekordzie
-                Console.SetCursorPosition(0, messageY + 3);
-                AuthorInfo.WriteColor(" NOWY REKORD! GRATULACJE! ", ConsoleColor.DarkYellow);
-            }
-
-            // Wyświetlam odpowiedmią oprawę zakończenia gry
-            Console.SetCursorPosition(0, messageY + 4);
-            AuthorInfo.WriteColor("\n Naciśnij dowolny klawisz, aby zakończyć...", gameWon ? ConsoleColor.Green : ConsoleColor.Red);   // Instrukcja zakończenia gry
-                               
-            AuthorInfo.WriteColor("\nDziękuję za grę w Snake! Naciśnij dowolny klawisz, aby wyjść...", ConsoleColor.DarkGray);  
-            
-            Console.CursorVisible = true;       // Przywracam widoczność kursora konsoli
-            Console.ReadKey();                  // Czekam na naciśnięcie dowolnego klawisza przed zakończeniem gry
+            ShowGameOverScreen(gameWon, newRecord);    // Wyświetlam ekran końcowy gry
         }
 
         // Definiuję metodę konfigurującą konsolę dla gry - metoda pomocnicza
