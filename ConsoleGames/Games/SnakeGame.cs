@@ -265,6 +265,8 @@ namespace ConsoleGames.Games
                     DrawPixel(rottenFood.Value.X, rottenFood.Value.Y, "X", ConsoleColor.Magenta);   // Rysuję zepsute jedzenie na planszy
                 }
 
+                UpdateHUD();        // Aktualizuję interfejs użytkownika gry - HUD
+
                 // Obsługuję interfejs użytkownika gry - UI - podział na 2 linie
 
                 // Linia 1 - Statystyki stałe gry
