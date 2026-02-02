@@ -302,7 +302,7 @@ namespace ConsoleGames.Games
             // Dodanie lekkiej korekty w górę, żeby zrobić miejsce na HUD gry
             if (yOffset > 2)
             {
-                yOffset -= 2;      // Dodatkowe przesunięcie w górę, aby zrobić miejsce na nagłówek gry
+                yOffset -= 1;      // Dodatkowe przesunięcie w górę, aby zrobić miejsce na nagłówek gry
             }
         }
 
