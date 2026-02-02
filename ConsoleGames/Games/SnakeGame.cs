@@ -474,6 +474,12 @@ namespace ConsoleGames.Games
                 Console.ForegroundColor = ConsoleColor.Yellow;                                  // Ustawiam kolor tekstu na żółty
                 Console.Write(recordText);                                                      // Wyświetlam tekst informujący o nowym rekordzie
             }
+
+            // Wyświetlam instrukcję zakończenia gry
+            string exitText = "Naciśnij dowolny klawisz, aby zakończyć...";              // Tekst instrukcji zakończenia gry
+            Console.SetCursorPosition(bX + (boxWidth - exitText.Length) / 2, bY + 7);    // Ustawiam kursor na środku tekstu z instrukcją zakończenia gry
+            Console.ForegroundColor = ConsoleColor.Gray;                                 // Ustawiam kolor tekstu na biały
+            Console.Write(exitText);                                                     // Wyświetlam tekst instrukcji zakończenia gry
         }
 
         // Definiuję metodę zapisującą najwyższy wynik do pliku - metoda pomocnicza
