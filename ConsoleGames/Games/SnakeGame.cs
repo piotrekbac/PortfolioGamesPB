@@ -589,6 +589,13 @@ namespace ConsoleGames.Games
         private void DrawHUD()
         {
             int hudY = yOffset - 2;                                         // Pozycja Y dla HUD gry (2 linie nad planszą gry)
+
+            // Tworzymy zabezpieczenie na wypadek, gdyby yOffset nadał był mniejszy od 0, ustawiamy 0 jako minimalną wartość
+            if (hudY < 0)
+            {
+                hudY = 0;    // Ustawiam minimalną wartość pozycji Y dla HUD gry
+            }
+
             Console.SetCursorPosition(xOffset, hudY);                       // Ustawiam kursor na pozycji HUD gry
             Console.ForegroundColor = ConsoleColor.White;                   // Ustawiam kolor tekstu na biały
             Console.Write($" Snake Game | Rekord: {highScore} pkt ");       // Wyświetlam tytuł gry i najwyższy wynik
