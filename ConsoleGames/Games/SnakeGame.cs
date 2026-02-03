@@ -297,6 +297,20 @@ namespace ConsoleGames.Games
             // Wprowadzamy zabezpieczenie - próbujemy ustawić minimalny rozmiar okna, aby nasza plansza się mieściła
             // height + 5 linii zapasu na HUD i komunikaty
 
+            // Ustawiam minimalną wysokość okna konsoli
+            try
+            {
+                // Ustawiam minimalną wysokość okna konsoli
+                if (Console.WindowHeight < height + 5)
+                {
+                    Console.WindowHeight = height + 5;      // Ustawiam minimalną wysokość okna konsoli
+                }
+            }
+
+            catch ()
+            {
+
+            }
 
             // Dokonujemy obliczeń offsetu dla centrowania planszy w oknie konsoli (zakładamy stały rozmiar okna 120x30) 
 
