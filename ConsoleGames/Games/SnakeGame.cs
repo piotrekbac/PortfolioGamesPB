@@ -294,6 +294,10 @@ namespace ConsoleGames.Games
         {
             Console.CursorVisible = false;      // Ukrywam kursor konsoli
 
+            // Wprowadzamy zabezpieczenie - próbujemy ustawić minimalny rozmiar okna, aby nasza plansza się mieściła
+            // height + 5 linii zapasu na HUD i komunikaty
+
+
             // Dokonujemy obliczeń offsetu dla centrowania planszy w oknie konsoli (zakładamy stały rozmiar okna 120x30) 
 
             xOffset = (Console.WindowWidth - width) / 2;        // Obliczam offset X dla centrowania planszy
