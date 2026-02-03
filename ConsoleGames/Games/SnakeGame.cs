@@ -299,10 +299,10 @@ namespace ConsoleGames.Games
             xOffset = (Console.WindowWidth - width) / 2;        // Obliczam offset X dla centrowania planszy
             yOffset = (Console.WindowHeight - height) / 2;      // Obliczam offset Y dla centrowania planszy
 
-            // Dodanie lekkiej korekty w górę, żeby zrobić miejsce na HUD gry
-            if (yOffset > 2)
+            // Dodanie lekkiej korekty na offset Y, aby zrobić miejsce na HUD gry
+            if (yOffset < 2)
             {
-                yOffset -= 1;      // Dodatkowe przesunięcie w górę, aby zrobić miejsce na nagłówek gry
+                yOffset = 2;      // Dodatkowe przesunięcie, aby zrobić miejsce na HUD gry
             }
         }
 
