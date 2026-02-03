@@ -65,6 +65,7 @@ namespace ConsoleGames.Games
             Console.CursorVisible = false;      // Ukrywam kursor konsoli
             Console.Clear();                    // Czyści ekran konsoli
 
+            SetupConsole();                     // Konfiguruję konsolę dla gry
             highScore = LoadHighScore();        // Ładuję najwyższy wynik z pliku
 
             // Inicjalizacja węża jako lista punktów na planszy, gdzie index 0 to głowa
