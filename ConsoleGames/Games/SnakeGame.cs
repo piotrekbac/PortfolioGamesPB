@@ -97,6 +97,11 @@ namespace ConsoleGames.Games
             Random random = new Random();                   // Tworzę nową instancję generatora liczb losowych
             Point food = GenerateFood(snake);               // Generuję początkową pozycję jedzenia na planszy
 
+
+            // Rysuję statyczne tło gry
+
+            Console.Clear();                                // Czyści ekran konsoli
+            DrawHUD();                                      // Rysuję interfejs użytkownika gry - HUD
             DrawBorder();                                   // Rysuję obramowanie planszy gry
             DrawObstacles();                                // Rysuję przeszkody na planszy gry
 
