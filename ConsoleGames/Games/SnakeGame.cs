@@ -307,7 +307,8 @@ namespace ConsoleGames.Games
                 }
             }
 
-            catch ()
+            // Ignorujemy przypadek, gdy system nie pozwala na zmianę rozmiaru okna konsoli
+            catch 
             {
 
             }
