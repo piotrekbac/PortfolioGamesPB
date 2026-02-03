@@ -325,6 +325,7 @@ namespace ConsoleGames.Games
             DrawCenteredText(" @ - Jedzenie (+10 pkt) ", centerY + 10, ConsoleColor.Red);                         // Rysuję legendę dla jedzenia
             DrawCenteredText(" X - Trucizna (-20 pkt)", centerY + 11, ConsoleColor.Magenta);                      // Rysuję legendę dla trucizny
             DrawCenteredText(" $ - BONUS (+50 pkt) ", centerY + 12, ConsoleColor.Yellow);                         // Rysuję legendę dla bonusowego jedzenia
+            DrawCenteredText(" Naciśnij dowolny klawisz, aby rozpocząć... ", centerY + 14, ConsoleColor.Gray);    // Rysuję instrukcję rozpoczęcia gry
         }
 
         // Definiuję metodę rysującą wyśrodkowany tekst w konsoli - metoda pomocnicza
