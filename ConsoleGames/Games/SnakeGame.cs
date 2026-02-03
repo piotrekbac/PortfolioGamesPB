@@ -68,6 +68,8 @@ namespace ConsoleGames.Games
             SetupConsole();                     // Konfiguruję konsolę dla gry
             highScore = LoadHighScore();        // Ładuję najwyższy wynik z pliku
 
+            ShowStartScreen();                  // Wyświetlam ekran startowy gry
+
             // Inicjalizacja węża jako lista punktów na planszy, gdzie index 0 to głowa
             List<Point> snake = new List<Point>
             {
