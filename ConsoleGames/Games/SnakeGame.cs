@@ -342,9 +342,9 @@ namespace ConsoleGames.Games
         // Definiuję metodę wyświetlającą ekran startowy gry - metoda pomocnicza
         private void ShowStartScreen()
         {
-            Console.Clear();                            // Czyści ekran konsoli
-            int centerX = Console.WindowWidth / 2;      // Obliczam środek okna konsoli w osi X
-            int centerY = Console.WindowHeight / 2;     // Obliczam środek okna konsoli w osi Y
+            Console.Clear();                                // Czyści ekran konsoli
+            int centerX = Console.WindowWidth / 2;          // Obliczam środek okna konsoli w osi X
+            int centerY = Console.WindowHeight / 2 - 5;     // Obliczam środek okna konsoli w osi Y
 
             DrawCenteredText(" GRA SNAKE ", centerY, ConsoleColor.Green);                                   // Rysuję tytuł gry na środku ekranu
             DrawCenteredText(" Autor: Piotr Bacior ", centerY + 1, ConsoleColor.DarkGray);                  // Rysuję autora gry pod tytułem
