@@ -373,6 +373,12 @@ namespace ConsoleGames.Games
             Console.Clear();        // Czyści ekran konsoli
         }
 
+        // Definiuję metodę rysującą prostokątne pudełko w konsoli - metoda pomocnicza 
+        private void DrawBox(int x, int y, int w, int h, ConsoleColor color)
+        {
+
+        }
+
         // Definiuję metodę rysującą wyśrodkowany tekst w konsoli - metoda pomocnicza
         private void DrawCenteredText(string text, int y, ConsoleColor color)
         {
