@@ -313,6 +313,12 @@ namespace ConsoleGames.Games
                 {
                     Console.WindowHeight = height + 5;      // Ustawiam minimalną wysokość okna konsoli
                 }
+
+                // Ustawiam minimalną szerokość okna konsoli
+                if (Console.WindowWidth < width + 5)
+                {
+                    Console.WindowWidth = width + 5;        // Ustawiam minimalną szerokość okna konsoli
+                }
             }
 
             // Ignorujemy przypadek, gdy system nie pozwala na zmianę rozmiaru okna konsoli
