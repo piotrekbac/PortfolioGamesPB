@@ -297,6 +297,9 @@ namespace ConsoleGames.Games
             ShowGameOverScreen(gameWon, newRecord);    // Wyświetlam ekran końcowy gry
         }
 
+
+        // ====== SEKCJA KONFIGURACJI KONSOLI I EKRANÓW ========
+
         // Definiuję metodę konfigurującą konsolę dla gry - metoda pomocnicza
         private void SetupConsole()
         {
