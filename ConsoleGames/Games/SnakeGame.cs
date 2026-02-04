@@ -376,7 +376,11 @@ namespace ConsoleGames.Games
         // Definiuję metodę rysującą prostokątne pudełko w konsoli - metoda pomocnicza 
         private void DrawBox(int x, int y, int w, int h, ConsoleColor color)
         {
+            Console.ForegroundColor = color;      // Ustawiam kolor tekstu na podany kolor
 
+            // Górna krawędź pudełka
+            Console.SetCursorPosition(x, y);                        // Ustawiam kursor na górną krawędź pudełka
+            Console.Write("+" + new string('-', w - 2) + "+");      // Rysuję górną krawędź pudełka
         }
 
         // Definiuję metodę rysującą wyśrodkowany tekst w konsoli - metoda pomocnicza
