@@ -230,7 +230,7 @@ namespace ConsoleGames.Games
                     if (snake.Count > 1)
                     {
                         ClearPoint(snake.Last());                   // Czyścimy ogon węża z planszy  
-                        snake.RemoveAt(snake.Count - 1);    // Usuwam ogon węża z listy (wąż skraca się)
+                        snake.RemoveAt(snake.Count - 1);            // Usuwam ogon węża z listy (wąż skraca się)
                     }
                 }
 
@@ -238,7 +238,7 @@ namespace ConsoleGames.Games
                 if (shouldRemoveTail)
                 {
                     ClearPoint(snake.Last());                        // Czyścimy ogon węża z planszy
-                    snake.RemoveAt(snake.Count - 1);         // Usuwam ogon węża z listy
+                    snake.RemoveAt(snake.Count - 1);                 // Usuwam ogon węża z listy
                 }
 
                 // Sprawdzam, czy gracz osiągnął warunek zwycięstwa
@@ -381,12 +381,6 @@ namespace ConsoleGames.Games
             Console.ForegroundColor = color;                    // Ustawiam kolor tekstu na podany kolor
             Console.Write(text);                                // Wyświetlam podany tekst w konsoli
             Console.ResetColor();                               // Resetuję kolor konsoli do domyślnego
-        }
-
-        // Definiuję metodę rysującą pojedynczy piksel na planszy gry - metoda pomocnicza
-        private void DrawPixel(int x, int y, string symbol, ConsoleColor color)
-        {
-            DrawAt(x, y, symbol, color);      // Rysuję podany symbol na podanej pozycji z podanym kolorem
         }
 
         // Definiuję metodę wyświetlającą ekran końcowy gry - metoda pomocnicza
