@@ -443,17 +443,14 @@ namespace ConsoleGames.Games
 
             Console.ReadKey();          // Czekam na naciśnięcie dowolnego klawisza, aby zakończyć grę
             Console.Clear();            // Czyści ekran konsoli
-        }        
-
-        // Definiuję metodę czyszczącą ogon węża - metoda pomocnicza
-        private void ClearTail(List<Point> snake)
-        {
-            Point tail = snake[snake.Count - 1];            // Pobieram pozycję ogona węża
-            Console.SetCursorPosition(tail.X, tail.Y);      // Ustawiam kursor na pozycji ogona węża
-            Console.Write(" ");                             // Czyścimy znak ogona z planszy
         }
 
-        
+        // Definiuję metodę rysującą pojedynczy piksel na planszy gry - metoda pomocnicza
+        private void DrawPixel(int x, int y, string symbol, ConsoleColor color)
+        {
+            DrawAt(x, y, symbol, color);      // Rysuję podany symbol na podanej pozycji z podanym kolorem
+        }
+
 
         // Definiuję metodę czyszczącą punkt na planszy gry - metoda pomocnicza
         private void ClearPoint(Point p)
