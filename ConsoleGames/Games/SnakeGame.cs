@@ -395,34 +395,6 @@ namespace ConsoleGames.Games
             DrawAt(x, y, symbol, color);      // Rysuję podany symbol na podanej pozycji z podanym kolorem
         }
 
-        // Definiuję metodę ładującą najwyższy wynik z pliku - metoda pomocnicza
-        private int LoadHighScore()
-        {
-            // Próbuję odczytać najwyższy wynik z pliku
-            try
-            {
-                // Sprawdzam czy plik istnieje przed próbą odczytu
-                if (File.Exists(HighScoreFIleName))
-                {
-                    string content = File.ReadAllText(HighScoreFIleName);    // Odczytuję zawartość pliku jako tekst
-
-                    // Próbuję przekonwertować odczytany tekst na liczbę całkowitą
-                    if (int.TryParse(content, out int loadedScore))
-                    {
-                        return loadedScore;      // Zwracam odczytany najwyższy wynik jako liczbę całkowitą
-                    }
-                }
-            }
-
-            // Obsługa błędów odczytu pliku - w przypadku niepowodzenia, zwracam 0 jako domyślny najwyższy wynik
-            catch
-            {
-                // Nic nie robimy w przypadku błędu odczytu
-            }
-
-            return 0;      // Zwracam 0 jako domyślny najwyższy wynik, jeśli odczyt się nie powiódł
-        }
-
         // Definiuję metodę wyświetlającą ekran końcowy gry - metoda pomocnicza
         private void ShowGameOverScreen(bool won, bool newRecord)
         {
@@ -471,29 +443,7 @@ namespace ConsoleGames.Games
 
             Console.ReadKey();          // Czekam na naciśnięcie dowolnego klawisza, aby zakończyć grę
             Console.Clear();            // Czyści ekran konsoli
-        }
-
-        // Definiuję metodę zapisującą najwyższy wynik do pliku - metoda pomocnicza
-        private void SaveHighScore(int newHighScore)
-        {
-            // Próbuję zapisać najwyższy wynik do pliku
-            try
-            {
-                File.WriteAllText(HighScoreFIleName, newHighScore.ToString());   // Zapisuję najwyższy wynik do pliku jako tekst
-            }
-
-            catch
-            {
-                // Obsługa błędów zapisu pliku - w przypadku niepowodzenia, nic nie robimy
-            }
-        }
-
-        // Definiuję metodę wyświetlającą powiadomienia dla gracza - metoda pomocnicza
-        private void ShowNotification(string message)
-        {
-            notification = message;          // Ustawiam komunikat powiadomienia
-            notificationTimer = 20;          // Ustawiam licznik czasu powiadomienia na 20 klatek
-        }
+        }        
 
         // Definiuję metodę czyszczącą ogon węża - metoda pomocnicza
         private void ClearTail(List<Point> snake)
@@ -503,59 +453,7 @@ namespace ConsoleGames.Games
             Console.Write(" ");                             // Czyścimy znak ogona z planszy
         }
 
-        // Definiuję metodę zarządzającą logiką bonusowego jedzenia na planszy gry
-        private void ManageBonusFood(Random random, List<Point> snake, Point normalFood)
-        {
-            // Jeżeli bonusowego jedzenia nie ma, to mamy 2% szany na jego pojawienie się w każdej klatce, na planszy
-            if (bonusFood == null)
-            {
-                if (random.Next(0,100) == 0)    // ustawiamy 1% szansy na pojawienie się bonusowego jedzenia
-                {
-                    bonusFood = GenerateValidPoint(snake, normalFood);      // Generuję nową pozycję bonusowego jedzenia na planszy
-                    bonusFoodTimer = 50;                                    // Ustawiam licznik czasu bonusowego jedzenia na 50 klatek
-                }
-            }
-
-            // Jeżeli bonusowe jedzenie istnieje, to zmniejszamy jego licznik czasu
-            else
-            {
-                bonusFoodTimer--;      // Zmniejszam licznik czasu bonusowego jedzenia
-
-                // Sprawdzam, czy licznik czasu bonusowego jedzenia osiągnął 0
-                if (bonusFoodTimer <= 0)
-                {
-                    ClearPoint(bonusFood.Value);     // Czyścimy jedzenie z planszy
-                    bonusFood = null;                // Usuwam bonusowe jedzenie z planszy
-                }
-            }
-        }
-
-        // Definiuję metodę zarządzającą logiką zepsutego jedzenia na planszy gry
-        private void ManageRottenFood(Random random, List<Point> snake, Point normalFood)
-        {
-            // Warunek obsługujący logikę, gdy zepsutego jedzenia nie ma na planszy
-            if (rottenFood == null)
-            {
-                // Trucizna pojawia się częściej niż bonus 
-                if (random.Next(0, 80) == 0)
-                {
-                    rottenFood = GenerateValidPoint(snake, normalFood);    // Generuję nową pozycję zepsutego jedzenia na planszy   
-
-                    // nie ma licznika czasu dla zepsutego jedzenia - pozostaje na planszy do momentu zjedzenia lub zakończenia gry
-                }
-            }
-
-            // Warunek obsługujący logikę, gdy zepsute jedzenie jest na planszy
-            else
-            {
-                // Trucizna znika sama po jakimś czasie
-                if (random.Next(0, 100) == 0)
-                {
-                    ClearPoint(rottenFood.Value);     // Czyścimy zepsute jedzenie z planszy
-                    rottenFood = null;                // Usuwam zepsute jedzenie z planszy
-                }
-            }
-        }
+        
 
         // Definiuję metodę czyszczącą punkt na planszy gry - metoda pomocnicza
         private void ClearPoint(Point p)
@@ -659,6 +557,71 @@ namespace ConsoleGames.Games
             }
         }
 
+
+        // ======== SEKCJA LOGIKI GRY ========
+        
+
+        // Definiuję metodę zarządzającą logiką bonusowego jedzenia na planszy gry
+        private void ManageBonusFood(Random random, List<Point> snake, Point normalFood)
+        {
+            // Jeżeli bonusowego jedzenia nie ma, to mamy 2% szany na jego pojawienie się w każdej klatce, na planszy
+            if (bonusFood == null)
+            {
+                if (random.Next(0, 100) == 0)    // ustawiamy 1% szansy na pojawienie się bonusowego jedzenia
+                {
+                    bonusFood = GenerateValidPoint(snake, normalFood);      // Generuję nową pozycję bonusowego jedzenia na planszy
+                    bonusFoodTimer = 50;                                    // Ustawiam licznik czasu bonusowego jedzenia na 50 klatek
+                }
+            }
+
+            // Jeżeli bonusowe jedzenie istnieje, to zmniejszamy jego licznik czasu
+            else
+            {
+                bonusFoodTimer--;      // Zmniejszam licznik czasu bonusowego jedzenia
+
+                // Sprawdzam, czy licznik czasu bonusowego jedzenia osiągnął 0
+                if (bonusFoodTimer <= 0)
+                {
+                    ClearPoint(bonusFood.Value);     // Czyścimy jedzenie z planszy
+                    bonusFood = null;                // Usuwam bonusowe jedzenie z planszy
+                }
+            }
+        }
+
+        // Definiuję metodę zarządzającą logiką zepsutego jedzenia na planszy gry
+        private void ManageRottenFood(Random random, List<Point> snake, Point normalFood)
+        {
+            // Warunek obsługujący logikę, gdy zepsutego jedzenia nie ma na planszy
+            if (rottenFood == null)
+            {
+                // Trucizna pojawia się częściej niż bonus 
+                if (random.Next(0, 80) == 0)
+                {
+                    rottenFood = GenerateValidPoint(snake, normalFood);    // Generuję nową pozycję zepsutego jedzenia na planszy   
+
+                    // nie ma licznika czasu dla zepsutego jedzenia - pozostaje na planszy do momentu zjedzenia lub zakończenia gry
+                }
+            }
+
+            // Warunek obsługujący logikę, gdy zepsute jedzenie jest na planszy
+            else
+            {
+                // Trucizna znika sama po jakimś czasie
+                if (random.Next(0, 100) == 0)
+                {
+                    ClearPoint(rottenFood.Value);     // Czyścimy zepsute jedzenie z planszy
+                    rottenFood = null;                // Usuwam zepsute jedzenie z planszy
+                }
+            }
+        }
+
+        // Definiuję metodę wyświetlającą powiadomienia dla gracza - metoda pomocnicza
+        private void ShowNotification(string message)
+        {
+            notification = message;          // Ustawiam komunikat powiadomienia
+            notificationTimer = 20;          // Ustawiam licznik czasu powiadomienia na 20 klatek
+        }
+
         // Definiuję metodę generującą przeszkody na planszy gry
         private void GenerateObstacles(int count, List<Point> snake)
         {
@@ -724,7 +687,49 @@ namespace ConsoleGames.Games
             {
                 return p;      // Zwracam wygenerowaną ważną pozycję punktu
             }
+        }
 
+        // Definiuję metodę ładującą najwyższy wynik z pliku - metoda pomocnicza
+        private int LoadHighScore()
+        {
+            // Próbuję odczytać najwyższy wynik z pliku
+            try
+            {
+                // Sprawdzam czy plik istnieje przed próbą odczytu
+                if (File.Exists(HighScoreFIleName))
+                {
+                    string content = File.ReadAllText(HighScoreFIleName);    // Odczytuję zawartość pliku jako tekst
+
+                    // Próbuję przekonwertować odczytany tekst na liczbę całkowitą
+                    if (int.TryParse(content, out int loadedScore))
+                    {
+                        return loadedScore;      // Zwracam odczytany najwyższy wynik jako liczbę całkowitą
+                    }
+                }
+            }
+
+            // Obsługa błędów odczytu pliku - w przypadku niepowodzenia, zwracam 0 jako domyślny najwyższy wynik
+            catch
+            {
+                // Nic nie robimy w przypadku błędu odczytu
+            }
+
+            return 0;      // Zwracam 0 jako domyślny najwyższy wynik, jeśli odczyt się nie powiódł
+        }
+
+        // Definiuję metodę zapisującą najwyższy wynik do pliku - metoda pomocnicza
+        private void SaveHighScore(int newHighScore)
+        {
+            // Próbuję zapisać najwyższy wynik do pliku
+            try
+            {
+                File.WriteAllText(HighScoreFIleName, newHighScore.ToString());   // Zapisuję najwyższy wynik do pliku jako tekst
+            }
+
+            catch
+            {
+                // Obsługa błędów zapisu pliku - w przypadku niepowodzenia, nic nie robimy
+            }
         }
     }
 }
