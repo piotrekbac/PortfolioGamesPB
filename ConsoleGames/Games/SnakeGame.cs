@@ -503,6 +503,10 @@ namespace ConsoleGames.Games
             Console.ResetColor();      // Resetuję kolor konsoli do domyślnego
         }
 
+
+        // ======== SEKCJA ZARZĄDZANIA HUD'EM ========
+
+
         // Definiuję metodę rysującą HUD gry - metoda pomocnicza
         private void DrawHUD()
         {
