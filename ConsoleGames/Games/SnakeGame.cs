@@ -451,6 +451,11 @@ namespace ConsoleGames.Games
             DrawAt(x, y, symbol, color);      // Rysuję podany symbol na podanej pozycji z podanym kolorem
         }
 
+        // Definiuję metodę czyszczącą ogon węża z planszy gry - metoda pomocnicza
+        private void ClearPoint(Point p)
+        {
+            DrawAt(p.X, p.Y, " ", ConsoleColor.Black);    // Czyścimy znak z planszy
+        }
 
         // Definiuję metodę czyszczącą punkt na planszy gry - metoda pomocnicza
         private void ClearPoint(Point p)
