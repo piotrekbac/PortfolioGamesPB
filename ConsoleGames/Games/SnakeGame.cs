@@ -346,6 +346,12 @@ namespace ConsoleGames.Games
             int centerX = Console.WindowWidth / 2;          // Obliczam środek okna konsoli w osi X
             int centerY = Console.WindowHeight / 2 - 5;     // Obliczam środek okna konsoli w osi Y
 
+            // Zapewniam, że centerY nie będzie ujemne
+            if (centerY < 0)
+            {
+                centerY = 0;      // Zapewniam, że centerY nie będzie ujemne
+            }
+
             DrawCenteredText(" GRA SNAKE ", centerY, ConsoleColor.Green);                                   // Rysuję tytuł gry na środku ekranu
             DrawCenteredText(" Autor: Piotr Bacior ", centerY + 1, ConsoleColor.DarkGray);                  // Rysuję autora gry pod tytułem
             DrawCenteredText("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=", centerY + 2, ConsoleColor.DarkGreen);     // Rysuję dekoracyjną linię pod tytułem gry
