@@ -380,15 +380,6 @@ namespace ConsoleGames.Games
             Console.ResetColor();                               // Resetuję kolor konsoli do domyślnego
         }
 
-        // Definiuję metodę rysującą tekst w określonej pozycji w konsoli - metoda pomocnicza
-        private void DrawAt(int x, int y, string text, ConsoleColor color)
-        {
-            Console.SetCursorPosition(xOffset + x, yOffset + y);        // Ustawiam kursor na podanej pozycji z uwzględnieniem offsetu
-            Console.ForegroundColor = color;                            // Ustawiam kolor tekstu na podany kolor
-            Console.Write(text);                                        // Wyświetlam podany tekst w konsoli
-            Console.ResetColor();                                       // Resetuję kolor konsoli do domyślnego
-        }
-
         // Definiuję metodę rysującą pojedynczy piksel na planszy gry - metoda pomocnicza
         private void DrawPixel(int x, int y, string symbol, ConsoleColor color)
         {
@@ -445,6 +436,20 @@ namespace ConsoleGames.Games
             Console.Clear();            // Czyści ekran konsoli
         }
 
+
+        // ======== SEKCJA RYSOWANIA PLANSZY WŁĄCZNIE Z OFFSET'EM ========
+
+
+        // Definiuję metodę rysującą tekst w określonej pozycji w konsoli - metoda pomocnicza
+        private void DrawAt(int x, int y, string text, ConsoleColor color)
+        {
+            Console.SetCursorPosition(xOffset + x, yOffset + y);        // Ustawiam kursor na podanej pozycji z uwzględnieniem offsetu
+            Console.ForegroundColor = color;                            // Ustawiam kolor tekstu na podany kolor
+            Console.Write(text);                                        // Wyświetlam podany tekst w konsoli
+            Console.ResetColor();                                       // Resetuję kolor konsoli do domyślnego
+        }
+
+
         // Definiuję metodę rysującą pojedynczy piksel na planszy gry - metoda pomocnicza
         private void DrawPixel(int x, int y, string symbol, ConsoleColor color)
         {
@@ -457,12 +462,6 @@ namespace ConsoleGames.Games
             DrawAt(p.X, p.Y, " ", ConsoleColor.Black);    // Czyścimy znak z planszy
         }
 
-        // Definiuję metodę czyszczącą punkt na planszy gry - metoda pomocnicza
-        private void ClearPoint(Point p)
-        {
-            Console.SetCursorPosition(p.X, p.Y);    // Ustawiam kursor na podanej pozycji
-            Console.Write(" ");                     // Czyścimy znak z planszy
-        }
 
         // Definiuję metodę rysującą obramowanie planszy gry 
         private void DrawBorder()
