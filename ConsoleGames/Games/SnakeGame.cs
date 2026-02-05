@@ -527,8 +527,8 @@ namespace ConsoleGames.Games
             // Rysuję każdą przeszkodę na planszy gry
             foreach (var obj in obstacles)
             {
-                Console.SetCursorPosition(obj.X, obj.Y);      // Ustawiam kursor na pozycji przeszkody
-                Console.Write("#");                           // Rysuję przeszkodę na planszy
+                // Używamy "█"
+                DrawPixel(obj.X, obj.Y, "█", ConsoleColor.DarkGray);
             }
 
             Console.ResetColor();      // Resetuję kolor konsoli do domyślnego
