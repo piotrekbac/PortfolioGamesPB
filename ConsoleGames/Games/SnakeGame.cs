@@ -390,6 +390,11 @@ namespace ConsoleGames.Games
                 Console.SetCursorPosition(x + w - 1, y + i);        // Ustawiam kursor na prawą krawędź pudełka
                 Console.Write("|");                                 // Rysuję boczne krawędzie pudełka z prawej strony
             }
+
+            // Dolna krawędź pudełka
+            Console.SetCursorPosition(x, y + h - 1);                // Ustawiam kursor na dolną krawędź pudełka
+            Console.Write("+" + new string('-', w - 2) + "+");      // Rysuję dolną krawędź pudełka
+            Console.ResetColor();                                   // Resetuję kolor konsoli do domyślnego
         }
 
         // Definiuję metodę rysującą wyśrodkowany tekst w konsoli - metoda pomocnicza
