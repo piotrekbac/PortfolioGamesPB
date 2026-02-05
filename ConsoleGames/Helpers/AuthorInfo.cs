@@ -25,7 +25,7 @@ namespace ConsoleGames.Helpers
 
             // Ustawiam kolor tekstu na ciemnozielony i wyświetlam tytuł gry w konsoli
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine($" > {gameTitle.ToUpper()} <\n");
+            Console.WriteLine($"\n > {gameTitle.ToUpper()} <\n");
             Console.ResetColor();
             Console.WriteLine();
         }
