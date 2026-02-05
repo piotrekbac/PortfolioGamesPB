@@ -428,6 +428,8 @@ namespace ConsoleGames.Games
                 Console.Write(new string(' ', boxWidth));                  // Rysuję tło okienka jako spacje
             }
 
+            DrawBox(bX, bY, boxWidth, boxHeight, won ? ConsoleColor.Green : ConsoleColor.Red);   // Rysuję obramowanie okienka w zależności od wyniku gry
+
             string title = won ? "GRATULACJE! WYGRAŁEŚ!" : "KONIEC GRY";                  // Tytuł okienka w zależności od wyniku gry
             Console.SetCursorPosition(bX + (boxWidth - title.Length) / 2, bY + 1);        // Ustawiam kursor na środku tytułu okienka
             Console.ForegroundColor = won ? ConsoleColor.Green : ConsoleColor.Red;        // Ustawiam kolor tytułu na zielony lub czerwony w zależności od wyniku gry
