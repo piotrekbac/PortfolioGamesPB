@@ -602,10 +602,10 @@ namespace ConsoleGames.Games
             // Jeżeli bonusowego jedzenia nie ma, to mamy 2% szany na jego pojawienie się w każdej klatce, na planszy
             if (bonusFood == null)
             {
-                if (random.Next(0, 100) == 0)    // ustawiamy 1% szansy na pojawienie się bonusowego jedzenia
+                if (random.Next(0, 40) == 0)    // ustawiamy 1% szansy na pojawienie się bonusowego jedzenia
                 {
                     bonusFood = GenerateValidPoint(snake, normalFood);      // Generuję nową pozycję bonusowego jedzenia na planszy
-                    bonusFoodTimer = 50;                                    // Ustawiam licznik czasu bonusowego jedzenia na 50 klatek
+                    bonusFoodTimer = 80;                                    // Ustawiam licznik czasu bonusowego jedzenia na 50 klatek
                 }
             }
 
@@ -630,7 +630,7 @@ namespace ConsoleGames.Games
             if (rottenFood == null)
             {
                 // Trucizna pojawia się częściej niż bonus 
-                if (random.Next(0, 80) == 0)
+                if (random.Next(0, 30) == 0)
                 {
                     rottenFood = GenerateValidPoint(snake, normalFood);    // Generuję nową pozycję zepsutego jedzenia na planszy   
 
