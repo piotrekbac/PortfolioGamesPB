@@ -501,14 +501,9 @@ namespace ConsoleGames.Games
         {
             Console.ForegroundColor = ConsoleColor.DarkCyan;       // Ustawiam kolor obramowania na ciemny cyjan
 
-            // Rysuję górną krawędź obramowania planszy
-            for (int x = 0; x <= width; x++)
-            {
-                Console.SetCursorPosition(x, 0);                  // Ustawiam kursor na górną krawędź
-                Console.Write("#");                               // Rysuję górną krawędź obramowania
-                Console.SetCursorPosition(x, height);             // Ustawiam kursor na dolną krawędź
-                Console.Write("#");                               // Rysuję dolną krawędź obramowania
-            }
+            // Rysowanie górnej linii z rogami: ╔══════╗
+            Console.SetCursorPosition(xOffset, yOffset);                // Ustawiam kursor na górny lewy róg obramowania planszy
+            Console.Write("╔" + new string('═', width - 1) + "╗");      // Rysuję górną krawędź obramowania planszy
 
             // Rysuję boczne krawędzie obramowania planszy
             for (int y = 0; y <= height; y++)
