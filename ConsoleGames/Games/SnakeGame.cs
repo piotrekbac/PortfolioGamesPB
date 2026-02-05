@@ -512,6 +512,10 @@ namespace ConsoleGames.Games
                 Console.SetCursorPosition(xOffset + width, yOffset + y); Console.Write("║");    // Rysuję prawą krawędź obramowania planszy
             }
 
+            // Rysowanie dolnej linii: ╚══════╝
+            Console.SetCursorPosition(xOffset, yOffset + height);       // Ustawiam kursor na dolny lewy róg obramowania planszy
+            Console.Write("╚" + new string('═', width - 1) + "╝");      // Rysuję dolną krawędź obramowania planszy
+
             Console.ResetColor();      // Resetuję kolor konsoli do domyślnego
         }
 
