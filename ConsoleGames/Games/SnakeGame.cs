@@ -305,8 +305,11 @@ namespace ConsoleGames.Games
         {
             Console.CursorVisible = false;      // Ukrywam kursor konsoli
 
+            // Ustawiam kodowanie konsoli na UTF-8, aby obsługiwać znaki specjalne
+            Console.OutputEncoding = Encoding.UTF8;
+
             // Wprowadzamy zabezpieczenie - próbujemy ustawić minimalny rozmiar okna, aby nasza plansza się mieściła
-            // height + 5 linii zapasu na HUD i komunikaty
+            // height + 6 linii zapasu na HUD i komunikaty
 
             // Ustawiam minimalną wysokość okna konsoli
             try
