@@ -387,6 +387,8 @@ namespace ConsoleGames.Games
             {
                 Console.SetCursorPosition(x, y + i);                // Ustawiam kursor na lewą krawędź pudełka
                 Console.Write("|");                                 // Rysuję boczne krawędzie pudełka
+                Console.SetCursorPosition(x + w - 1, y + i);        // Ustawiam kursor na prawą krawędź pudełka
+                Console.Write("|");                                 // Rysuję boczne krawędzie pudełka z prawej strony
             }
         }
 
