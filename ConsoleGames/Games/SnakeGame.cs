@@ -312,15 +312,15 @@ namespace ConsoleGames.Games
             try
             {
                 // Ustawiam minimalną wysokość okna konsoli
-                if (Console.WindowHeight < height + 5)
+                if (Console.WindowHeight < height + 6)
                 {
-                    Console.WindowHeight = height + 5;      // Ustawiam minimalną wysokość okna konsoli
+                    Console.WindowHeight = height + 6;      // Ustawiam minimalną wysokość okna konsoli
                 }
 
                 // Ustawiam minimalną szerokość okna konsoli
-                if (Console.WindowWidth < width + 5)
+                if (Console.WindowWidth < width + 6)
                 {
-                    Console.WindowWidth = width + 5;        // Ustawiam minimalną szerokość okna konsoli
+                    Console.WindowWidth = width + 6;        // Ustawiam minimalną szerokość okna konsoli
                 }
             }
 
@@ -347,7 +347,7 @@ namespace ConsoleGames.Games
         {
             Console.Clear();                                // Czyści ekran konsoli
             int centerX = Console.WindowWidth / 2;          // Obliczam środek okna konsoli w osi X
-            int centerY = Console.WindowHeight / 2 - 5;     // Obliczam środek okna konsoli w osi Y
+            int centerY = Console.WindowHeight / 2 - 6;     // Obliczam środek okna konsoli w osi Y
 
             // Zapewniam, że centerY nie będzie ujemne
             if (centerY < 0)
@@ -401,6 +401,13 @@ namespace ConsoleGames.Games
         private void DrawCenteredText(string text, int y, ConsoleColor color)
         {
             int x = (Console.WindowWidth - text.Length) / 2;    // Obliczam pozycję X dla wyśrodkowania tekstu
+
+            // Zapewniam, że pozycja X nie będzie ujemna
+            if (x < 0)
+            {
+                x = 0;      // Zapewniam, że pozycja X nie będzie ujemna
+            }
+
             Console.SetCursorPosition(x, y);                    // Ustawiam kursor na obliczoną pozycję
             Console.ForegroundColor = color;                    // Ustawiam kolor tekstu na podany kolor
             Console.Write(text);                                // Wyświetlam podany tekst w konsoli
