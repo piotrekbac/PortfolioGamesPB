@@ -8,6 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;         // Korzystamy z Threading dla DispatcherTimer
 
 // Piotr Bacior - Projekt portfolio 2026 
 
@@ -18,6 +19,9 @@ namespace DesktopGames.Views
     /// </summary>
     public partial class MainWindow : Window
     {
+        private DispatcherTimer timer;      // Timer do aktualizacji zegara
+        private int timeElapsed;            // Czas, który upłynął w sekundach
+
         public MainWindow()
         {
             InitializeComponent();
