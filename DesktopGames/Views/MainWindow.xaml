@@ -19,9 +19,10 @@
         </Grid.RowDefinitions>
 
         <!-- Definiujemy nagłówek (statystyki) -->
-        <StackPanel>
-            
-            
+        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Czas: 00:00" FontSize="20" FontWeight="Bold" Margin="10"/>
+            <TextBlock Text=" | " FontSize="20"/>
+            <TextBlock Text="Ruchy: 0" FontSize="20" FontWeight="Bold" Margin="10"/>
         </StackPanel>
         
     </Grid>
