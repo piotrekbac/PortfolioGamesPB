@@ -10,5 +10,13 @@
     <!-- Główny kontener naszej gry w memory -->
     <Grid>
         
+        <!-- Definiujemy wiersze: górny - odpowiada za statystyki, a dolny - za plansze gry -->
+        <Grid.RowDefinitions>
+            
+            <RowDefinition Height="50"/>    <!-- nagłówek -->
+            <RowDefinition Height="*"/>     <!-- plansza gry -->
+            
+        </Grid.RowDefinitions>
+        
     </Grid>
 </Window>
