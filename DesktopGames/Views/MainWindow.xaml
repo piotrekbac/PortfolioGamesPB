@@ -49,7 +49,12 @@
             <Button Content="?" FontFamily="24" Margin="2"/>
             <Button Content="?" FontFamily="24" Margin="2"/>
             <Button Content="?" FontFamily="24" Margin="2"/>
-        
+
+            <Button Content="?" FontFamily="24" Margin="2"/>
+            <Button Content="?" FontFamily="24" Margin="2"/>
+            <Button Content="?" FontFamily="24" Margin="2"/>
+            <Button Content="?" FontFamily="24" Margin="2"/>
+
         </UniformGrid>
         
     </Grid>
