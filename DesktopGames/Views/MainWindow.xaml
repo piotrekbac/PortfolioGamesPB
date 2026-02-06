@@ -5,12 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DesktopGames"
         mc:Ignorable="d"
-        Title="Piotr Bacior - Portfolio" Height="450" Width="800">
+        Title="Piotr Bacior - Portfolio - Memory game" Height="500" Width="400">
+    
+    <!-- Główny kontener naszej gry w memory -->
     <Grid>
-        <TextBlock Text="Witaj w mojej aplikacji WPF!"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center"
-                   FontSize="30"
-                   Foreground="DarkBlue"/> 
+        
     </Grid>
 </Window>
