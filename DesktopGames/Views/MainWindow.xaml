@@ -30,5 +30,11 @@
             <Button Content="Reset" Width="60" Height="30" Margin="20,0,0,0"/>
         </StackPanel>
         
+        <!-- Definiuję planszę gry (siatka 4x4) -->
+        <!-- używamy UniformGrid dla podziału planszy na równe części -->
+        <UniformGrid>
+            
+        </UniformGrid>
+        
     </Grid>
 </Window>
