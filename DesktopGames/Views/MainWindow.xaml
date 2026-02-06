@@ -34,6 +34,22 @@
         <!-- używamy UniformGrid dla podziału planszy na równe części -->
         <UniformGrid>
             
+            <!-- Ustawiamy na sztywno parę przycisków dla podgladu -->
+            <Button Content="?" FontFamily="24" Margin="2"/>
+            <Button Content="?" FontFamily="24" Margin="2"/>
+            <Button Content="?" FontFamily="24" Margin="2"/>
+            <Button Content="?" FontFamily="24" Margin="2"/>
+
+            <Button Content="?" FontFamily="24" Margin="2"/>
+            <Button Content="?" FontFamily="24" Margin="2"/>
+            <Button Content="?" FontFamily="24" Margin="2"/>
+            <Button Content="?" FontFamily="24" Margin="2"/>
+
+            <Button Content="?" FontFamily="24" Margin="2"/>
+            <Button Content="?" FontFamily="24" Margin="2"/>
+            <Button Content="?" FontFamily="24" Margin="2"/>
+            <Button Content="?" FontFamily="24" Margin="2"/>
+        
         </UniformGrid>
         
     </Grid>
