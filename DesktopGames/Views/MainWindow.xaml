@@ -17,6 +17,12 @@
             <RowDefinition Height="*"/>     <!-- plansza gry -->
             
         </Grid.RowDefinitions>
+
+        <!-- Definiujemy nagłówek (statystyki) -->
+        <StackPanel>
+            
+            
+        </StackPanel>
         
     </Grid>
 </Window>
