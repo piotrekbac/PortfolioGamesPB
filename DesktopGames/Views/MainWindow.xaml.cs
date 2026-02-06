@@ -33,7 +33,10 @@ namespace DesktopGames.Views
             "🦊", "🦊",
             "🐻", "🐻",
             "🐼", "🐼",
-        }; 
+        };
+
+        // Definiuje zmienne do śledzneia aktualnego stanu gry
+        private Button firstClicked; 
 
         public MainWindow()
         {
