@@ -9,6 +9,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+// Piotr Bacior - Projekt portfolio 2026 
+
 namespace DesktopGames.Views
 {
     /// <summary>
