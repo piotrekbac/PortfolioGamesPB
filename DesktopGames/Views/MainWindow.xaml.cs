@@ -60,7 +60,8 @@ namespace DesktopGames.Views
         // Metoda do obsługi kliknięcia przycisku
         private void Timer_Tick(object sender, EventArgs e)
         {
-           
+            timeElapsed++;                                      // Zwiększam czas o 1 sekundę
+            TimeTextBlock.Text = $"Czas: {timeElapsed} s";      // Aktualizuję tekst zegara
         }
     }
 }
