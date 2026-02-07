@@ -36,11 +36,20 @@ namespace DesktopGames.Views
         };
 
         // Definiuje zmienne do śledzneia aktualnego stanu gry
-        private Button firstClicked; 
+
+        private Button firstClicked;        // Pierwszy kliknięty przycisk
+        private Button secondClicked;       // Drugi kliknięty przycisk
+        private int matchesFount;           // Liczba znalezionych par
 
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        // Metoda do ustawienia gry
+        private void SetupGame()
+        {
+
         }
     }
 }
