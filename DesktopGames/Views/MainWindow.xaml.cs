@@ -39,7 +39,7 @@ namespace DesktopGames.Views
 
         private Button firstClicked;        // Pierwszy kliknięty przycisk
         private Button secondClicked;       // Drugi kliknięty przycisk
-        private int matchesFount;           // Liczba znalezionych par
+        private int matchesFound;           // Liczba znalezionych par
 
         public MainWindow()
         {
@@ -49,7 +49,8 @@ namespace DesktopGames.Views
         // Metoda do ustawienia gry
         private void SetupGame()
         {
-
+            timeElapsed = 0;                // Ustawiam czas na 0
+            matchesFound = 0;               // Ustawiam liczbę znalezionych par na 0
         }
     }
 }
