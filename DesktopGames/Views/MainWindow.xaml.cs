@@ -67,7 +67,7 @@ namespace DesktopGames.Views
         // Metoda do obsługi kliknięcia przycisku - tutaj będzie logika gry, np. sprawdzanie par
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Button clickedButton = sender as Button;    // Rzutuję sender na Button
+            Button clickedButton = sender as Button;      // Rzutuję sender na Button
 
             // Definiujemy odpowiednie zabezpieczenia, aby uniknąć błędów, np. kliknięcia tego samego przycisku lub kliknięcia więcej niż dwóch przycisków
             // 1. Jeżeli timer nie działa (koniec gry), to ignorujemy kliknięcia
@@ -82,6 +82,8 @@ namespace DesktopGames.Views
                 firstClicked = clickedButton;    // Ustawiam pierwszy kliknięty przycisk
                 return;                          // Kończę metodę, czekając na drugie kliknięcie
             }
-        }
+
+            secondClicked = clickedButton;      // Ustawiam drugi kliknięty przycisk
+        }       
     }
 }
