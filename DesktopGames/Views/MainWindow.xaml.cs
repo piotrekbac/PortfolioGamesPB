@@ -57,11 +57,17 @@ namespace DesktopGames.Views
             timer.Interval = TimeSpan.FromSeconds(1);
         }
 
-        // Metoda do obsługi kliknięcia przycisku
+        // Metoda do obsługi kliknięcia przycisku - obsługa kliku
         private void Timer_Tick(object sender, EventArgs e)
         {
             timeElapsed++;                                      // Zwiększam czas o 1 sekundę
             TimeTextBlock.Text = $"Czas: {timeElapsed} s";      // Aktualizuję tekst zegara
+        }
+
+        // Metoda do obsługi kliknięcia przycisku - tutaj będzie logika gry, np. sprawdzanie par
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
