@@ -56,5 +56,11 @@ namespace DesktopGames.Views
             timer = new DispatcherTimer();
             timer.Interval = TimeSpan.FromSeconds(1);
         }
+
+        // Metoda do obsługi kliknięcia przycisku
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
