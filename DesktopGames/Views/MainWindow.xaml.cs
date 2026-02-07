@@ -51,6 +51,10 @@ namespace DesktopGames.Views
         {
             timeElapsed = 0;                // Ustawiam czas na 0
             matchesFound = 0;               // Ustawiam liczbę znalezionych par na 0
+
+            // Konfiguruję timer do aktualizacji zegara co sekundę
+            timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromSeconds(1);
         }
     }
 }
