@@ -89,7 +89,17 @@ namespace DesktopGames.Views
         // Metoda do sprawdzania, czy kliknięte przyciski są parą - tutaj będzie logika porównywania zawartości dwóch klikniętych przycisków i aktualizacji stanu gry (np. liczby znalezionych par, zakończenia gry itp.)
         private void CheckForMatch()
         {
+            // Sprawdzam, czy oba kliknięte przyciski mają ten sam tag (czy są parą)
+            if (firstClicked.Tag.ToString() == secondClicked.Tag.ToString())
+            {
+                // sprawdzam czy pary są takie same 
 
+                matchesFound++;               // Zwiększam liczbę znalezionych par
+                firstClicked = null;          // Resetuję pierwszy kliknięty przycisk
+                secondClicked = null;         // Resetuję drugi kliknięty przycisk
+            }
+
+           
         }
     }
 }
