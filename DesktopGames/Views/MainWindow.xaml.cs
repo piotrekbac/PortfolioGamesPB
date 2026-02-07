@@ -79,7 +79,8 @@ namespace DesktopGames.Views
             // Obsługa sprawdzenie kliknięcia pierwszej karty (pierwszego buttona)
             if (firstClicked == null)
             {
-
+                firstClicked = clickedButton;    // Ustawiam pierwszy kliknięty przycisk
+                return;                          // Kończę metodę, czekając na drugie kliknięcie
             }
         }
     }
