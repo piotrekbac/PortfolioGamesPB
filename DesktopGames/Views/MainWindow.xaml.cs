@@ -120,7 +120,8 @@ namespace DesktopGames.Views
                     firstClicked.Content = "?";    // Ustawiam zawartość pierwszego przycisku na znak zapytania (zakrycie)
                     secondClicked.Content = "?";   // Ustawiam zawartość drugiego przycisku na znak zapytania (zakrycie)
 
-
+                    firstClicked  = null;          // Resetuję pierwszy kliknięty przycisk
+                    secondClicked = null;          // Resetuję drugi kliknięty przycisk
                 }
             }
 
