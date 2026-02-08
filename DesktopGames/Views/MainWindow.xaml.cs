@@ -106,7 +106,13 @@ namespace DesktopGames.Views
                 }
             }
 
-           
+            // Sprawdzam, czy kliknięte przyciski nie są parą (nie mają tego samego tagu)
+            else
+            {
+                // Jeżeli pary są różne to je zakrywamy z opóźnieniem, aby gracz miał czas zobaczyć, co było pod nimi
+                // Używam DispatcherTimer do opóźnienia zakrycia kart
+            }
+
         }
     }
 }
