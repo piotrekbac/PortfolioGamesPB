@@ -61,6 +61,8 @@ namespace DesktopGames.Views
             timer.Start();                  // Uruchamiam timer
 
             Random random = new Random();   // Tworzę obiekt Random do losowania pozycji emoji
+
+            animalEmoji = animalEmoji.OrderBy(x => random.Next()).ToList();   // Tasuję listę emoji, aby każda gra była inna
         }
 
         // Metoda do obsługi kliknięcia przycisku - obsługa kliku
