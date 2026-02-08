@@ -63,6 +63,8 @@ namespace DesktopGames.Views
             Random random = new Random();   // Tworzę obiekt Random do losowania pozycji emoji
 
             animalEmoji = animalEmoji.OrderBy(x => random.Next()).ToList();   // Tasuję listę emoji, aby każda gra była inna
+
+            GameGrid.Children.Clear();             // Czyścię siatkę z poprzednich elementów (jeśli gra jest resetowana)
         }
 
         // Metoda do obsługi kliknięcia przycisku - obsługa kliku
