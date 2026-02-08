@@ -44,6 +44,7 @@ namespace DesktopGames.Views
         public MainWindow()
         {
             InitializeComponent();
+            SetupGame();                    // Wywołuję metodę do ustawienia gry przy inicjalizacji okna
         }
 
         // Metoda do ustawienia gry
