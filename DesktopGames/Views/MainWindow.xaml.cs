@@ -56,6 +56,9 @@ namespace DesktopGames.Views
             // Konfiguruję timer do aktualizacji zegara co sekundę
             timer = new DispatcherTimer();
             timer.Interval = TimeSpan.FromSeconds(1);
+
+            timer.Tick += Timer_Tick;       // Podłączam metodę obsługi zdarzenia Tick do timera
+            timer.Start();                  // Uruchamiam timer
         }
 
         // Metoda do obsługi kliknięcia przycisku - obsługa kliku
