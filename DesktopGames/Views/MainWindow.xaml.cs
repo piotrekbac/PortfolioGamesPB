@@ -125,6 +125,8 @@ namespace DesktopGames.Views
 
                     delayTimer.Stop();             // Zatrzymuję timer, ponieważ jego zadanie jest wykonane
                 };
+
+                delayTimer.Start();                // Uruchamiam timer, aby rozpocząć odliczanie do zakrycia kart
             }
 
         }
