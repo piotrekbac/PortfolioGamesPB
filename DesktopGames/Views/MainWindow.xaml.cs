@@ -64,7 +64,13 @@ namespace DesktopGames.Views
 
             animalEmoji = animalEmoji.OrderBy(x => random.Next()).ToList();   // Tasuję listę emoji, aby każda gra była inna
 
-            GameGrid.Children.Clear();             // Czyścię siatkę z poprzednich elementów (jeśli gra jest resetowana)
+            GameGrid.Children.Clear();      // Czyścię siatkę z poprzednich elementów (jeśli gra jest resetowana)
+
+            // Tworzę przyciski i przypisuję im emoji jako tag, a zawartość ustawiam na znak zapytania (zakrycie)
+            foreach (string emoji in animalEmoji)
+            {
+
+            }
         }
 
         // Metoda do obsługi kliknięcia przycisku - obsługa kliku
