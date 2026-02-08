@@ -59,6 +59,8 @@ namespace DesktopGames.Views
 
             timer.Tick += Timer_Tick;       // Podłączam metodę obsługi zdarzenia Tick do timera
             timer.Start();                  // Uruchamiam timer
+
+            Random random = new Random();   // Tworzę obiekt Random do losowania pozycji emoji
         }
 
         // Metoda do obsługi kliknięcia przycisku - obsługa kliku
