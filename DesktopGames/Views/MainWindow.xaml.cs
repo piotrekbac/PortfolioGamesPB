@@ -55,6 +55,9 @@ namespace DesktopGames.Views
             matchesFound = 0;               // Ustawiam liczbę znalezionych par na 0
             isGameLocked = false;           // Odblokowuję grę, aby można było klikać przyciski
 
+            firstClicked = null;            // Resetuję pierwszy kliknięty przycisk
+            secondClicked = null;           // Resetuję drugi kliknięty przycisk
+
             // Konfiguruję timer do aktualizacji zegara co sekundę
             timer = new DispatcherTimer();
             timer.Interval = TimeSpan.FromSeconds(1);
