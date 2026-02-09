@@ -101,6 +101,12 @@ namespace DesktopGames.Views
             // 2. Jeżeli przycisk jest już odkryty (nie jest pusty), to ignorujemy kliknięcia
             // 3. Jeżeli animacja trwa (mamy już dwa kliknięte przyciski), to ignorujemy kliknięcia
 
+            // Sprawdzam, czy timer jest aktywny (gra jest w toku) - jeżeli timer nie działa, to gra jest zakończona i ignorujemy kliknięcia
+            if (isGameLocked)
+            {
+                return; // Jeżeli gra jest zablokowana (np. podczas animacji zakrywania kart), to ignorujemy kliknięcia
+            }
+
             // Sprawdzam czy kliknięty przycisk jest już odkryty (czy jego zawartość nie jest znakiem zapytania) lub czy mamy już dwa kliknięte przyciski (animacja trwa)
             if (clickedButton.Content.ToString() != "?")
             {
