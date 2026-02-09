@@ -69,7 +69,8 @@ namespace DesktopGames.Views
             // Tworzę przyciski i przypisuję im emoji jako tag, a zawartość ustawiam na znak zapytania (zakrycie)
             foreach (string emoji in animalEmoji)
             {
-
+                Button button = new Button();          // Tworzę nowy przycisk
+                button.FontSize = 32;                  // Ustawiam rozmiar czcionki, aby emoji były dobrze widoczne
             }
         }
 
