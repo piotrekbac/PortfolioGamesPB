@@ -96,6 +96,12 @@ namespace DesktopGames.Views
             // 2. Jeżeli przycisk jest już odkryty (nie jest pusty), to ignorujemy kliknięcia
             // 3. Jeżeli animacja trwa (mamy już dwa kliknięte przyciski), to ignorujemy kliknięcia
 
+            // Sprawdzam czy kliknięty przycisk jest już odkryty (czy jego zawartość nie jest znakiem zapytania) lub czy mamy już dwa kliknięte przyciski (animacja trwa)
+            if (clickedButton.Content.ToString() != "?")
+            {
+                return;  // Jeżeli przycisk jest już odkryty, to ignorujemy kliknięcia
+            }
+
             clickedButton.Content = clickedButton.Tag;    // Ustawiam zawartość przycisku na jego tag (emoji)
 
             // Obsługa sprawdzenie kliknięcia pierwszej karty (pierwszego buttona)
