@@ -159,9 +159,11 @@ namespace DesktopGames.Views
                 delayTimer.Interval = TimeSpan.FromMilliseconds(800);    // Ustawiam interwał na 800 ms (0.8 sekundy)
                 delayTimer.Tick += (s, args) =>
                 {
-                    // Zakrycie kart 
-                    firstClicked.Content = "?";    // Ustawiam zawartość pierwszego przycisku na znak zapytania (zakrycie)
-                    secondClicked.Content = "?";   // Ustawiam zawartość drugiego przycisku na znak zapytania (zakrycie)
+                    // Jeżeli karty nie są parą, to zakrywam je ponownie (ustawiam zawartość na znak zapytania) i resetuję stan gry
+                    if (firstClicked != null)
+                    {
+                        firstClicked.Content = "?";   // Zakrywam pierwszy kliknięty przycisk (ustawiam zawartość na znak zapytania)
+                    }
 
                     firstClicked = null;           // Resetuję pierwszy kliknięty przycisk
                     secondClicked = null;          // Resetuję drugi kliknięty przycisk
