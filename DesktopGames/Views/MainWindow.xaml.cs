@@ -40,6 +40,7 @@ namespace DesktopGames.Views
         private Button firstClicked;        // Pierwszy kliknięty przycisk
         private Button secondClicked;       // Drugi kliknięty przycisk
         private int matchesFound;           // Liczba znalezionych par
+        private bool isGameLocked;          // Flaga blokady gry (np. podczas animacji zakrywania kart)
 
         public MainWindow()
         {
