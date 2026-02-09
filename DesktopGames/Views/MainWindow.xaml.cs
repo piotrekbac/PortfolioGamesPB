@@ -53,6 +53,7 @@ namespace DesktopGames.Views
         {
             timeElapsed = 0;                // Ustawiam czas na 0
             matchesFound = 0;               // Ustawiam liczbę znalezionych par na 0
+            isGameLocked = false;           // Odblokowuję grę, aby można było klikać przyciski
 
             // Konfiguruję timer do aktualizacji zegara co sekundę
             timer = new DispatcherTimer();
