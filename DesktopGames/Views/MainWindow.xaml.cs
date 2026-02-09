@@ -111,7 +111,9 @@ namespace DesktopGames.Views
                 return;                          // Kończę metodę, czekając na drugie kliknięcie
             }
 
-            secondClicked = clickedButton;      // Ustawiam drugi kliknięty przycisk
+            secondClicked = clickedButton;       // Ustawiam drugi kliknięty przycisk
+
+            CheckForMatch();                     // Wywołuję metodę do sprawdzania, czy kliknięte przyciski są parą
         }
 
         // Metoda do sprawdzania, czy kliknięte przyciski są parą - tutaj będzie logika porównywania zawartości dwóch klikniętych przycisków i aktualizacji stanu gry (np. liczby znalezionych par, zakończenia gry itp.)
