@@ -150,6 +150,8 @@ namespace DesktopGames.Views
             // Sprawdzam, czy kliknięte przyciski nie są parą (nie mają tego samego tagu)
             else
             {
+                isGameLocked = true;               // Blokuję grę, aby użytkownik nie mógł klikać innych przycisków podczas animacji zakrywania kart
+
                 // Jeżeli pary są różne to je zakrywamy z opóźnieniem, aby gracz miał czas zobaczyć, co było pod nimi
                 // Używam DispatcherTimer do opóźnienia zakrycia kart
 
