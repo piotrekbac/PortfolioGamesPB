@@ -165,6 +165,12 @@ namespace DesktopGames.Views
                         firstClicked.Content = "?";   // Zakrywam pierwszy kliknięty przycisk (ustawiam zawartość na znak zapytania)
                     }
 
+                    // Sprawdzam, czy drugi kliknięty przycisk nie jest null, ponieważ może się zdarzyć, że gracz kliknie tylko jeden przycisk i potem timer się uruchomi (choć w tej implementacji jest to mało prawdopodobne, ale warto mieć takie zabezpieczenie)
+                    if (secondClicked != null)
+                    {
+                        secondClicked.Content = "?";  // Zakrywam drugi kliknięty przycisk (ustawiam zawartość na znak zapytania)
+                    }
+
                     firstClicked = null;           // Resetuję pierwszy kliknięty przycisk
                     secondClicked = null;          // Resetuję drugi kliknięty przycisk
 
