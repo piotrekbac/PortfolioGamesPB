@@ -74,6 +74,8 @@ namespace DesktopGames.Views
                 button.Content = "?";                  // Ustawiam zawartość przycisku na znak zapytania (zakrycie)
                 button.Tag = emoji;                    // Przypisuję emoji do tagu przycisku, aby łatwo było je porównać podczas kliknięcia
                 button.Click += Button_Click;          // Podłączam metodę obsługi kliknięcia do przycisku
+
+                GameGrid.Children.Add(button);         // Dodaję przycisk do siatki
             }
         }
 
