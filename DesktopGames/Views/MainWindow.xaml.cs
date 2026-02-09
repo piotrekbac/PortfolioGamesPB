@@ -72,6 +72,7 @@ namespace DesktopGames.Views
                 Button button = new Button();          // Tworzę nowy przycisk
                 button.FontSize = 32;                  // Ustawiam rozmiar czcionki, aby emoji były dobrze widoczne
                 button.Content = "?";                  // Ustawiam zawartość przycisku na znak zapytania (zakrycie)
+                button.Tag = emoji;                    // Przypisuję emoji do tagu przycisku, aby łatwo było je porównać podczas kliknięcia
             }
         }
 
