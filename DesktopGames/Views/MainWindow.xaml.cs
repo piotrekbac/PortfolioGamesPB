@@ -65,6 +65,11 @@ namespace DesktopGames.Views
 
             TimeTextBlock.Text = "Czas: 0 s";   // Ustawiam tekst zegara na początkowy stan
           
+            // Ustawiamy timer 
+            if (timer != null)
+            {
+                timer.Stop();                  // Zatrzymuję timer, jeśli już istnieje, aby uniknąć konfliktów przy ponownym uruchomieniu gry
+            }
 
             // Konfiguruję timer do aktualizacji zegara co sekundę
             timer = new DispatcherTimer();
