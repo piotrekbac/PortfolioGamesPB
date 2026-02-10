@@ -38,10 +38,10 @@ namespace DesktopGames.Views
 
         // Definiuje zmienne do śledzneia aktualnego stanu gry
 
-        private Button firstClicked;        // Pierwszy kliknięty przycisk
-        private Button secondClicked;       // Drugi kliknięty przycisk
-        private int matchesFound;           // Liczba znalezionych par
-        private bool isGameLocked;          // Flaga blokady gry (np. podczas animacji zakrywania kart)
+        private Button firstClicked;                // Pierwszy kliknięty przycisk
+        private Button secondClicked;               // Drugi kliknięty przycisk
+        private int matchesFound;                   // Liczba znalezionych par
+        private bool isGameLocked = false;          // Flaga blokady gry (np. podczas animacji zakrywania kart)
 
         public MainWindow()
         {
