@@ -220,6 +220,7 @@ namespace DesktopGames.Views
                     firstClicked = null;           // Resetuję pierwszy kliknięty przycisk
                     secondClicked = null;          // Resetuję drugi kliknięty przycisk
 
+                    isGameLocked = false;           // Odblokowuję grę, aby użytkownik mógł ponownie klikać przyciski po zakończeniu animacji zakrywania kart
                     delayTimer.Stop();             // Zatrzymuję timer, ponieważ jego zadanie jest wykonane
                 };
                 delayTimer.Start();                // Uruchamiam timer, aby rozpocząć odliczanie do zakrycia kart
