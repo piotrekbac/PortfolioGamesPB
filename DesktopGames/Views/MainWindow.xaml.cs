@@ -21,16 +21,17 @@ namespace DesktopGames.Views
         private int movesCount;             // Liczba wykonanych ruchów (opcjonalnie, można dodać licznik ruchów do gry)
 
         // Definiuję listę emoji zwierząt
+        // Każde emoji występuje dwukrotnie, aby utworzyć pary
         private List<string> animalEmoji = new List<string>()
         {
-            "🐶", "🐶",
-            "🐱", "🐱",
-            "🐭", "🐭",
-            "🐹", "🐹",
-            "🐰", "🐰",
-            "🦊", "🦊",
-            "🐻", "🐻",
-            "🐼", "🐼",
+            "🐶", "🐶",       // Pies
+            "🐱", "🐱",       // Kot
+            "🐭", "🐭",       // Mysz
+            "🐹", "🐹",       // Chomik
+            "🐰", "🐰",       // Królik
+            "🦊", "🦊",       // Lis
+            "🐻", "🐻",       // Niedźwiedź
+            "🐼", "🐼",       // Panda
         };
 
         // Definiuje zmienne do śledzneia aktualnego stanu gry
