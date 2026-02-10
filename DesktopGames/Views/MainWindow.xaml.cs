@@ -144,7 +144,12 @@ namespace DesktopGames.Views
             clickedButton.Background = Brushes.White;           // Zmieniam tło przycisku na białe, aby oznaczyć, że jest odkryty
             clickedButton.Foreground = Brushes.Black;           // Ustawiam kolor tekstu na czarny, aby emoji było widoczne
 
-
+            // Sprawdzan czy pierwszy przycisk jest null
+            if (firstClicked == null)
+            {
+                firstClicked = clickedButton;       // Ustawiam pierwszy kliknięty przycisk
+                return;                             // Zwracam, ponieważ czekam na drugi kliknięty przycisk, aby sprawdzić parę
+            }
 
             secondClicked = clickedButton;       // Ustawiam drugi kliknięty przycisk
 
