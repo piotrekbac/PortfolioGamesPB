@@ -142,6 +142,10 @@ namespace DesktopGames.Views
 
             clickedButton.Content = clickedButton.Tag;          // Odkrywam kartę, ustawiając zawartość przycisku na jego tag (emoji)
             clickedButton.Background = Brushes.White;           // Zmieniam tło przycisku na białe, aby oznaczyć, że jest odkryty
+            clickedButton.Foreground = Brushes.Black;           // Ustawiam kolor tekstu na czarny, aby emoji było widoczne
+
+
+
             secondClicked = clickedButton;       // Ustawiam drugi kliknięty przycisk
 
             CheckForMatch();                     // Wywołuję metodę do sprawdzania, czy kliknięte przyciski są parą
