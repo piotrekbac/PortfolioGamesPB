@@ -121,8 +121,6 @@ namespace DesktopGames.Views
         // Metoda do obsługi kliknięcia przycisku - tutaj będzie logika gry, np. sprawdzanie par
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Button clickedButton = sender as Button;      // Rzutuję sender na Button
-
             // Definiujemy odpowiednie zabezpieczenia, aby uniknąć błędów, np. kliknięcia tego samego przycisku lub kliknięcia więcej niż dwóch przycisków
             // 1. Jeżeli timer nie działa (koniec gry), to ignorujemy kliknięcia
             // 2. Jeżeli przycisk jest już odkryty (nie jest pusty), to ignorujemy kliknięcia
@@ -134,19 +132,12 @@ namespace DesktopGames.Views
                 return; // Jeżeli gra jest zablokowana (np. podczas animacji zakrywania kart), to ignorujemy kliknięcia
             }
 
-            // Sprawdzam czy kliknięty przycisk jest już odkryty (czy jego zawartość nie jest znakiem zapytania) lub czy mamy już dwa kliknięte przyciski (animacja trwa)
-            if (clickedButton.Content.ToString() != "?")
-            {
-                return;  // Jeżeli przycisk jest już odkryty, to ignorujemy kliknięcia
-            }
+            Button clickedButton = sender as Button;      // Rzutuję sender na Button
 
-            clickedButton.Content = clickedButton.Tag;    // Ustawiam zawartość przycisku na jego tag (emoji)
-
-            // Obsługa sprawdzenie kliknięcia pierwszej karty (pierwszego buttona)
-            if (firstClicked == null)
+            // Jeżeli karta jest odkryta (czyli tło jest białe) - ignorujemy kliknięcia, ponieważ karta jest już odkryta i nie można jej ponownie kliknąć, dopóki nie zostanie zakryta (w przypadku niepary) lub dopóki gra się nie zakończy (w przypadku pary)
+            if (clickedButton.Background == Brushes.White)
             {
-                firstClicked = clickedButton;    // Ustawiam pierwszy kliknięty przycisk
-                return;                          // Kończę metodę, czekając na drugie kliknięcie
+                return; 
             }
 
             secondClicked = clickedButton;       // Ustawiam drugi kliknięty przycisk
