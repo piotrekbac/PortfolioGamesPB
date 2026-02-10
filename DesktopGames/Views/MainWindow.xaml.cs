@@ -105,6 +105,12 @@ namespace DesktopGames.Views
             }
         }
 
+        // Metoda do obsługi kliknięcia przycisku - zresetowanie stanu gry 
+        private void ResetButton_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
         // Metoda do obsługi kliknięcia przycisku - obsługa kliku
         private void Timer_Tick(object sender, EventArgs e)
         {
