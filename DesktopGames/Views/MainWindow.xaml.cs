@@ -60,6 +60,12 @@ namespace DesktopGames.Views
             firstClicked = null;            // Resetuję pierwszy kliknięty przycisk
             secondClicked = null;           // Resetuję drugi kliknięty przycisk
 
+
+            // Resetuję UI - ustawiam tekst zegara i licznik ruchów
+
+            TimeTextBlock.Text = "Czas: 0 s";   // Ustawiam tekst zegara na początkowy stan
+          
+
             // Konfiguruję timer do aktualizacji zegara co sekundę
             timer = new DispatcherTimer();
             timer.Interval = TimeSpan.FromSeconds(1);
