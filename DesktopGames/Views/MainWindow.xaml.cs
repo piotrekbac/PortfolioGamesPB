@@ -91,6 +91,14 @@ namespace DesktopGames.Views
                 button.FontSize = 32;                  // Ustawiam rozmiar czcionki, aby emoji były dobrze widoczne
                 button.Content = "?";                  // Ustawiam zawartość przycisku na znak zapytania (zakrycie)
                 button.Tag = emoji;                    // Przypisuję emoji do tagu przycisku, aby łatwo było je porównać podczas kliknięcia
+
+
+                // Stylizujemy przycisk, aby wyglądał estetycznie i był dobrze widoczny na siatce
+
+                button.Background = Brushes.LightSkyBlue;   // Ustawiam kolor tła przycisku
+
+
+
                 button.Click += Button_Click;          // Podłączam metodę obsługi kliknięcia do przycisku
 
                 GameGrid.Children.Add(button);         // Dodaję przycisk do siatki
