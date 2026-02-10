@@ -153,6 +153,8 @@ namespace DesktopGames.Views
 
             secondClicked = clickedButton;       // Ustawiam drugi kliknięty przycisk
 
+            movesCount++;                        // Zwiększam licznik ruchów (jeśli chcemy go śledzić, można go wyświetlić w UI podobnie jak czas)
+
             CheckForMatch();                     // Wywołuję metodę do sprawdzania, czy kliknięte przyciski są parą
         }
 
