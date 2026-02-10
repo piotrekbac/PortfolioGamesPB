@@ -140,6 +140,8 @@ namespace DesktopGames.Views
                 return; 
             }
 
+            clickedButton.Content = clickedButton.Tag;  // Odkrywam kartę, ustawiając zawartość przycisku na jego tag (emoji)
+
             secondClicked = clickedButton;       // Ustawiam drugi kliknięty przycisk
 
             CheckForMatch();                     // Wywołuję metodę do sprawdzania, czy kliknięte przyciski są parą
