@@ -213,6 +213,7 @@ namespace DesktopGames.Views
                     if (secondClicked != null)
                     {
                         secondClicked.Content = "?";  // Zakrywam drugi kliknięty przycisk (ustawiam zawartość na znak zapytania)
+                        secondClicked.Background = Brushes.LightSkyBlue;    // Przywracam tło drugiego klikniętego przycisku do pierwotnego koloru, aby oznaczyć, że jest ponownie zakryty
                     }
 
                     firstClicked = null;           // Resetuję pierwszy kliknięty przycisk
