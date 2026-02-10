@@ -41,9 +41,10 @@ namespace DesktopGames.Views
         private int matchesFound;                   // Liczba znalezionych par
         private bool isGameLocked = false;          // Flaga blokady gry (np. podczas animacji zakrywania kart)
 
+        // Konstruktor okna głównego, gdzie inicjalizuję komponenty i ustawiam grę
         public MainWindow()
         {
-            InitializeComponent();
+            InitializeComponent();                  // Inicjalizuję komponenty okna (generowane przez XAML)
             SetupGame();                            // Wywołuję metodę do ustawienia gry przy inicjalizacji okna
         }
 
