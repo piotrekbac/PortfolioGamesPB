@@ -201,10 +201,12 @@ namespace DesktopGames.Views
                 delayTimer.Interval = TimeSpan.FromMilliseconds(800);    // Ustawiam interwał na 800 ms (0.8 sekundy)
                 delayTimer.Tick += (s, args) =>
                 {
-                    // Jeżeli karty nie są parą, to zakrywam je ponownie (ustawiam zawartość na znak zapytania) i resetuję stan gry
+                    // Stan początkowuy to, że oba przyciski są odkryte i pokazują emoji, więc teraz musimy je zakryć ponownie, ustawiając zawartość na znak zapytania i przywracając tło do pierwotnego koloru
                     if (firstClicked != null)
                     {
-                        firstClicked.Content = "?";   // Zakrywam pierwszy kliknięty przycisk (ustawiam zawartość na znak zapytania)
+                        firstClicked.Content = "?";                         // Zakrywam pierwszy kliknięty przycisk (ustawiam zawartość na znak zapytania)
+                        firstClicked.Background = Brushes.LightSkyBlue;     // Przywracam tło pierwszego klikniętego przycisku do pierwotnego koloru, aby oznaczyć, że jest ponownie zakryty
+                        firstClicked.Foreground = Brushes.Transparent;      // Ustawiam kolor tekstu na przezroczysty, aby emoji były niewidoczne, dopóki nie zostaną odkryte ponownie
                     }
 
                     // Sprawdzam, czy drugi kliknięty przycisk nie jest null, ponieważ może się zdarzyć, że gracz kliknie tylko jeden przycisk i potem timer się uruchomi (choć w tej implementacji jest to mało prawdopodobne, ale warto mieć takie zabezpieczenie)
