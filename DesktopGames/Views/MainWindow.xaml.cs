@@ -212,8 +212,9 @@ namespace DesktopGames.Views
                     // Sprawdzam, czy drugi kliknięty przycisk nie jest null, ponieważ może się zdarzyć, że gracz kliknie tylko jeden przycisk i potem timer się uruchomi (choć w tej implementacji jest to mało prawdopodobne, ale warto mieć takie zabezpieczenie)
                     if (secondClicked != null)
                     {
-                        secondClicked.Content = "?";  // Zakrywam drugi kliknięty przycisk (ustawiam zawartość na znak zapytania)
+                        secondClicked.Content = "?";                        // Zakrywam drugi kliknięty przycisk (ustawiam zawartość na znak zapytania)
                         secondClicked.Background = Brushes.LightSkyBlue;    // Przywracam tło drugiego klikniętego przycisku do pierwotnego koloru, aby oznaczyć, że jest ponownie zakryty
+                        secondClicked.Foreground = Brushes.Transparent;     // Ustawiam kolor tekstu na przezroczysty, aby emoji były niewidoczne, dopóki nie zostaną odkryte ponownie
                     }
 
                     firstClicked = null;           // Resetuję pierwszy kliknięty przycisk
