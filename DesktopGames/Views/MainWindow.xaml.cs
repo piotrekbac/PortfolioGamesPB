@@ -14,9 +14,6 @@ using System.Windows.Threading;         // Korzystamy z Threading dla Dispatcher
 
 namespace DesktopGames.Views
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         private DispatcherTimer timer;      // Timer do aktualizacji zegara
@@ -46,7 +43,7 @@ namespace DesktopGames.Views
         public MainWindow()
         {
             InitializeComponent();
-            SetupGame();                    // Wywołuję metodę do ustawienia gry przy inicjalizacji okna
+            SetupGame();                            // Wywołuję metodę do ustawienia gry przy inicjalizacji okna
         }
 
         // Metoda do ustawienia gry
@@ -63,17 +60,19 @@ namespace DesktopGames.Views
 
             // Resetuję UI - ustawiam tekst zegara i licznik ruchów
 
-            TimeTextBlock.Text = "Czas: 0 s";   // Ustawiam tekst zegara na początkowy stan
+            TimeTextBlock.Text = "Czas: 0 s";     // Ustawiam tekst zegara na początkowy stan
           
             // Ustawiamy timer 
             if (timer != null)
             {
-                timer.Stop();                  // Zatrzymuję timer, jeśli już istnieje, aby uniknąć konfliktów przy ponownym uruchomieniu gry
+                timer.Stop();                    // Zatrzymuję timer, jeśli już istnieje, aby uniknąć konfliktów przy ponownym uruchomieniu gry
             }
+
 
             // Konfiguruję timer do aktualizacji zegara co sekundę
             timer = new DispatcherTimer();
             timer.Interval = TimeSpan.FromSeconds(1);
+
 
             timer.Tick += Timer_Tick;       // Podłączam metodę obsługi zdarzenia Tick do timera
             timer.Start();                  // Uruchamiam timer
@@ -132,7 +131,7 @@ namespace DesktopGames.Views
                 return; // Jeżeli gra jest zablokowana (np. podczas animacji zakrywania kart), to ignorujemy kliknięcia
             }
 
-            Button clickedButton = sender as Button;      // Rzutuję sender na Button
+            Button clickedButton = sender as Button;            // Rzutuję sender na Button
            
             // Jeżeli karta jest odkryta (czyli tło jest białe) - ignorujemy kliknięcia, ponieważ karta jest już odkryta i nie można jej ponownie kliknąć, dopóki nie zostanie zakryta (w przypadku niepary) lub dopóki gra się nie zakończy (w przypadku pary)
             if (clickedButton.Background == Brushes.White)
@@ -151,12 +150,12 @@ namespace DesktopGames.Views
                 return;                             // Zwracam, ponieważ czekam na drugi kliknięty przycisk, aby sprawdzić parę
             }
 
-            secondClicked = clickedButton;       // Ustawiam drugi kliknięty przycisk
+            secondClicked = clickedButton;          // Ustawiam drugi kliknięty przycisk
 
-            movesCount++;                        // Zwiększam licznik ruchów (jeśli chcemy go śledzić, można go wyświetlić w UI podobnie jak czas)
+            movesCount++;                           // Zwiększam licznik ruchów (jeśli chcemy go śledzić, można go wyświetlić w UI podobnie jak czas)
 
-            CheckForMatch();                     // Wywołuję metodę do sprawdzania, czy kliknięte przyciski są parą
-        }
+            CheckForMatch();                        // Wywołuję metodę do sprawdzania, czy kliknięte przyciski są parą
+        }       
 
         // Metoda do sprawdzania, czy kliknięte przyciski są parą - tutaj będzie logika porównywania zawartości dwóch klikniętych przycisków i aktualizacji stanu gry (np. liczby znalezionych par, zakończenia gry itp.)
         private void CheckForMatch()
@@ -166,7 +165,7 @@ namespace DesktopGames.Views
             {
                 // sprawdzam czy pary są takie same 
 
-                matchesFound++;               // Zwiększam liczbę znalezionych par
+                matchesFound++;                 // Zwiększam liczbę znalezionych par
 
                 // Zmieniam kolor na zielony dla obu przycisków, aby oznaczyć, że są parą i zostały znalezione
 
