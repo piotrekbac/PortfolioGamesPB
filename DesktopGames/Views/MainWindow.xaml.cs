@@ -21,6 +21,7 @@ namespace DesktopGames.Views
     {
         private DispatcherTimer timer;      // Timer do aktualizacji zegara
         private int timeElapsed;            // Czas, który upłynął w sekundach
+        private int movesCount;             // Liczba wykonanych ruchów (opcjonalnie, można dodać licznik ruchów do gry)
 
         // Definiuję listę emoji zwierząt
         private List<string> animalEmoji = new List<string>()
