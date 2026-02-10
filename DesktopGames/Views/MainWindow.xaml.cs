@@ -189,6 +189,11 @@ namespace DesktopGames.Views
             {
                 isGameLocked = true;               // Blokuję grę, aby użytkownik nie mógł klikać innych przycisków podczas animacji zakrywania kart
 
+                // Oznaczamy komunikat na czerwono, aby gracz widział błąd i wiedział, że to nie jest para (opcjonalnie, można dodać taki efekt, ale w tej implementacji skupiam się na zakrywaniu kart z opóźnieniem)
+
+                firstClicked.Background = Brushes.IndianRed;   // Ustawiam tło pierwszego klikniętego przycisku na czerwone, aby oznaczyć, że to nie jest para
+                secondClicked.Background = Brushes.IndianRed;  // Ustawiam tło drugiego klikniętego przycisku na czerwone, aby oznaczyć, że to nie jest para
+
                 // Jeżeli pary są różne to je zakrywamy z opóźnieniem, aby gracz miał czas zobaczyć, co było pod nimi
                 // Używam DispatcherTimer do opóźnienia zakrycia kart
 
