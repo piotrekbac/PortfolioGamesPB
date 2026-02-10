@@ -108,7 +108,7 @@ namespace DesktopGames.Views
         // Metoda do obsługi kliknięcia przycisku - zresetowanie stanu gry 
         private void ResetButton_Click(object sender, RoutedEventArgs e)
         {
-            
+            SetupGame();    // Wywołuję metodę do ustawienia gry, aby zresetować stan gry i UI
         }
 
         // Metoda do obsługi kliknięcia przycisku - obsługa kliku
