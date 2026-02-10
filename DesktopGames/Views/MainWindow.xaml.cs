@@ -173,6 +173,8 @@ namespace DesktopGames.Views
                 firstClicked.Background = Brushes.LightGreen;   // Ustawiam tło pierwszego klikniętego przycisku na zielone, aby oznaczyć, że jest parą
                 secondClicked.Background = Brushes.LightGreen;  // Ustawiam tło drugiego klikniętego przycisku na zielone, aby oznaczyć, że jest parą
 
+                firstClicked = null;            // Resetuję pierwszy kliknięty przycisk, ponieważ para została znaleziona i nie musimy go już śledzić
+                secondClicked = null;           // Resetuję drugi kliknięty przycisk, ponieważ para została znaleziona i nie musimy go już śledzić
 
                 // Sprawdzam, czy wszystkie pary zostały znalezione (w tym przypadku 8 par)
                 if (matchesFound == 8)
