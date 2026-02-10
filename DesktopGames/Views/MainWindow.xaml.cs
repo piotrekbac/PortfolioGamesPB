@@ -97,6 +97,7 @@ namespace DesktopGames.Views
 
                 button.Background = Brushes.LightSkyBlue;   // Ustawiam kolor tła przycisku
                 button.Foreground = Brushes.Transparent;    // Ustawiam kolor tekstu na przezroczysty, aby emoji były niewidoczne, dopóki nie zostaną odkryte
+                button.BorderBrush = Brushes.DarkBlue;      // Ustawiam kolor obramowania przycisku
 
 
                 button.Click += Button_Click;          // Podłączam metodę obsługi kliknięcia do przycisku
