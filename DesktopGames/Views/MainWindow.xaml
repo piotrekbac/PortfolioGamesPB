@@ -27,7 +27,16 @@
                                 Background="{TemplateBinding Background}"
                                 BorderBrush="{TemplateBinding BorderBrush}"
                                 BorderThickness="0"
-                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <Border/>
+                            
+                            <!-- Efekt najechania myszką (nasz Trigger) -->
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True"/>
+                                <Setter TargetName="border" Property="Background" Value="#636e72"/>
+                                <Trigger/>
+                            </ControlTemplate.Triggers>
+                            
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
