@@ -45,7 +45,12 @@
         
             
         <!-- Styl dla przycisku Reset (niebieski) -->
-        <Style>
+        <Style TargetType="Button" x:Key="MenuButtonStyle">
+            
+            <!-- Ustawiamy odpowiednie wartości właściwości -->
+            <Setter Property="Background" Value="#0984e3"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="Bold"/>
             
         </Style>
             
