@@ -18,6 +18,15 @@
             <Setter Property="Margin" Value="4"/>
             <Setter Property="Cursor" Value="Hand"/>
             
+            <!-- Ustawiamy template - pozwala on zmienić kształt przycisków (zaokrąglić je) -->
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            
         </Style>
         
     </Window.Resources>
