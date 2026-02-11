@@ -43,6 +43,13 @@
             
         </Style>
         
+            
+        <!-- Styl dla przycisku Reset (niebieski) -->
+        <Style>
+            
+        </Style>
+            
+            
     </Window.Resources>
     
     <!-- Główny kontener naszej gry w memory -->
