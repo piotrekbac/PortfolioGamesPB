@@ -6,6 +6,16 @@
         xmlns:local="clr-namespace:DesktopGames"
         mc:Ignorable="d"
         Title="Piotr Bacior - Portfolio - Memory game" Height="500" Width="400" Background="#2d3436">
+
+    <!-- Definiuję style - wygląd naszych przycisków -->
+    <Window.Resources>
+        
+        <!-- Ustawiam style dla kart memorów -->
+        <Style x:Key="CardButtonStyle" TargetType="Button">
+            
+        </Style>
+        
+    </Window.Resources>
     
     <!-- Główny kontener naszej gry w memory -->
     <Grid>
