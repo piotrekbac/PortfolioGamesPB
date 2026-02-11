@@ -13,6 +13,11 @@
         <!-- Ustawiam style dla kart memorów -->
         <Style x:Key="CardButtonStyle" TargetType="Button">
             
+            <!-- Ustawiam wartości dla konkretnych parametrów jak margines, czcionka oraz kursor -->
+            <Setter Property="FontSize" Value="32"/>
+            <Setter Property="Margin" Value="4"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            
         </Style>
         
     </Window.Resources>
