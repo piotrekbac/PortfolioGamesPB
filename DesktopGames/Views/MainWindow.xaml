@@ -51,6 +51,11 @@
             <Setter Property="Background" Value="#0984e3"/>
             <Setter Property="Foreground" Value="White"/>
             <Setter Property="FontWeight" Value="Bold"/>
+
+            <!-- Ustawianie właściwości template -->
+            <Setter Property="Template">
+                
+            </Setter>
             
         </Style>
             
