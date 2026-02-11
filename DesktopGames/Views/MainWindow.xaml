@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DesktopGames"
         mc:Ignorable="d"
-        Title="Piotr Bacior - Portfolio - Memory game" Height="500" Width="400">
+        Title="Piotr Bacior - Portfolio - Memory game" Height="500" Width="400" Background="#2d3436">
     
     <!-- Główny kontener naszej gry w memory -->
     <Grid>
