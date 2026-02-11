@@ -22,7 +22,11 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
-                        
+                        <Border x:Name="border"
+                                CornerRadius="10"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="0"
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
