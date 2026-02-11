@@ -54,7 +54,13 @@
 
             <!-- Ustawianie właściwości template -->
             <Setter Property="Template">
-                
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="5" Background="{TemplateBinding}">
+                            
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
             </Setter>
             
         </Style>
