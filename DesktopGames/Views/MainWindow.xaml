@@ -85,7 +85,7 @@
                 <TextBlock x:Name="MovesTextBlock" Text="Ruchy: 0" FontSize="20" Foreground="White" FontWeight="Bold" Margin="15,0"/>
 
                 <!-- Definiujemy Button - Reset -->
-                <Button Content="Reset" Width="60" Height="30" Margin="20,0,0,0"/>
+                <Button Content="Reset" Width="80" Height="30" Style="{StaticResource MenuButtonStyle}"/>
             </StackPanel>
         </Border>
         
