@@ -98,8 +98,11 @@
         
         <!-- Overlay końca gry -->
         <Grid>
+            <Border>
+                <StackPanel>
 
-            
+                </StackPanel>
+            </Border>
         </Grid>
     </Grid>
 </Window>
