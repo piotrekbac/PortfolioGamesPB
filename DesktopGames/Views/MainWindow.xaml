@@ -91,30 +91,11 @@
         
         <!-- Definiuję planszę gry (siatka 4x4) -->
         <!-- używamy UniformGrid dla podziału planszy na równe części -->
-        <UniformGrid x:Name="GameGrid" Grid.Row="1" Rows="4" Columns="4" Margin="10">
-            
-            <!-- Ustawiamy na sztywno parę przycisków dla podgladu -->
-            <Button Content="?" FontFamily="24" Margin="2"/>
-            <Button Content="?" FontFamily="24" Margin="2"/>
-            <Button Content="?" FontFamily="24" Margin="2"/>
-            <Button Content="?" FontFamily="24" Margin="2"/>
-
-            <Button Content="?" FontFamily="24" Margin="2"/>
-            <Button Content="?" FontFamily="24" Margin="2"/>
-            <Button Content="?" FontFamily="24" Margin="2"/>
-            <Button Content="?" FontFamily="24" Margin="2"/>
-
-            <Button Content="?" FontFamily="24" Margin="2"/>
-            <Button Content="?" FontFamily="24" Margin="2"/>
-            <Button Content="?" FontFamily="24" Margin="2"/>
-            <Button Content="?" FontFamily="24" Margin="2"/>
-
-            <Button Content="?" FontFamily="24" Margin="2"/>
-            <Button Content="?" FontFamily="24" Margin="2"/>
-            <Button Content="?" FontFamily="24" Margin="2"/>
-            <Button Content="?" FontFamily="24" Margin="2"/>
-
+        
+        <UniformGrid x:Name="GameGrid" Grid.Row="1" Rows="4" Columns="4" Margin="15">
+            <!-- Przyciski będą generowane w części kodu c# -->
         </UniformGrid>
+        
         
     </Grid>
 </Window>
