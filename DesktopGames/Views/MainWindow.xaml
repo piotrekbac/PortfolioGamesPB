@@ -98,7 +98,7 @@
         
         <!-- Overlay końca gry -->
         <Grid x:Name="GameOverOverlay" Grid.RowSpan="2" Background="#cc000000" Visibility="Collapsed">
-            <Border>
+            <Border Background="White" Width="300" Height="200" CornerRadius="15">
                 <StackPanel>
                     
                     <TextBlock/>
