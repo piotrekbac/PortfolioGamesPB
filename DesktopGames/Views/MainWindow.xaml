@@ -96,6 +96,10 @@
             <!-- Przyciski będą generowane w części kodu c# -->
         </UniformGrid>
         
-        
+        <!-- Overlay końca gry -->
+        <Grid>
+
+            
+        </Grid>
     </Grid>
 </Window>
