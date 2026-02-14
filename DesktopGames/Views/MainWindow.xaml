@@ -71,7 +71,7 @@
         
         <!-- Definiujemy wiersze: górny - odpowiada za statystyki, a dolny - za plansze gry -->
         <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>    <!-- nagłówek -->
+            <RowDefinition Height="60"/>    <!-- nagłówek -->
             <RowDefinition Height="*"/>     <!-- plansza gry -->
         </Grid.RowDefinitions>
 
@@ -105,7 +105,7 @@
                     <TextBlock x:Name="FinalScoreText" Text="Twój wynik..." FontSize="18" Foreground="#636e72" Margin="0,10,0,20" HorizontalAlignment="Center"/>
                     <TextBlock/>
 
-                    <Button/>
+                    <Button Content="Zagraj ponownie" Width="150" Height="40" Click="ResetButton_Click" Style="{StaticResource MenuButtonStyle}" Background="#00b894"/>
                     
                 </StackPanel>
             </Border>
