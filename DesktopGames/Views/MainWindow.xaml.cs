@@ -117,7 +117,8 @@ namespace DesktopGames.Views
         // Metoda do obsługi kliknięcia przycisku - zresetowanie stanu gry 
         private void ResetButton_Click(object sender, RoutedEventArgs e)
         {
-            SetupGame();    // Wywołuję metodę do ustawienia gry, aby zresetować stan gry i UI
+            // Wywołuję metodę do ustawienia gry, aby zresetować stan gry i UI
+            SetupGame();    
         }
 
         // Metoda do obsługi kliknięcia przycisku - obsługa kliku
@@ -143,16 +144,7 @@ namespace DesktopGames.Views
 
             Button clickedButton = sender as Button;            // Rzutuję sender na Button
            
-            // Jeżeli karta jest odkryta (czyli tło jest białe) - ignorujemy kliknięcia, ponieważ karta jest już odkryta i nie można jej ponownie kliknąć, dopóki nie zostanie zakryta (w przypadku niepary) lub dopóki gra się nie zakończy (w przypadku pary)
-            if (clickedButton.Background == Brushes.White)
-            {
-                return; 
-            }
-
-            clickedButton.Content = clickedButton.Tag;          // Odkrywam kartę, ustawiając zawartość przycisku na jego tag (emoji)
-            clickedButton.Background = Brushes.White;           // Zmieniam tło przycisku na białe, aby oznaczyć, że jest odkryty
-            clickedButton.Foreground = Brushes.Black;           // Ustawiam kolor tekstu na czarny, aby emoji było widoczne
-
+            
             // Sprawdzan czy pierwszy przycisk jest null
             if (firstClicked == null)
             {
