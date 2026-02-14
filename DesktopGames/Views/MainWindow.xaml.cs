@@ -69,7 +69,8 @@ namespace DesktopGames.Views
             // Resetuję UI - ustawiam tekst zegara i licznik ruchów
 
             TimeTextBlock.Text = "Czas: 0 s";     // Ustawiam tekst zegara na początkowy stan
-          
+            MovesTextBlock.Text = "Ruchy: 0";     // Ustawiam tekst licznika ruchów na początkowy stan
+
             // Ustawiamy timer 
             if (timer != null)
             {
