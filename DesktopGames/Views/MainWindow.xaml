@@ -108,6 +108,7 @@
                     <TextBlock Text="Gratulacje!" FontSize="24" FontWeight="Bold" Foreground="#2d3436" HorizontalAlignment="Center"/>
                     <TextBlock x:Name="FinalScoreText" Text="Twój wynik..." FontSize="18" Foreground="#636e72" Margin="0,10,0,20" HorizontalAlignment="Center"/>
 
+                    <!-- Definiuję przycisk do ponownej gry -->
                     <Button Content="Zagraj ponownie" Width="150" Height="40" Click="ResetButton_Click" Style="{StaticResource MenuButtonStyle}" Background="#00b894"/>
                     
                 </StackPanel>
