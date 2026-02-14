@@ -104,17 +104,10 @@ namespace DesktopGames.Views
             foreach (string emoji in animalEmoji)
             {
                 Button button = new Button();          // Tworzę nowy przycisk
-                button.FontSize = 32;                  // Ustawiam rozmiar czcionki, aby emoji były dobrze widoczne
-                button.Content = "?";                  // Ustawiam zawartość przycisku na znak zapytania (zakrycie)
+                button.Style = cardStyle;              // Ustawiam styl przycisku, aby zapewnić spójny wygląd kart
+                button.Content = "";                   // Ustawiam zawartość przycisku na pusty
                 button.Tag = emoji;                    // Przypisuję emoji do tagu przycisku, aby łatwo było je porównać podczas kliknięcia
-
-
-                // Stylizujemy przycisk, aby wyglądał estetycznie i był dobrze widoczny na siatce
-
-                button.Background = Brushes.LightSkyBlue;       // Ustawiam kolor tła przycisku
-                button.Foreground = Brushes.Transparent;        // Ustawiam kolor tekstu na przezroczysty, aby emoji były niewidoczne, dopóki nie zostaną odkryte
-                button.BorderBrush = Brushes.DarkBlue;          // Ustawiam kolor obramowania przycisku
-                button.BorderThickness = new Thickness(2);      // Ustawiam grubość obramowania przycisku
+                button.Background = CardBackBrush;     // Ustawiam tło przycisku na kolor tła kart, aby oznaczyć, że jest zakryty
 
                 button.Click += Button_Click;          // Podłączam metodę obsługi kliknięcia do przycisku
                 GameGrid.Children.Add(button);         // Dodaję przycisk do siatki
