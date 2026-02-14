@@ -44,6 +44,7 @@ namespace DesktopGames.Views
         // Definiuję nowoczesną paletę barw do gry 
         private readonly Brush CardBackBrush = (Brush)new BrushConverter().ConvertFromString("#6c5ce7");    // Fioletowy kolor tła kart
         private readonly Brush CardFrontBrush = (Brush)new BrushConverter().ConvertFromString("#dfe6e9");   // Szary kolor odkrytych kart
+        private readonly Brush MatchBrush = (Brush)new BrushConverter().ConvertFromString("#00b894");       // Zielony kolor dla znalezionych par
 
         // Konstruktor okna głównego, gdzie inicjalizuję komponenty i ustawiam grę
         public MainWindow()
