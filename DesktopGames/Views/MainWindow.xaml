@@ -9,15 +9,15 @@
 
     <!-- Definiuję style - wygląd naszych przycisków -->
     <Window.Resources>
-        
+
         <!-- Ustawiam style dla kart memorów -->
         <Style x:Key="CardButtonStyle" TargetType="Button">
-            
+
             <!-- Ustawiam wartości dla konkretnych parametrów jak margines, czcionka oraz kursor -->
             <Setter Property="FontSize" Value="32"/>
             <Setter Property="Margin" Value="4"/>
             <Setter Property="Cursor" Value="Hand"/>
-            
+
             <!-- Ustawiamy template - pozwala on zmienić kształt przycisków (zaokrąglić je) -->
             <Setter Property="Template">
                 <Setter.Value>
@@ -26,23 +26,23 @@
                                 CornerRadius="10"
                                 Background="{TemplateBinding Background}"
                                 BorderBrush="{TemplateBinding BorderBrush}"
-                                BorderThickness="0"
+                                BorderThickness="0">
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                            <Border/>
+                        </Border>
 
-                            <!-- Efekt najechania myszką (nasz Trigger) -->
-                            <ControlTemplate.Triggers>
-                                <Trigger Property="IsMouseOver" Value="True"/>
+                        <!-- Efekt najechania myszką (nasz Trigger) -->
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
                                 <Setter TargetName="border" Property="Opacity" Value="0.8"/>
-                                <Trigger/>
-                            </ControlTemplate.Triggers>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
 
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
         </Style>
-        
-            
+
+
         <!-- Styl dla przycisku Reset (niebieski) -->
         <Style TargetType="Button" x:Key="MenuButtonStyle">
 
@@ -62,16 +62,18 @@
                 </Setter.Value>
             </Setter>
         </Style>
-            
+
     </Window.Resources>
-    
+
     <!-- Główny kontener naszej gry w memory -->
     <Grid>
-        
+
         <!-- Definiujemy wiersze: górny - odpowiada za statystyki, a dolny - za plansze gry -->
         <Grid.RowDefinitions>
-            <RowDefinition Height="60"/>    <!-- nagłówek -->
-            <RowDefinition Height="*"/>     <!-- plansza gry -->
+            <RowDefinition Height="60"/>
+            <!-- nagłówek -->
+            <RowDefinition Height="*"/>
+            <!-- plansza gry -->
         </Grid.RowDefinitions>
 
         <!-- Definiujemy nagłówek (statystyki) -->
@@ -87,20 +89,20 @@
                 <Button Content="Reset" Width="80" Height="30" Style="{StaticResource MenuButtonStyle}"/>
             </StackPanel>
         </Border>
-        
+
         <!-- Definiuję planszę gry (siatka 4x4) -->
         <!-- używamy UniformGrid dla podziału planszy na równe części -->
-        
+
         <UniformGrid x:Name="GameGrid" Grid.Row="1" Rows="4" Columns="4" Margin="15">
             <!-- Przyciski będą generowane w części kodu c# -->
         </UniformGrid>
-        
+
         <!-- Overlay końca gry -->
         <Grid x:Name="GameOverOverlay" Grid.RowSpan="2" Background="#cc000000" Visibility="Collapsed">
-            
+
             <!-- Definiuję styl border'a naszego overlay'a końca gry -->
             <Border Background="White" Width="300" Height="200" CornerRadius="15">
-                
+
                 <!-- StackPanel odpowiedzialny za ułożenie naszych elementów w pionie oraz poziomie -->
                 <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
 
@@ -110,7 +112,7 @@
 
                     <!-- Definiuję przycisk do ponownej gry -->
                     <Button Content="Zagraj ponownie" Width="150" Height="40" Click="ResetButton_Click" Style="{StaticResource MenuButtonStyle}" Background="#00b894"/>
-                    
+
                 </StackPanel>
             </Border>
         </Grid>
