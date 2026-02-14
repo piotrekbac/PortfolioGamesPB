@@ -81,6 +81,8 @@ namespace DesktopGames.Views
 
             // Konfiguruję timer do aktualizacji zegara co sekundę
             timer = new DispatcherTimer();
+
+            // Ustawiam interwał timera na 1 sekundę, aby aktualizować czas co sekundę
             timer.Interval = TimeSpan.FromSeconds(1);
 
 
@@ -89,9 +91,14 @@ namespace DesktopGames.Views
 
             Random random = new Random();   // Tworzę obiekt Random do losowania pozycji emoji
 
-            animalEmoji = animalEmoji.OrderBy(x => random.Next()).ToList();   // Tasuję listę emoji, aby każda gra była inna
+            // Tasuję listę emoji, aby każda gra była inna
+            animalEmoji = animalEmoji.OrderBy(x => random.Next()).ToList();   
 
-            GameGrid.Children.Clear();      // Czyścię siatkę z poprzednich elementów (jeśli gra jest resetowana)
+            // Czyścię siatkę z poprzednich elementów (jeśli gra jest resetowana)
+            GameGrid.Children.Clear();      
+
+            // Pobieram styl dla kart z zasobów, aby zapewnić spójny wygląd przycisków"; 
+            Style cardStyle = (Style)this.Resources["CardButtonStyle"];   
 
             // Tworzę przyciski i przypisuję im emoji jako tag, a zawartość ustawiam na znak zapytania (zakrycie)
             foreach (string emoji in animalEmoji)
