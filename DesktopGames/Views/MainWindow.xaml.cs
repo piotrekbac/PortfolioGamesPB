@@ -232,6 +232,7 @@ namespace DesktopGames.Views
         private void ShowGameOver()
         {
             FinalScoreText.Text = $"Czas: {timesElepsed} s, Ruchy: {movesCount}";   // Wyświetlam końcowy wynik (czas i liczba ruchów) w UI
+            GameOverOverlay.Visibility = Visibility.Visible;                        // Pokazuję nakładkę z komunikatem o zakończeniu gry    
         }
 
     }
