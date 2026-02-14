@@ -41,6 +41,9 @@ namespace DesktopGames.Views
         private int matchesFound;                   // Liczba znalezionych par
         private bool isGameLocked = false;          // Flaga blokady gry (np. podczas animacji zakrywania kart)
 
+        // Definiuję nowoczesną paletę barw do gry 
+        private readonly Brush CardBackBrush = (Bursh)newBrushConverter().ConvertFromString("#6c5ce7"); // Fioletowy kolor tła kart
+
         // Konstruktor okna głównego, gdzie inicjalizuję komponenty i ustawiam grę
         public MainWindow()
         {
