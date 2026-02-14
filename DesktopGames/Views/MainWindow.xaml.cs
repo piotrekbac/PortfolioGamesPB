@@ -143,8 +143,13 @@ namespace DesktopGames.Views
             }
 
             Button clickedButton = sender as Button;            // Rzutuję sender na Button
-           
-            
+
+            // Sprawdzam po kolorze tła czy przycisk jest odkryty (jeśli tło nie jest kolorem kart, to znaczy, że jest odkryty i pokazuje emoji, więc ignorujemy kliknięcia)
+            if (clickedButton.Background != CardBackBrush)
+            {
+                return; // Jeżeli przycisk jest już odkryty (nie jest pusty), to ignorujemy kliknięcia
+            }
+
             // Sprawdzan czy pierwszy przycisk jest null
             if (firstClicked == null)
             {
