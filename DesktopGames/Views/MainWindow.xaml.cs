@@ -150,6 +150,11 @@ namespace DesktopGames.Views
                 return; // Jeżeli przycisk jest już odkryty (nie jest pusty), to ignorujemy kliknięcia
             }
 
+            // Odkrywanie kart
+
+            clickedButton.Content = clickedButton.Tag;          // Ustawiam zawartość klikniętego przycisku na jego tag (emoji), aby odkryć kartę i pokazać emoji
+
+
             // Sprawdzan czy pierwszy przycisk jest null
             if (firstClicked == null)
             {
