@@ -226,7 +226,13 @@ namespace DesktopGames.Views
                 };
                 delayTimer.Start();                // Uruchamiam timer, aby rozpocząć odliczanie do zakrycia kart
             }
+        }
+
+        // Metoda ShowGameOver - wyświetla komunikat po zakończeniu gry
+        private void ShowGameOver()
+        {
 
         }
+
     }
 }
