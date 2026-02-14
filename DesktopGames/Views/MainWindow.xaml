@@ -100,6 +100,8 @@
             
             <!-- Definiuję styl border'a naszego overlay'a końca gry -->
             <Border Background="White" Width="300" Height="200" CornerRadius="15">
+                
+                <!-- StackPanel odpowiedzialny za ułożenie naszych elementów w pionie oraz poziomie -->
                 <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center"> 
                     
                     <TextBlock Text="Gratulacje!" FontSize="24" FontWeight="Bold" Foreground="#2d3436" HorizontalAlignment="Center"/>
