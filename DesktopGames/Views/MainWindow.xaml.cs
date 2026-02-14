@@ -153,7 +153,7 @@ namespace DesktopGames.Views
             // Odkrywanie kart
 
             clickedButton.Content = clickedButton.Tag;          // Ustawiam zawartość klikniętego przycisku na jego tag (emoji), aby odkryć kartę i pokazać emoji
-
+            clickedButton.Background = CardFrontBrush;          // Ustawiam tło klikniętego przycisku na kolor odkrytych kart, aby oznaczyć, że jest odkryty
 
             // Sprawdzan czy pierwszy przycisk jest null
             if (firstClicked == null)
