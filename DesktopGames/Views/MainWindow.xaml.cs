@@ -178,15 +178,8 @@ namespace DesktopGames.Views
             {
                 // sprawdzam czy pary są takie same 
 
-                matchesFound++;                 // Zwiększam liczbę znalezionych par
-
-                // Zmieniam kolor na zielony dla obu przycisków, aby oznaczyć, że są parą i zostały znalezione
-
-                firstClicked.Background = Brushes.LightGreen;   // Ustawiam tło pierwszego klikniętego przycisku na zielone, aby oznaczyć, że jest parą
-                secondClicked.Background = Brushes.LightGreen;  // Ustawiam tło drugiego klikniętego przycisku na zielone, aby oznaczyć, że jest parą
-
-                firstClicked = null;            // Resetuję pierwszy kliknięty przycisk, ponieważ para została znaleziona i nie musimy go już śledzić
-                secondClicked = null;           // Resetuję drugi kliknięty przycisk, ponieważ para została znaleziona i nie musimy go już śledzić
+                matchesFound++;                          // Zwiększam liczbę znalezionych par
+                firstClicked.Background = MatchBrush;    // Ustawiam tło pierwszego klikniętego przycisku na kolor dla znalezionych par, aby oznaczyć, że ta para została znaleziona
 
                 // Sprawdzam, czy wszystkie pary zostały znalezione (w tym przypadku 8 par)
                 if (matchesFound == 8)
