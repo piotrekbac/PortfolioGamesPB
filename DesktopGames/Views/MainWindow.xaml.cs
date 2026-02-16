@@ -182,6 +182,11 @@ namespace DesktopGames.Views
                 firstClicked.Background = MatchBrush;    // Ustawiam tło pierwszego klikniętego przycisku na kolor dla znalezionych par, aby oznaczyć, że ta para została znaleziona
                 secondClicked.Background = MatchBrush;   // Ustawiam tło drugiego klikniętego przycisku na kolor dla znalezionych par, aby oznaczyć, że ta para została znaleziona
 
+
+                // Usuwam obsługę kliknięcia dla tych przycisków, aby nie można było ich ponownie kliknąć (opcjonalnie, można też ustawić je jako nieaktywne lub ukryć, ale w tej implementacji po prostu usuwam obsługę kliknięcia)
+
+                firstClicked.Click -= Button_Click;      // Usuwam obsługę kliknięcia dla pierwszego klikniętego przycisku, aby nie można było go ponownie kliknąć
+
                 // Sprawdzam, czy wszystkie pary zostały znalezione (w tym przypadku 8 par)
                 if (matchesFound == 8)
                 {
