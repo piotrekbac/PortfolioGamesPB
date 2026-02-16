@@ -176,7 +176,7 @@ namespace DesktopGames.Views
             // Sprawdzam, czy oba kliknięte przyciski mają ten sam tag (czy są parą)
             if (firstClicked.Tag.ToString() == secondClicked.Tag.ToString())
             {
-                // sprawdzam czy pary są takie same 
+                // sprawdzam czy pary są takie same - obsługa przypadku SUKCESU - znalezienia pary
 
                 matchesFound++;                          // Zwiększam liczbę znalezionych par
                 firstClicked.Background = MatchBrush;    // Ustawiam tło pierwszego klikniętego przycisku na kolor dla znalezionych par, aby oznaczyć, że ta para została znaleziona
@@ -199,13 +199,11 @@ namespace DesktopGames.Views
             // Sprawdzam, czy kliknięte przyciski nie są parą (nie mają tego samego tagu)
             else
             {
+                // Obsługuję przypadek PORAŻKI 
+
                 isGameLocked = true;               // Blokuję grę, aby użytkownik nie mógł klikać innych przycisków podczas animacji zakrywania kart
 
-                // Oznaczamy komunikat na czerwono, aby gracz widział błąd i wiedział, że to nie jest para (opcjonalnie, można dodać taki efekt, ale w tej implementacji skupiam się na zakrywaniu kart z opóźnieniem)
-
-                firstClicked.Background = Brushes.IndianRed;   // Ustawiam tło pierwszego klikniętego przycisku na czerwone, aby oznaczyć, że to nie jest para
-                secondClicked.Background = Brushes.IndianRed;  // Ustawiam tło drugiego klikniętego przycisku na czerwone, aby oznaczyć, że to nie jest para
-
+                
                 // Jeżeli pary są różne to je zakrywamy z opóźnieniem, aby gracz miał czas zobaczyć, co było pod nimi
                 // Używam DispatcherTimer do opóźnienia zakrycia kart
 
