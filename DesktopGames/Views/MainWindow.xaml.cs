@@ -186,6 +186,7 @@ namespace DesktopGames.Views
                 // Usuwam obsługę kliknięcia dla tych przycisków, aby nie można było ich ponownie kliknąć (opcjonalnie, można też ustawić je jako nieaktywne lub ukryć, ale w tej implementacji po prostu usuwam obsługę kliknięcia)
 
                 firstClicked.Click -= Button_Click;      // Usuwam obsługę kliknięcia dla pierwszego klikniętego przycisku, aby nie można było go ponownie kliknąć
+                secondClicked.Click -= Button_Click;     // Usuwam obsługę kliknięcia dla drugiego klikniętego przycisku, aby nie można było go ponownie kliknąć
 
                 // Sprawdzam, czy wszystkie pary zostały znalezione (w tym przypadku 8 par)
                 if (matchesFound == 8)
