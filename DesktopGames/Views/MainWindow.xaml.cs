@@ -242,7 +242,7 @@ namespace DesktopGames.Views
         // Metoda ShowGameOver - wyświetla komunikat po zakończeniu gry
         private void ShowGameOver()
         {
-            FinalScoreText.Text = $"Czas: {timesElepsed} s, Ruchy: {movesCount}";   // Wyświetlam końcowy wynik (czas i liczba ruchów) w UI
+            FinalScoreText.Text = $"Czas: {timeElapsed}s, Ruchy: {movesCount}";   // Wyświetlam końcowy wynik (czas i liczba ruchów) w UI
             GameOverOverlay.Visibility = Visibility.Visible;                        // Pokazuję nakładkę z komunikatem o zakończeniu gry    
         }
 
