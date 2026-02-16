@@ -180,6 +180,7 @@ namespace DesktopGames.Views
 
                 matchesFound++;                          // Zwiększam liczbę znalezionych par
                 firstClicked.Background = MatchBrush;    // Ustawiam tło pierwszego klikniętego przycisku na kolor dla znalezionych par, aby oznaczyć, że ta para została znaleziona
+                secondClicked.Background = MatchBrush;   // Ustawiam tło drugiego klikniętego przycisku na kolor dla znalezionych par, aby oznaczyć, że ta para została znaleziona
 
                 // Sprawdzam, czy wszystkie pary zostały znalezione (w tym przypadku 8 par)
                 if (matchesFound == 8)
