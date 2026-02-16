@@ -204,6 +204,7 @@ namespace DesktopGames.Views
                 isGameLocked = true;                     // Blokuję grę, aby użytkownik nie mógł klikać innych przycisków podczas animacji zakrywania kart
 
                 firstClicked.Background = ErrorBrush;    // Ustawiam tło pierwszego klikniętego przycisku na kolor dla błędnych par, aby oznaczyć, że ta para jest błędna
+                secondClicked.Background = ErrorBrush;   // Ustawiam tło drugiego klikniętego przycisku na kolor dla błędnych par, aby oznaczyć, że ta para jest błędna
 
                 // Jeżeli pary są różne to je zakrywamy z opóźnieniem, aby gracz miał czas zobaczyć, co było pod nimi
                 // Używam DispatcherTimer do opóźnienia zakrycia kart
