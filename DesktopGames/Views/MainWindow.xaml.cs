@@ -217,7 +217,8 @@ namespace DesktopGames.Views
                     // Stan początkowuy to, że oba przyciski są odkryte i pokazują emoji, więc teraz musimy je zakryć ponownie, ustawiając zawartość na znak zapytania i przywracając tło do pierwotnego koloru
                     if (firstClicked != null)
                     {
-                        firstClicked.Content = "";                         // Zakrywam pierwszy kliknięty przycisk (ustawiam zawartość na znak zapytania)
+                        firstClicked.Content = "";                        // Zakrywam pierwszy kliknięty przycisk (ustawiam zawartość na znak zapytania)
+                        firstClicked.Background = CardBackBrush;          // Przywracam tło pierwszego klikniętego przycisku do pierwotnego koloru, aby oznaczyć, że jest ponownie zakryty
                     }
 
                     // Sprawdzam, czy drugi kliknięty przycisk nie jest null, ponieważ może się zdarzyć, że gracz kliknie tylko jeden przycisk i potem timer się uruchomi (choć w tej implementacji jest to mało prawdopodobne, ale warto mieć takie zabezpieczenie)
