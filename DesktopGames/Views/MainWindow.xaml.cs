@@ -60,6 +60,7 @@ namespace DesktopGames.Views
             // Zabezpieczenie - zatrzymanie starego timera 
             if (timer != null)
             { 
+                timer.Stop();               // Zatrzymuję timer, jeśli już istnieje, aby uniknąć konfliktów przy ponownym uruchomieniu gry
             }
 
             timeElapsed = 0;                // Ustawiam czas na 0
