@@ -120,7 +120,7 @@ namespace DesktopGames.Views
             // Zabezpieczenie - podpięcie metody Resetu - upewnienie się, że przycisk ma podpiętą metodę Resetu, aby można było zresetować grę po jej zakończeniu
             if (isGameLocked)
             {
-
+                return;     // Jeżeli gra jest zablokowana (np. podczas animacji zakrywania kart), to ignorujemy kliknięcia, aby nie można było resetować gry w trakcie animacji
             }
 
             // Wywołuję metodę do ustawienia gry, aby zresetować stan gry i UI
