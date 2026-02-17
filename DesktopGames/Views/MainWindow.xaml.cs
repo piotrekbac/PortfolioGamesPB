@@ -88,7 +88,8 @@ namespace DesktopGames.Views
             timer.Start();                                  // Uruchamiam timer
 
 
-            Random random = new Random();   // Tworzę obiekt Random do losowania pozycji emoji
+            // Tworzę obiekt Random do losowania pozycji emoji
+            Random random = new Random();   
 
             // Tasuję listę emoji, aby każda gra była inna
             animalEmoji = animalEmoji.OrderBy(x => random.Next()).ToList();   
@@ -116,6 +117,12 @@ namespace DesktopGames.Views
         // Metoda do obsługi kliknięcia przycisku - zresetowanie stanu gry 
         private void ResetButton_Click(object sender, RoutedEventArgs e)
         {
+            // Zabezpieczenie - podpięcie metody Resetu - upewnienie się, że przycisk ma podpiętą metodę Resetu, aby można było zresetować grę po jej zakończeniu
+            if (isGameLocked)
+            {
+
+            }
+
             // Wywołuję metodę do ustawienia gry, aby zresetować stan gry i UI
             SetupGame();    
         }
