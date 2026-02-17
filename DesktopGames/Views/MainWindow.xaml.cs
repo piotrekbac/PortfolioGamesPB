@@ -190,6 +190,8 @@ namespace DesktopGames.Views
 
                 // Restetuję zmienne do śledzenia klikniętych przycisków, ponieważ ta para została już znaleziona i nie musimy ich dalej śledzić
 
+                firstClicked = null;            // Resetuję pierwszy kliknięty przycisk
+
                 // Sprawdzam, czy wszystkie pary zostały znalezione (w tym przypadku 8 par)
                 if (matchesFound == 8)
                 {
