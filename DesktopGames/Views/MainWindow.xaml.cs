@@ -219,8 +219,8 @@ namespace DesktopGames.Views
                 // Jeżeli pary są różne to je zakrywamy z opóźnieniem, aby gracz miał czas zobaczyć, co było pod nimi
                 // Używam DispatcherTimer do opóźnienia zakrycia kart
 
-                DispatcherTimer delayTimer = new DispatcherTimer();      // Tworzę nowy timer do opóźnienia
-                delayTimer.Interval = TimeSpan.FromMilliseconds(800);    // Ustawiam interwał na 800 ms (0.8 sekundy)
+                DispatcherTimer delayTimer = new DispatcherTimer();       // Tworzę nowy timer do opóźnienia
+                delayTimer.Interval = TimeSpan.FromMilliseconds(1000);    // Ustawiam interwał na 1000 ms (1 sekunda)
 
                 // Podłączam metodę obsługi zdarzenia Tick do delayTimer, która zostanie wywołana po upływie interwału, aby zakryć karty ponownie
                 delayTimer.Tick += (s, args) =>
