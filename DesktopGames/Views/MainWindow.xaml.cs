@@ -79,22 +79,14 @@ namespace DesktopGames.Views
             MovesTextBlock.Text = "Ruchy: 0";                     // Ustawiam tekst licznika ruchów na początkowy stan
             GameOverOverlay.Visibility = Visibility.Collapsed;    // Ukrywam nakładkę z komunikatem o zakończeniu gry, jeśli była widoczna
 
-            // Ustawiamy timer 
-            if (timer != null)
-            {
-                timer.Stop();                    // Zatrzymuję timer, jeśli już istnieje, aby uniknąć konfliktów przy ponownym uruchomieniu gry
-            }
 
+            // Definiuję nowy timer do aktualizacji zegara co sekundę, który będzie odliczał czas gry
 
-            // Konfiguruję timer do aktualizacji zegara co sekundę
-            timer = new DispatcherTimer();
+            timer = new DispatcherTimer();                  // Konfiguruję timer do aktualizacji zegara co sekundę
+            timer.Interval = TimeSpan.FromSeconds(1);       // Ustawiam interwał timera na 1 sekundę, aby aktualizować czas co sekundę
+            timer.Tick += Timer_Tick;                       // Podłączam metodę obsługi zdarzenia Tick do timera
+            timer.Start();                                  // Uruchamiam timer
 
-            // Ustawiam interwał timera na 1 sekundę, aby aktualizować czas co sekundę
-            timer.Interval = TimeSpan.FromSeconds(1);
-
-
-            timer.Tick += Timer_Tick;       // Podłączam metodę obsługi zdarzenia Tick do timera
-            timer.Start();                  // Uruchamiam timer
 
             Random random = new Random();   // Tworzę obiekt Random do losowania pozycji emoji
 
