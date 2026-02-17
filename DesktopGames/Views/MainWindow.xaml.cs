@@ -50,13 +50,18 @@ namespace DesktopGames.Views
         // Konstruktor okna głównego, gdzie inicjalizuję komponenty i ustawiam grę
         public MainWindow()
         {
-            InitializeComponent();                  // Inicjalizuję komponenty okna (generowane przez XAML)
-            SetupGame();                            // Wywołuję metodę do ustawienia gry przy inicjalizacji okna
+            InitializeComponent();          // Inicjalizuję komponenty okna (generowane przez XAML)
+            SetupGame();                    // Wywołuję metodę do ustawienia gry przy inicjalizacji okna
         }
 
         // Metoda do ustawienia gry
         private void SetupGame()
         {
+            // Zabezpieczenie - zatrzymanie starego timera 
+            if (timer != null)
+            { 
+            }
+
             timeElapsed = 0;                // Ustawiam czas na 0
             matchesFound = 0;               // Ustawiam liczbę znalezionych par na 0
             movesCount = 0;                 // Ustawiam liczbę ruchów na 0 (jeśli chcemy ją śledzić)
