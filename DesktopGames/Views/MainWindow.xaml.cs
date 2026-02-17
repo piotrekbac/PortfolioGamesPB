@@ -61,8 +61,9 @@ namespace DesktopGames.Views
             if (timer != null)
             { 
                 timer.Stop();               // Zatrzymuję timer, jeśli już istnieje, aby uniknąć konfliktów przy ponownym uruchomieniu gry
+                timer = null;               // Resetuję timer do null, aby wskazać, że nie ma aktywnego timera
             }
-
+            
             timeElapsed = 0;                // Ustawiam czas na 0
             matchesFound = 0;               // Ustawiam liczbę znalezionych par na 0
             movesCount = 0;                 // Ustawiam liczbę ruchów na 0 (jeśli chcemy ją śledzić)
