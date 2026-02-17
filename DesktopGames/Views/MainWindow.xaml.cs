@@ -188,6 +188,8 @@ namespace DesktopGames.Views
                 firstClicked.Click -= Button_Click;      // Usuwam obsługę kliknięcia dla pierwszego klikniętego przycisku, aby nie można było go ponownie kliknąć
                 secondClicked.Click -= Button_Click;     // Usuwam obsługę kliknięcia dla drugiego klikniętego przycisku, aby nie można było go ponownie kliknąć
 
+                // Restetuję zmienne do śledzenia klikniętych przycisków, ponieważ ta para została już znaleziona i nie musimy ich dalej śledzić
+
                 // Sprawdzam, czy wszystkie pary zostały znalezione (w tym przypadku 8 par)
                 if (matchesFound == 8)
                 {
