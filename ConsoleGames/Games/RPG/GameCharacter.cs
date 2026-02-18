@@ -23,5 +23,11 @@ namespace ConsoleGames.Games.RPG
         public int Y { get; set; }              // Pozycja Y postaci na mapie
         public char Symbol { get; set; }        // Symbol reprezentujący postać na mapie
         public ConsoleColor Color { get; set; } // Kolor reprezentujący postać na mapie
+
+        // Konstruktor do inicjalizacji postaci z odpowiednimi wartościami
+        public GameCharacter(string name, int health, int damage, char symbol, ConsoleColor color)
+        {
+
+        }
     }
 }
