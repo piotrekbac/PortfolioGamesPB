@@ -27,7 +27,7 @@ namespace ConsoleGames.Games.RPG
         // Konstruktor do inicjalizacji postaci z odpowiednimi wartościami
         public GameCharacter(string name, int health, int damage, char symbol, ConsoleColor color)
         {
-
+            Name = name;                   // Ustawiamy nazwę postaci
         }
     }
 }
