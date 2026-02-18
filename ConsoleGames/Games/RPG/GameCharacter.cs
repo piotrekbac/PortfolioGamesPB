@@ -8,9 +8,10 @@ using System.Threading.Tasks;
 
 namespace ConsoleGames.Games.RPG
 {
-    // Klasa bazowa dla postaci w grze RPG
+    // Klasa bazowa dla postaci w grze RPG - musimy utworzyć albo gracza albo potwora
     public abstract class GameCharacter
-    { 
-
+    {
+        // Ustawiamy odpowiednie właściwości dla postaci - nazwa, poziom życia, atak i obronę
+        public string Name { get; set; }        // Nazwa postaci
     }
 }
