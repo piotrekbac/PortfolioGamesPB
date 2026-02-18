@@ -22,5 +22,6 @@ namespace ConsoleGames.Games.RPG
         public int X { get; set; }              // Pozycja X postaci na mapie
         public int Y { get; set; }              // Pozycja Y postaci na mapie
         public char Symbol { get; set; }        // Symbol reprezentujący postać na mapie
+        public ConsoleColor Color { get; set; } // Kolor reprezentujący postać na mapie
     }
 }
