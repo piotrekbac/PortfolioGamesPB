@@ -14,5 +14,6 @@ namespace ConsoleGames.Games.RPG
         // Ustawiamy odpowiednie właściwości dla postaci - nazwa, poziom życia, atak i obronę
         public string Name { get; set; }        // Nazwa postaci
         public int Health { get; set; }         // Poziom życia postaci
+        public int MaxHealth { get; set; }      // Maksymalny poziom życia postaci
     }
 }
