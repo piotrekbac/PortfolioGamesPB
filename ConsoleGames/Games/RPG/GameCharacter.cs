@@ -20,5 +20,6 @@ namespace ConsoleGames.Games.RPG
 
         // Ustawiamy pozycję na mapie - x i y
         public int X { get; set; }              // Pozycja X postaci na mapie
+        public int Y { get; set; }              // Pozycja Y postaci na mapie
     }
 }
