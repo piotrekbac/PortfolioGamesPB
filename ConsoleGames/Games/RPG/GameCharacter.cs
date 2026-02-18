@@ -28,6 +28,7 @@ namespace ConsoleGames.Games.RPG
         public GameCharacter(string name, int health, int damage, char symbol, ConsoleColor color)
         {
             Name = name;                   // Ustawiamy nazwę postaci
+            MaxHealth = health;            // Ustawiamy maksymalny poziom życia postaci
         }
     }
 }
