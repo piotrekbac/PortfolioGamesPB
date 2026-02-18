@@ -17,5 +17,8 @@ namespace ConsoleGames.Games.RPG
         public int MaxHealth { get; set; }      // Maksymalny poziom życia postaci
         public int Damage { get; set; }         // Siła ataku postaci
         public int Defense { get; set; }        // Siła obrony postaci
+
+        // Ustawiamy pozycję na mapie - x i y
+        public int X { get; set; }              // Pozycja X postaci na mapie
     }
 }
