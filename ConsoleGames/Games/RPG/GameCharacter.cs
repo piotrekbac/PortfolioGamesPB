@@ -71,6 +71,5 @@ namespace ConsoleGames.Games.RPG
                 Health = MaxHealth; // Zapobiegamy przekroczeniu maksymalnego poziomu życia
             }
         }
-
     }
 }
