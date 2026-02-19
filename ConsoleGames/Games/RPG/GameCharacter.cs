@@ -65,6 +65,11 @@ namespace ConsoleGames.Games.RPG
         {
             Health += amount; // Zwiększamy poziom życia postaci o określoną wartość
 
+            // Zapobiegamy przekroczeniu maksymalnego poziomu życia - jeśli poziom życia przekroczy maksymalny poziom życia, ustawiamy go na maksymalny poziom życia
+            if (Health > MaxHealth)
+            {
+                
+            }
         }
 
     }
