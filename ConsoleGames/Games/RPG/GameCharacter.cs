@@ -34,13 +34,14 @@ namespace ConsoleGames.Games.RPG
             Damage = damage;               // Ustawiamy siłę ataku postaci
             Symbol = symbol;               // Ustawiamy symbol reprezentujący postać na mapie
             Color = color;                 // Ustawiamy kolor reprezentujący postać na mapie
-            Armor = 0;                     // Domyślna wartość obrony postaci to 0
+            Armor = 0;                     // Domyślna wartość pancerza postaci to 0
         }
 
         // Tworzymy metodę wirtualną - TakeDamage, która będzie odpowiedzialna za zadawanie obrażeń postaci - będzie ona nadpisywana w klasach potomnych 
         public virtual void TakeDamage(int damage)
         {
-
+            // Obliczamy rzeczywiste obrażenia, uwzględniając obronę postaci - jeśli obrażenia są mniejsze niż obrona, to postać nie otrzymuje obrażeń
+            int actualDamage = Math.Max(0, damage - Armor);
         }
     }
 }
