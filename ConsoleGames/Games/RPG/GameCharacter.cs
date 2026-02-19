@@ -60,5 +60,11 @@ namespace ConsoleGames.Games.RPG
             return Health <= 0; 
         }
 
+        // Tworzymy metodę Heal, która będzie odpowiedzialna za leczenie postaci - zwiększa poziom życia postaci o określoną wartość, ale nie przekracza maksymalnego poziomu życia
+        public void Heal(int amount)
+        {
+
+        }
+
     }
 }
