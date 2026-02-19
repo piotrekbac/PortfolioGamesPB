@@ -36,5 +36,11 @@ namespace ConsoleGames.Games.RPG
             Color = color;                 // Ustawiamy kolor reprezentujący postać na mapie
             Armor = 0;                     // Domyślna wartość obrony postaci to 0
         }
+
+        // Tworzymy metodę wirtualną - TakeDamage, która będzie odpowiedzialna za zadawanie obrażeń postaci - będzie ona nadpisywana w klasach potomnych 
+        public virtual void TakeDamage(int damage)
+        {
+
+        }
     }
 }
