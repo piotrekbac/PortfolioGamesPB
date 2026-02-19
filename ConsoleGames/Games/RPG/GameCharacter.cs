@@ -46,6 +46,11 @@ namespace ConsoleGames.Games.RPG
             // Zmniejszamy poziom życia postaci o obliczone obrażenia
             Health -= actualDamage;
 
+            // Zapobiegamy ujemnemu poziomowi życia - jeśli poziom życia spadnie poniżej 0, ustawiamy go na 0
+            if (Health < 0)
+            {
+                Health = 0; // Zapobiegamy ujemnemu poziomowi życia 
+            }
         }
 
     }
