@@ -31,6 +31,7 @@ namespace ConsoleGames.Games.RPG
             MaxHealth = health;            // Ustawiamy maksymalny poziom życia postaci
             Health = health;               // Ustawiamy aktualny poziom życia postaci
             Damage = damage;               // Ustawiamy siłę ataku postaci
+            Symbol = symbol;               // Ustawiamy symbol reprezentujący postać na mapie
         }
     }
 }
