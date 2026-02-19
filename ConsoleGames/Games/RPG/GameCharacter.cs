@@ -56,7 +56,8 @@ namespace ConsoleGames.Games.RPG
         // Tworzymy metodę isDead, która będzie sprawdzać, czy postać jest martwa - jeśli poziom życia jest równy 0, to postać jest martwa
         public bool isDead()
         {
-
+            // Sprawdzamy, czy poziom życia postaci jest równy 0 - jeśli tak, to postać jest martwa, w przeciwnym razie jest żywa
+            return Health <= 0; 
         }
 
     }
