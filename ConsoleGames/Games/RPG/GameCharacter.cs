@@ -32,6 +32,7 @@ namespace ConsoleGames.Games.RPG
             Health = health;               // Ustawiamy aktualny poziom życia postaci
             Damage = damage;               // Ustawiamy siłę ataku postaci
             Symbol = symbol;               // Ustawiamy symbol reprezentujący postać na mapie
+            Color = color;                 // Ustawiamy kolor reprezentujący postać na mapie
         }
     }
 }
