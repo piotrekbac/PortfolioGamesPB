@@ -12,6 +12,7 @@ namespace ConsoleGames.Games.RPG
     public class Player : GameCharacter
     {
         // Konstruktor do inicjalizacji gracza z odpowiednimi wartościami - wywołujemy konstruktor klasy bazowej, przekazując odpowiednie parametry, a dodatkowo ustawiamy poziom gracza na 1
-        public int Level { get; set; }         // Poziom gracza - im wyższy poziom, tym silniejszy gracz
+        public int Level { get; set; }           // Poziom gracza - im wyższy poziom, tym silniejszy gracz
+        public int Experience { get; set; }      // Doświadczenie gracza - zdobywane za pokonanie potworów, im więcej doświadczenia, tym szybciej gracz awansuje na wyższy poziom
     }
 }
