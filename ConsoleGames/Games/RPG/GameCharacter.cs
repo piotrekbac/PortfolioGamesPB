@@ -30,6 +30,7 @@ namespace ConsoleGames.Games.RPG
             Name = name;                   // Ustawiamy nazwę postaci
             MaxHealth = health;            // Ustawiamy maksymalny poziom życia postaci
             Health = health;               // Ustawiamy aktualny poziom życia postaci
+            Damage = damage;               // Ustawiamy siłę ataku postaci
         }
     }
 }
