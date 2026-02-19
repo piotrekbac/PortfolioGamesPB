@@ -17,6 +17,7 @@ namespace ConsoleGames.Games.RPG
         public int MaxHealth { get; set; }      // Maksymalny poziom życia postaci
         public int Damage { get; set; }         // Siła ataku postaci
         public int Defense { get; set; }        // Siła obrony postaci
+        public int Armor { get; set; }          // Dodatkowa wartość obrony postaci (np. z pancerza)
 
         // Ustawiamy pozycję na mapie - x i y
         public int X { get; set; }              // Pozycja X postaci na mapie
@@ -33,6 +34,7 @@ namespace ConsoleGames.Games.RPG
             Damage = damage;               // Ustawiamy siłę ataku postaci
             Symbol = symbol;               // Ustawiamy symbol reprezentujący postać na mapie
             Color = color;                 // Ustawiamy kolor reprezentujący postać na mapie
+            Armor = 0;                     // Domyślna wartość obrony postaci to 0
         }
     }
 }
