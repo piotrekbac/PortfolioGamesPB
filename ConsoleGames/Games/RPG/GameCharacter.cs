@@ -42,6 +42,11 @@ namespace ConsoleGames.Games.RPG
         {
             // Obliczamy rzeczywiste obrażenia, uwzględniając obronę postaci - jeśli obrażenia są mniejsze niż obrona, to postać nie otrzymuje obrażeń
             int actualDamage = Math.Max(0, damage - Armor);
+
+            // Zmniejszamy poziom życia postaci o obliczone obrażenia
+            Health -= actualDamage;
+
         }
+
     }
 }
