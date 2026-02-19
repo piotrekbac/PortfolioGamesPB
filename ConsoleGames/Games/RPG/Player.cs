@@ -11,6 +11,7 @@ namespace ConsoleGames.Games.RPG
     // Klasa reprezentująca gracza w grze RPG - dziedziczy po klasie GameCharacter, ponieważ gracz jest postacią w grze
     public class Player : GameCharacter
     {
-
+        // Konstruktor do inicjalizacji gracza z odpowiednimi wartościami - wywołujemy konstruktor klasy bazowej, przekazując odpowiednie parametry, a dodatkowo ustawiamy poziom gracza na 1
+        public int Level { get; set; }         // Poziom gracza - im wyższy poziom, tym silniejszy gracz
     }
 }
