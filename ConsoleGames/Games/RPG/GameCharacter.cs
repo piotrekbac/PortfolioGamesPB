@@ -68,7 +68,7 @@ namespace ConsoleGames.Games.RPG
             // Zapobiegamy przekroczeniu maksymalnego poziomu życia - jeśli poziom życia przekroczy maksymalny poziom życia, ustawiamy go na maksymalny poziom życia
             if (Health > MaxHealth)
             {
-                
+                Health = MaxHealth; // Zapobiegamy przekroczeniu maksymalnego poziomu życia
             }
         }
 
